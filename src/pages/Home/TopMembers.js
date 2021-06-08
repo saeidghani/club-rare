@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Slider from 'react-slick';
 import avatar2 from '../../assets/images/avatar-2.png';
 import { useTranslation } from 'react-i18next';
-import BidCard from '../../components/common/BidCard';
 
 function TopMembers({ wrapperClass }) {
   const { t } = useTranslation();
@@ -34,6 +33,7 @@ function TopMembers({ wrapperClass }) {
           <div className="flex border border-solid border-white rounded-12 h-9">
             {memberTypes.map((i) => (
               <div
+                key={i.key}
                 className={`text-14 font-semibold px-5 rounded-12 flex items-center cursor-pointer ${
                   topMembersType === i.key
                     ? 'text-white border-r border-solid border-white linearGradient'
@@ -49,7 +49,7 @@ function TopMembers({ wrapperClass }) {
         <div className="grid grid-cols-1 px-2 xs:px-14 sm:px-32 md:px-56 lg:px-0 c-slick-dots c-slick-dots-bottom--40 mt-4 xl:mt-6">
           <Slider {...settings} style={{ maxHeight: 400 }} className="">
             {[1, 2, 3].map((i) => (
-              <div>
+              <div key={i}>
                 <div
                   key={i}
                   className="grid grid-cols-2 gap-x-2.5 xs:gap-x-3.5 md:gap-x-2 xl:gap-x-6 gap-y-8.5 mt-2"

@@ -26,6 +26,28 @@ export const CryptoIcon = () => (
   </svg>
 );
 
+export const CryptoIcon2 = ({ fill }) => (
+  <svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g opacity="0.7">
+      <path
+        d="M6.9977 0L6.84485 0.531561V15.9562L6.9977 16.1124L13.9954 11.8801L6.9977 0Z"
+        fill={fill || '#377CF6'}
+      />
+      <path d="M6.99775 0L0 11.8801L6.99775 16.1124V8.62573V0Z" fill={fill || '#377CF6'} />
+      <path
+        d="M6.998 17.4678L6.91187 17.5752V23.0698L6.998 23.3272L14 13.2377L6.998 17.4678Z"
+        fill={fill || '#377CF6'}
+      />
+      <path d="M6.99775 23.3273V17.4678L0 13.2377L6.99775 23.3273Z" fill={fill || '#377CF6'} />
+      <path
+        d="M6.99829 16.1124L13.9959 11.8802L6.99829 8.62579V16.1124Z"
+        fill={fill || '#377CF6'}
+      />
+      <path d="M0 11.8802L6.99764 16.1124V8.62579L0 11.8802Z" fill={fill || '#377CF6'} />
+    </g>
+  </svg>
+);
+
 export const Arrow = ({ stroke }) => (
   <svg width="36" height="21" viewBox="0 0 36 21" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path

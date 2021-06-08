@@ -48,7 +48,7 @@ export default function Dropdown({
                 }`}
               >
                 {items.map((i) => (
-                  <div key={i.key} className="px-1 py-1">
+                  <div key={i.key} className="w-full">
                     <Menu.Item>
                       {({ active }) => (
                         <button

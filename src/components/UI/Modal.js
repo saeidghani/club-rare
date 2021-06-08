@@ -8,6 +8,7 @@ export default function Modal({
   onCloseModal,
   afterCloseModal = () => {},
   width,
+  contentClass,
 }) {
   const cancelButtonRef = useRef();
 
@@ -63,7 +64,7 @@ export default function Modal({
                 <Dialog.Title as="h3" className="text-lg font-medium leading-6 text-blue">
                   {title}
                 </Dialog.Title>
-                <div className="mt-2 text-blue">{content}</div>
+                <div className={`mt-2 text-blue ${contentClass}`}>{content}</div>
               </div>
             </Transition.Child>
           </div>
