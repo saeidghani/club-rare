@@ -1,0 +1,161 @@
+{
+  "en": {
+    "translation": {
+      "header": {
+        "logo": {
+          "part1": "Vital",
+          "part2": "Hint"
+        },
+        "explore": "Explore",
+        "liveAuctions": "Live Auctions",
+        "selectedLang": "",
+        "langOption1": "english",
+        "langOption2": "korean",
+        "notifications": "notifications",
+        "seeAll": "seeAll",
+        "search": "Search"
+      },
+      "sidebar": {
+        "home": {
+          "title": "Home",
+          "alt": "home icon"
+        },
+        "myItems": {
+          "title": "My Items",
+          "alt": "my items icon"
+        },
+        "create": {
+          "title": "Create",
+          "alt": "create icon"
+        }
+      },
+      "profile": {
+        "summary": {
+          "paragraph": "Emilie Butler is the publisher of Whitehot Magazine of Contemporar Art. Emilie paintings have been exhibited around the world in museums and galleries.",
+          "report": {
+            "title": "Report",
+            "submitAReport": "Submit a report",
+            "text": "If you believe there's been a violation of Foundation's Terms of Service or Community Guidelines, please complete this report.\nFor all cases related to potential copyright infringement, please email trust@withfoundation.com directly with a formal DMCA Takedown Request.\nEmail address",
+            "email": {
+              "title": "Email Address",
+              "placeholder": "Email",
+              "pleaseEnterValidEmail": "Please Enter Valid Email",
+              "emailIsRequired": "Email Is Required"
+            },
+              "description": {
+                "title": "Description",
+                "placeholder": "Description",
+                "descriptionIsRequired": "Description Is Required"
+              },
+            "submit": "Submit"
+          }
+        },
+        "categories": {
+          "created": "Created",
+          "onSale": "On Sale",
+          "collectibles": "Collectibles"
+        },
+        "bid": {
+          "highestBid": "Highest Bid",
+          "placeABid": "Place a Bid"
+        }
+      },
+      "home": {
+        "banner": {
+          "logo": {
+            "part1": "Vital",
+            "part2": "Hint"
+          },
+          "text": "In this box you promote artists’ artworks",
+          "viewArtwork": "View Artwork"
+        },
+        "topMembers": {
+          "top": "TOP",
+          "sellers": "Sellers",
+          "buyers": "Buyers"
+        },
+        "explore": {
+          "title": "Explore",
+          "sortItems": {
+            "all": "All",
+            "FanArt": "FanArt",
+            "Photography": "Photography",
+            "FineArt": "FineArt",
+            "Food": "Food",
+            "Memes": "Memes"
+          },
+          "filterItems": {
+            "MostRecent": "Most Recent",
+            "Cheapest": "Cheapest",
+            "HighestPrice": "Highest Price",
+            "Sold": "Sold"
+          }
+        },
+        "LiveAuctions": "Live Auctions"
+      }
+    }
+  },
+  "kr": {
+    "translation": {
+      "header": {
+        "logo": {
+          "part1": "Vital",
+          "part2": "Hint"
+        },
+        "explore": "Explore",
+        "liveAuctions": "Live Auctions",
+        "selectedLang": "",
+        "langOption1": "english",
+        "langOption2": "korean",
+        "notifications": "notifications",
+        "seeAll": "seeAll",
+        "search": "Search"
+      },
+      "sidebar": {
+        "home": {
+          "title": "Home",
+          "alt": "home icon"
+        },
+        "myItems": {
+          "title": "My Items",
+          "alt": "my items icon"
+        },
+        "create": {
+          "title": "Create",
+          "alt": "create icon"
+        }
+      },
+      "profile": {
+        "summary": {
+          "paragraph": "Emilie Butler is the publisher of Whitehot Magazine of Contemporar Art. Emilie paintings have been exhibited around the world in museums and galleries.",
+          "report": {
+            "title": "Report",
+            "submitAReport": "Submit a report",
+            "text": "If you believe there's been a violation of Foundation's Terms of Service or Community Guidelines, please complete this report.\nFor all cases related to potential copyright infringement, please email trust@withfoundation.com directly with a formal DMCA Takedown Request.\nEmail address",
+            "email": {
+              "title": "Email Address",
+              "placeholder": "Email",
+              "pleaseEnterValidEmail": "Please Enter Valid Email",
+              "emailIsRequired": "Email Is Required"
+            },
+            "description": {
+              "title": "Description",
+              "placeholder": "Description",
+              "descriptionIsRequired": "Description Is Required"
+            },
+            "submit": "Submit"
+          }
+        },
+        "categories": {
+          "created": "Created",
+          "onSale": "On Sale",
+          "collectibles": "Collectibles"
+        },
+        "bid": {
+          "highestBid": "Highest Bid",
+          "placeABid": "Place a Bid"
+        }
+      }
+    }
+  }
+}
