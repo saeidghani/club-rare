@@ -3,8 +3,8 @@ import { useTranslation } from 'react-i18next';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import Modal from '../../components/UI/Modal';
-import closeBox from '../../assets/icons/closeBox.svg';
+import Modal from '../../../components/UI/Modal';
+import closeBox from '../../../assets/icons/closeBox.svg';
 
 function ReportModal({ open, onCloseModal }) {
   const { t } = useTranslation();
@@ -51,7 +51,7 @@ function ReportModal({ open, onCloseModal }) {
         {/* register your input into the hook by invoking the "register" function */}
         <input
           className="fadeBgWhite border-b border-solid border-fadeBlue
-                   focus:outline-none pr-6 py-2 mt-4 w-full"
+                   pr-6 py-2 mt-4 w-full"
           placeholder={t('profile.summary.report.email.placeholder')}
           {...register('email')}
         />
@@ -62,8 +62,7 @@ function ReportModal({ open, onCloseModal }) {
         </div>
         {/* include validation with required or other standard HTML validation rules */}
         <input
-          className="fadeBgWhite border-b border-solid border-fadeBlue
-                   focus:outline-none pr-6 py-2 w-full mt-4"
+          className="fadeBgWhite border-b border-solid border-fadeBlue pr-6 py-2 w-full mt-4"
           placeholder={t('profile.summary.report.description.placeholder')}
           {...register('description')}
         />

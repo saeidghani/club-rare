@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import MainLayout from '../../layouts/MainLayout/MainLayout';
+import MainLayout from '../../../layouts/MainLayout/MainLayout';
 import ProfileSummary from './ProfileSummary';
-import BidCard from '../../components/common/BidCard';
-import { Arrow } from '../../components/common/Icons';
+import BidCard from '../../../components/common/BidCard';
+import { Arrow } from '../../../components/common/Icons';
 import { useTranslation } from 'react-i18next';
 
 function Profile() {

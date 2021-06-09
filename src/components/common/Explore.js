@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import BidCard from '../../components/common/BidCard';
-import Dropdown from '../../components/UI/Dropdown';
+import BidCard from './BidCard';
+import Dropdown from '../UI/Dropdown';
 import filter from '../../assets/icons/filter.svg';
 
 function Explore({ wrapperClass }) {

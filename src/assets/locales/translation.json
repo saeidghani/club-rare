@@ -11,8 +11,12 @@
         "selectedLang": "",
         "langOption1": "english",
         "langOption2": "korean",
-        "notifications": "notifications",
-        "seeAll": "seeAll",
+        "notifications": "Notifications",
+        "offered": "offered",
+        "seeAll": "See All",
+        "WalletBalance": "Wallet Balance",
+        "Balance": "Balance",
+        "DisconnectWallet": "Disconnect Wallet",
         "search": "Search"
       },
       "sidebar": {
@@ -92,6 +96,33 @@
           }
         },
         "LiveAuctions": "Live Auctions"
+      },
+      "connectWallet": {
+        "title": "Connect your wallet",
+        "text": "Connect with one of available wallet providers"
+      },
+      "communityUpvote": {
+        "title": {
+          "part1": "Join the community",
+          "part2": "Upvote",
+          "part3": "to access creator tools."
+        },
+        "text1": "With the community Upvote, artists are encouraged to support other artists and to set the stage for a modet of community-led curation that puts power in the hands of creator",
+        "text2": "In the new creative economy, we all rise up together",
+        "verifyProfile": "Verify profile to join"
+      },
+      "verifyProfile": {
+        "title": "Please verify your profile",
+        "text1": "Verify profile via at least one social media account tp prove the authenticitly of your profile on vital Hint",
+        "verifyViaTwitter": "Verify via twitter"
+      },
+      "verifyProfileViaTwitter": {
+        "title": "Post a public tweet",
+        "text1": "Post a public tweet that contains your wallet adsress (0xyfhhvje836e45tdbcmwiruhfnbvmvj)",
+        "postTweet": "Post tweet",
+        "text2": "Paste the URL of the tweet to verify your profile",
+        "twitterUrlErrorMsg": "twitter url is required",
+        "submit": "Submit"
       }
     }
   },

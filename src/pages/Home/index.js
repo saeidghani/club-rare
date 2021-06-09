@@ -3,8 +3,8 @@ import { useTranslation } from 'react-i18next';
 import Layout from '../../layouts/MainLayout/MainLayout';
 import Banner from './Banner';
 import TopMembers from './TopMembers';
-import LiveAuctions from './LiveAuctions';
-import Explore from './Explore';
+import LiveAuctions from '../../components/common/LiveAuctions';
+import Explore from '../../components/common/Explore';
 
 export default function Home() {
   const { t } = useTranslation();

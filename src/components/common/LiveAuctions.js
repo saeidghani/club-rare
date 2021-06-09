@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Slider from 'react-slick';
 import arrow from '../../assets/icons/arrowColorful.svg';
-import BidCard from '../../components/common/BidCard';
+import BidCard from './BidCard';
 import RouteMap from '../../routes/RouteMap';
 
 function LiveAuctions({ wrapperClass }) {

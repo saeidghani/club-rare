@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import roundSquare from '../../assets/icons/roundSquare.svg';
 import avatar from '../../assets/images/avatar-2.png';
@@ -11,13 +11,14 @@ import Menu from '../../components/common/Menu';
 import { CryptoIcon2 } from '../../components/common/Icons';
 import Dropdown from '../../components/UI/Dropdown';
 import NotificationsModal from '../../components/common/NotificationsModal';
+import RouteMap from '../../routes/RouteMap';
 
 function Header() {
   const { pathname, search } = useLocation();
   const path = `${pathname}${search}`;
   const { t, i18n } = useTranslation();
 
-  const [notificationsOpen, setNotificationsOpen] = useState(true);
+  const [notificationsOpen, setNotificationsOpen] = useState(false);
 
   const languageOptions = [
     { key: 1, title: t('header.langOption1'), onClick: () => i18n.changeLanguage('en') },
@@ -29,7 +30,7 @@ function Header() {
       key: 1,
       title: (
         <div className="text-18 border-b border-solid border-gray pb-2 w-full -mt-1">
-          Notifications
+          {t('header.notifications')}
         </div>
       ),
       onClick: () => {},
@@ -43,7 +44,7 @@ function Header() {
             <div className="flex flex-col items-start">
               <div className="text-14 font-semibold">Bigboyniftie</div>
               <div className="text-14">
-                offered <span className="font-bold">$600.00</span>
+                {t('header.offered')} <span className="font-bold">$600.00</span>
               </div>
             </div>
           </div>
@@ -54,8 +55,12 @@ function Header() {
     }));
     const seeAllOption = {
       key: mainOptions.length + 2,
-      title: <div className="text-14 text-blue font-semibold">See All</div>,
-      onClick: () => {},
+      title: (
+        <div className="text-14 text-blue font-semibold border-b border-solid border-blue">
+          {t('header.seeAll')}
+        </div>
+      ),
+      onClick: () => setNotificationsOpen(true),
     };
     return [titleOption, ...mainOptions, seeAllOption];
   }, []);
@@ -65,7 +70,7 @@ function Header() {
       key: 1,
       title: (
         <div className="text-18 text-blue border-b border-solid border-gray pb-2 w-full -mt-1">
-          Wallet Balance
+          {t('header.WalletBalance')}
         </div>
       ),
       onClick: () => {},
@@ -93,7 +98,7 @@ function Header() {
           className="text-14 text-blue font-bold border border-solid border-gray
                         py-3 px-6 rounded-12 w-full mx-10"
         >
-          Dissconnect Wallet
+          {t('header.DisconnectWallet')}
         </div>
       ),
       onClick: () => {},
@@ -112,13 +117,17 @@ function Header() {
           <div className="text-18 lg:text-24 font-Ubuntu pb-1">
             {t('header.logo.part1')} <span className="font-bold">{t('header.logo.part2')}</span>
           </div>
-          <div className="text-14 mx-2">{t('header.explore')}</div>
-          <div className="text-14">{t('header.liveAuctions')}</div>
+          <Link to={RouteMap.explore}>
+            <div className="text-14 mx-2">{t('header.explore')}</div>
+          </Link>
+          <Link to={RouteMap.liveAuctions}>
+            <div className="text-14">{t('header.liveAuctions')}</div>
+          </Link>
         </div>
         <div className="relative mx-4 w-full max-w-390">
           <input
             className="left-space-placeholder fadeBgWhite border border-solid border-white rounded-12
-                   focus:outline-none pl-12 pr-6 py-2 w-full"
+                   pl-12 pr-6 py-2 w-full"
             placeholder={t('header.search')}
           />
           <img className="absolute top-2.5 left-4" src={magnifier} alt="" />

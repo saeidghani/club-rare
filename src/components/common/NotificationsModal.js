@@ -1,12 +1,15 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import Modal from '../../components/UI/Modal';
 import avatar from '../../assets/images/avatar-2.png';
 import girl from '../../assets/images/girl.png';
 
 function NotificationsModal({ open, onCloseModal }) {
+  const { t } = useTranslation();
+
   const title = (
     <div className="text-18 text-center border-b border-solid border-gray p-5 w-full">
-      Notifications
+      {t('header.notifications')}
     </div>
   );
 
@@ -19,7 +22,7 @@ function NotificationsModal({ open, onCloseModal }) {
             <div className="flex flex-col items-start">
               <div className="text-14 font-semibold">Bigboyniftie</div>
               <div className="text-14">
-                offered <span className="font-bold">$600.00</span>
+                {t('header.offered')} <span className="font-bold">$600.00</span>
               </div>
             </div>
           </div>

@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import dotsDropdown from '../../assets/icons/dotsDropdown.svg';
-import edit from '../../assets/icons/edit.svg';
-import tickBox from '../../assets/icons/tickBox.svg';
-import avatar from '../../assets/images/avatar-2.png';
-import layers from '../../assets/icons/layers.svg';
-import switchBox from '../../assets/icons/switchBox.svg';
-import Dropdown from '../../components/UI/Dropdown';
+import dotsDropdown from '../../../assets/icons/dotsDropdown.svg';
+import edit from '../../../assets/icons/edit.svg';
+import tickBox from '../../../assets/icons/tickBox.svg';
+import avatar from '../../../assets/images/avatar-2.png';
+import layers from '../../../assets/icons/layers.svg';
+import switchBox from '../../../assets/icons/switchBox.svg';
+import Dropdown from '../../../components/UI/Dropdown';
 import ReportModal from './ReportModal';
 
 function ProfileSummary({ categories, activeCategory, onSetCategories, wrapperClassName }) {

@@ -4,6 +4,12 @@ body {
   background-color: #ededed;
 }
 
+input, button {
+  &:focus {
+    outline: none !important;
+  }
+}
+
 ::-webkit-scrollbar {
   width: 5px;
 }
@@ -34,12 +40,20 @@ body {
 .radialGradient {
   background: linear-gradient(180deg, #EB6B5B 0%, #ECBAF6 100%);
   filter: blur(70px);
-  border-radius: 50px;
+  border-radius: 50%;
   width: 100px;
   height: 100px;
   position: absolute;
   top: 0;
   left: 0;
+  &--md {
+    width: 100px;
+    height: 100px;
+  }
+  &--lg {
+    width: 300px;
+    height: 300px;
+  }
 }
 
 .linearGradient {
