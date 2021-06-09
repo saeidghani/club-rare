@@ -10,6 +10,7 @@ import Explore from '../pages/Explore';
 import Create from '../pages/Create';
 import ConnectWallet from '../pages/ConnectWallet';
 import ClaimingNFT from '../pages/ClaimingNFT';
+import ClaimingNFTSuccess from '../pages/ClaimingNFT/Success';
 import Profile from '../pages/Profile/ViewProfile';
 import EditProfile from '../pages/Profile/EditProfile';
 import CommunityUpvote from '../pages/Profile/CommunityUpvote';
@@ -26,7 +27,8 @@ const Routes = () => {
       <Route path={RouteMap.explore} component={Explore} />
       <Route path={RouteMap.create} component={Create} />
       <Route path={RouteMap.connectWallet} component={ConnectWallet} />
-      <Route path={RouteMap.claimingNFT} component={ClaimingNFT} />
+      <Route path={RouteMap.claimingNFT.success} component={ClaimingNFTSuccess} />
+      <Route path={RouteMap.claimingNFT.index} component={ClaimingNFT} />
       <Route path={RouteMap.profile.verifyProfile.viaTwitter} component={VerifyProfileViaTwitter} />
       <Route path={RouteMap.profile.verifyProfile.index} component={VerifyProfile} />
       <Route path={RouteMap.profile.communityUpvote} component={CommunityUpvote} />

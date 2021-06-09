@@ -123,6 +123,26 @@
         "text2": "Paste the URL of the tweet to verify your profile",
         "twitterUrlErrorMsg": "twitter url is required",
         "submit": "Submit"
+      },
+      "claimingNFT": {
+        "title": "You Won!",
+        "text": {
+          "part1": "Congratulations, you won the auction for this artwork .Now,",
+          "part2": "claim your NFT and add it to your collection."
+        },
+        "sunlight": "Sunlight",
+        "auctionEnded": "Auction Ended",
+        "winningBid": "Winning Bid",
+        "claimYourNFT": "Claim Your NFT:",
+        "sunlightCreated": "Sunlight Created by"
+      },
+      "claimingNFTSuccess": {
+        "title": "Your NFT is on the way!",
+        "text": {
+          "part1": "Congratulations, you claimed your NFT successfully. Its",
+          "part2": "currently being transferred to your wallet"
+        },
+        "continue": "Continue"
       }
     }
   },

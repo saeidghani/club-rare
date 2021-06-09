@@ -53,9 +53,7 @@ function ProfileSummary({ categories, activeCategory, onSetCategories, wrapperCl
             <div className="text-12 text-white flex-grow">0x4A34639...5wqdgyieyvqjva81</div>
             <img className="" src={layers} alt="layers" />
           </div>
-          <div className="border border-solid border-blue rounded-12 p-3">
-            <img className="" src={switchBox} alt="switchBox" />
-          </div>
+          <img className="" src={switchBox} alt="switchBox" />
         </div>
         <div
           className="sm:hidden flex justify-between border border-solid border-lightGray2

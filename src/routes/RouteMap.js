@@ -5,7 +5,10 @@ export default {
   explore: '/explore',
   create: '/create',
   connectWallet: '/connect-wallet',
-  claimingNFT: '/claiming-NFT',
+  claimingNFT: {
+    index: '/claiming-NFT',
+    success: '/claiming-NFT/success',
+  },
   profile: {
     index: '/profile',
     edit(userId) {

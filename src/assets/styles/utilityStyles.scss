@@ -37,6 +37,13 @@ input, button {
   font-weight: 600 !important;
 }
 
+.responsive-placeholder::placeholder {
+  font-size: 15px !important;
+  @media(max-width: 1024px) {
+   font-size: 12px !important;
+  }
+}
+
 .radialGradient {
   background: linear-gradient(180deg, #EB6B5B 0%, #ECBAF6 100%);
   filter: blur(70px);
@@ -46,6 +53,7 @@ input, button {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: -5;
   &--md {
     width: 100px;
     height: 100px;
