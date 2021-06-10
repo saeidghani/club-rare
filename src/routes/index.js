@@ -34,8 +34,8 @@ const Routes = () => {
       <Route path={RouteMap.profile.verifyProfile.viaTwitter} component={VerifyProfileViaTwitter} />
       <Route path={RouteMap.profile.verifyProfile.index} component={VerifyProfile} />
       <Route path={RouteMap.profile.communityUpvote} component={CommunityUpvote} />
+      <Route path={RouteMap.profile.edit} component={EditProfile} />
       <Route path={RouteMap.profile.index} component={Profile} />
-      <Route path={RouteMap.profile.edit('userId')} component={EditProfile} />
       <Route component={NotFound} />
     </Switch>
   );

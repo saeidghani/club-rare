@@ -16,9 +16,7 @@ export default {
   },
   profile: {
     index: '/profile',
-    edit(userId) {
-      return `/profile/:${userId}`;
-    },
+    edit: '/profile/edit',
     communityUpvote: '/profile/community-upvote',
     verifyProfile: {
       index: '/profile/verify-profile',
