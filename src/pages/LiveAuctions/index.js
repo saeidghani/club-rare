@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import MainLayout from '../layouts/MainLayout/MainLayout';
-import BidCard from '../components/common/BidCard';
+import MainLayout from '../../layouts/MainLayout/MainLayout';
+import BidCard from '../../components/common/BidCard';
 
 function LiveAuctionsPage() {
   const { t } = useTranslation();

@@ -6,6 +6,7 @@ import NotFound from '../pages/NotFound';
 import Home from '../pages/Home';
 import Notifications from '../pages/Notifications';
 import LiveAuctions from '../pages/LiveAuctions';
+import LiveAuction from '../pages/LiveAuctions/LiveAuction';
 import Explore from '../pages/Explore';
 import Create from '../pages/Create';
 import ConnectWallet from '../pages/ConnectWallet';
@@ -23,7 +24,8 @@ const Routes = () => {
       <Route exact path="/" render={() => <Redirect to={RouteMap.home} />} />
       <Route path={RouteMap.home} component={Home} />
       <Route path={RouteMap.notifications} component={Notifications} />
-      <Route path={RouteMap.liveAuctions} component={LiveAuctions} />
+      <Route path={RouteMap.liveAuctions.view('liveAuctionId')} component={LiveAuction} />
+      <Route path={RouteMap.liveAuctions.index} component={LiveAuctions} />
       <Route path={RouteMap.explore} component={Explore} />
       <Route path={RouteMap.create} component={Create} />
       <Route path={RouteMap.connectWallet} component={ConnectWallet} />

@@ -80,7 +80,16 @@ function ReportModal({ open, onCloseModal }) {
     </div>
   );
 
-  return <Modal title={title} open={open} width="" content={content} onCloseModal={onCloseModal} />;
+  return (
+    <Modal
+      title={title}
+      open={open}
+      width=""
+      contentClass="mt-2 text-blue"
+      content={content}
+      onCloseModal={onCloseModal}
+    />
+  );
 }
 
 export default ReportModal;

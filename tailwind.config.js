@@ -9,14 +9,14 @@ module.exports = {
     },
     container: {
       center: true,
-      padding: {
+      /* padding: {
         DEFAULT: '1rem',
         sm: '1rem',
         md: '1rem',
         lg: '1rem',
         xl: '1rem',
         '2xl': '6rem',
-      },
+      },*/
     },
     extend: {
       fontFamily: {
@@ -26,6 +26,7 @@ module.exports = {
         primary: '#EB6B5B',
         blue: '#1B3142',
         fadeBlue: 'rgba(27, 49, 66, 0.3)',
+        fadeBlue2: '#465866',
         red: '#EB5757',
         gray: '#818D97',
         gray2: '#ccc7c8',
@@ -84,6 +85,7 @@ module.exports = {
         25: '6.25rem',
         26: '6.5rem',
         36: '9rem',
+        42: '10.5rem',
         100: '25rem',
         120: '30rem',
         140: '35rem',
@@ -96,6 +98,7 @@ module.exports = {
         320: '320px',
         350: '350px',
         390: '390px',
+        480: '480px',
         400: '400px',
         570: '570px',
         600: '700px',

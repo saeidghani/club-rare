@@ -4,7 +4,7 @@ body {
   background-color: #ededed;
 }
 
-input, button {
+input, button, select {
   &:focus {
     outline: none !important;
   }
@@ -124,3 +124,68 @@ input, button {
   }
 }
 
+.gradient-box {
+  display: flex;
+  align-items: center;
+  //width: 50vw;
+  width: 90%;
+  max-width: 128px;
+
+  position: relative;
+  padding: 8px;
+  box-sizing: border-box;
+
+  $border: 1px;
+  color: #FFF;
+  background: #fff;
+  background-clip: padding-box; /* !importanté */
+  border: solid $border transparent; /* !importanté */
+  border-radius: 12px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    z-index: -1;
+    margin: -$border; /* !important */
+    border-radius: inherit; /* !important */
+    background: linear-gradient(to right, #EB6B5B, #ECBAF6);
+  }
+}
+
+.colorful-checkbox {
+  label > input[type="checkbox"] {
+    display: none;
+  }
+  label > input[type="checkbox"] + *::before {
+    content: "";
+    display: inline-block;
+    vertical-align: bottom;
+    width: 23px;
+    height: 23px;
+    border-radius: 10%;
+    border-style: solid;
+    border-width: 0.1rem;
+    border-color: #ECBAF6;
+    margin-right: 9px;
+    cursor: pointer;
+  }
+  label > input[type="checkbox"]:checked + *::before {
+    content: "✓";
+    color: #ECBAF6;
+    text-align: center;
+    border-color: #ECBAF6;
+    margin-right: 9px;
+    //margin-bottom: 3px;
+  }
+  label > input[type="checkbox"]:checked + * {
+    color: #1B3142;
+  }
+}
+
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+.custom-file-input::before {
+}

@@ -10,10 +10,7 @@ function ClaimingNFT() {
   const { t } = useTranslation();
   return (
     <Layout displaySidebar={false}>
-      <div
-        className="w-full mx-auto flex flex-col items-center mt-28 lg:mt-8 border-b border-solid border-black pb-6"
-        style={{ maxWidth: 1100 }}
-      >
+      <div className="w-full mx-auto flex flex-col items-center mt-28 lg:mt-8 pb-6">
         <div className="text-24 lg:text-34 text-blue font-bold">{t('claimingNFT.title')}</div>
         <div className="relative mt-2">
           <div className="text-14 lg:text-18 text-center">
@@ -23,17 +20,14 @@ function ClaimingNFT() {
           <div className="hidden lg:block radialGradient radialGradient--md left-24 -top-2"></div>
         </div>
       </div>
-      <div
-        className="w-full flex flex-col lg:flex-row space-y-12 lg:space-y-0 space-x-0 lg:space-x-12
-       justify-center items-center mx-auto mt-8"
-      >
-        <div
-          className="w-full border border-solid border-white rounded-50 p-7"
-          style={{ maxWidth: 483 }}
-        >
-          <img className="mx-auto" src={nature} alt="nature" />
-        </div>
-        <div className="w-full" style={{ maxWidth: 592 }}>
+      <div className="grid grid-cols-1 md:grid-cols-12 md:gap-x-12 gap-y-6 w-full mt-8">
+        <hr className="hidden lg:block row-start-1 col-start-2 col-span-10 mb-8" />
+        <img
+          className="md:justify-self-start md:row-start-2 md:col-start-1 md:col-span-5 lg:col-start-2 lg:col-span-4 w-full border border-solid border-white rounded-50 p-7"
+          src={nature}
+          alt="nature"
+        />
+        <div className="md:row-start-2 md:col-start-6 md:col-span-7 lg:col-start-6 lg:col-span-6 self-center w-full">
           <div className="bg-white rounded-32 lg:rounded-50 p-5 lg:p-8">
             <div className="flex justify-between items-center">
               <div className="text-24 lg:text-24 text-blue font-semibold">
@@ -52,7 +46,7 @@ function ClaimingNFT() {
                 <div className="text-16 lg:text-22 text-blue font-bold">3.00 ETH</div>
                 <CryptoIcon />
               </div>
-              <div className="text-12 lg:text-blue">$3,600</div>
+              <div className="text-12 lg:text-16 text-blue">$3,600</div>
             </div>
             <div className="flex items-center space-x-5 w-full mt-8">
               <button
@@ -79,7 +73,7 @@ function ClaimingNFT() {
               </div>
               <div className="text-12 lg:text-blue opacity-60 mt-1">May 11, 2021 at 4:30pm</div>
             </div>
-            <div className="hidden lg:block radialGradient radialGradient--lg right-0 -top-20 opacity-30"></div>
+            <div className="hidden lg:block radialGradient radialGradient--lg left-60 -top-20 opacity-30"></div>
           </div>
         </div>
       </div>

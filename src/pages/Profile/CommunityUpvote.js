@@ -9,28 +9,25 @@ function CommunityUpvote() {
   const { t } = useTranslation();
 
   return (
-    <Layout displaySidebar={false}>
-      <div
-        className="w-full flex flex-col justify-center items-center mx-auto mt-40 lg:mt-32"
-        style={{ maxWidth: 760 }}
-      >
+    <Layout displaySidebar={false} mainClassName="grid grid-cols-1 md:grid-cols-12">
+      <div className="md:col-start-4 md:col-span-6 xl:col-start-5 xl:col-span-4 w-full flex flex-col justify-center items-center mx-auto mt-40 md:mt-32">
         <div className="relative w-full">
-          <div className="text-24 lg:text-34 text-blue font-bold text-center">
+          <div className="text-24 md:text-34 text-blue font-bold text-center">
             {t('communityUpvote.title.part1')}
             <span className="textGradient ml-2">{t('communityUpvote.title.part2')}</span> <br />
             {t('communityUpvote.title.part3')}
           </div>
           <div className="hidden lg:block radialGradient radialGradient--md left-24 top-8"></div>
         </div>
-        <p className="text-14 lg:text-24 text-blue mt-8 text-center opacity-80">
+        <p className="text-14 md:text-24 text-blue mt-8 text-center opacity-80">
           {t('communityUpvote.text1')}
         </p>
-        <p className="text-16 lg:text-22 text-blue text-center mt-8.5 opacity-80">
+        <p className="text-16 md:text-22 text-blue text-center mt-8.5 opacity-80">
           {t('communityUpvote.text2')}
         </p>
         <div className="relative mt-8.5">
           <button
-            className="flex justify-center space-x-4 items-center bg-blue text-16 lg:text-22 text-white rounded-12 py-3.5 px-11 mt-4"
+            className="flex justify-center space-x-4 items-center bg-blue text-16 md:text-22 text-white rounded-12 py-3.5 px-11 mt-4"
             onClick={() => history.push(RouteMap.profile.verifyProfile.index)}
           >
             {t('communityUpvote.verifyProfile')}

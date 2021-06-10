@@ -1,7 +1,12 @@
 export default {
   home: '/home',
   notifications: '/notifications',
-  liveAuctions: '/live-auctions',
+  liveAuctions: {
+    index: '/live-auctions',
+    view(liveAuctionId) {
+      return `/live-auctions/:${liveAuctionId}`;
+    },
+  },
   explore: '/explore',
   create: '/create',
   connectWallet: '/connect-wallet',

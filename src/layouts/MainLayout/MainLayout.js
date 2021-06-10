@@ -14,8 +14,8 @@ function MainLayout({ children, mainClassName, loading, displaySidebar = true })
           </div>
         )}
         <main
-          className={`w-full px-5 lg:pr-8 lg:pl-4 -mt-12 lg:mt-0 pb-9 lg:pt-10 ${
-            mainClassName || ''
+          className={`w-full px-5 lg:pl-4 -mt-12 lg:mt-0 pb-9 lg:pt-10 ${mainClassName || ''} ${
+            displaySidebar ? 'lg:pr-8' : ''
           }`}
         >
           {loading ? <Spinner /> : children}

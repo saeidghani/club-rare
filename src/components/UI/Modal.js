@@ -8,6 +8,7 @@ export default function Modal({
   onCloseModal,
   afterCloseModal = () => {},
   width,
+  containerClass,
   contentClass,
 }) {
   const cancelButtonRef = useRef();
@@ -57,14 +58,14 @@ export default function Modal({
             >
               <div
                 className={`bg-white inline-block w-full my-8 overflow-hidden
-              text-left align-middle transition-all transform shadow-xl rounded-2xl ${
+              text-left align-middle transition-all transform shadow-xl ${
                 width ? width : 'max-w-570'
-              }`}
+              } ${containerClass || 'rounded-2xl'}`}
               >
                 <Dialog.Title as="h3" className="text-lg font-medium leading-6 text-blue">
                   {title}
                 </Dialog.Title>
-                <div className={`mt-2 text-blue ${contentClass}`}>{content}</div>
+                <div className={contentClass}>{content}</div>
               </div>
             </Transition.Child>
           </div>

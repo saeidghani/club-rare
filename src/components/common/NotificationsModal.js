@@ -38,7 +38,7 @@ function NotificationsModal({ open, onCloseModal }) {
       title={title}
       open={open}
       width="max-w-320"
-      contentClass="px-2"
+      contentClass="mt-2 text-blue px-2"
       content={content}
       onCloseModal={onCloseModal}
     />
