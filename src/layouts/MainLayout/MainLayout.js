@@ -19,7 +19,7 @@ function MainLayout({
         </div>
         <main
           className={`w-full px-5 lg:pl-4 pb-9 ${mainClassName || ''} ${
-            displaySidebar ? 'lg:pr-8' : ''
+            displaySidebar ? 'lg:pr-12' : ''
           } ${displayStickySidebar ? '-mt-12 lg:mt-0 lg:pt-10' : 'lg:mt-0 lg:pt-10'}`}
         >
           {loading ? <Spinner /> : children}

@@ -53,10 +53,8 @@ function Sidebar({ displaySidebar, displayStickySidebar }) {
         {navItems?.map((n) => (
           <div className="relative cursor-pointer" key={n.key} onClick={() => history.push(n.href)}>
             <div
-              className={`flex flex-col items-center text-center ${
-                n.relatedRoutes.includes(pathname)
-                  ? 'p-2 border border-solid border-white rounded-12'
-                  : ''
+              className={`flex flex-col items-center text-center border border-solid border-transparent p-2 ${
+                n.relatedRoutes.includes(pathname) ? 'border-white rounded-12' : ''
               }`}
             >
               <img src={n.relatedRoutes.includes(pathname) ? n.iconColorful : n.icon} alt={n.alt} />

@@ -60,16 +60,15 @@ export default function Select({
               >
                 <Listbox.Options
                   static
-                  className="absolute w-full mt-1 overflow-auto text-base text-white bg-fadeBlack
-                   rounded-b-md shadow-lg max-h-28 ring-1 ring-black ring-opacity-5
-                   border border-solid border-gray focus:outline-none sm:text-sm"
+                  className="absolute w-full mt-1 overflow-auto text-18 text-white
+                   rounded-md shadow-lg max-h-28 focus:outline-none sm:text-sm"
                 >
                   {options.map((option, optionIdx) => (
                     <Listbox.Option
                       key={optionIdx}
                       className={({ active }) =>
                         `${active ? '' : ''}
-                          select-none relative py-1 pl-4 pr-4 cursor-pointer bg-white bg-lightGray`
+                          select-none relative py-1 pl-4 pr-4 cursor-pointer bg-white bg-lightestGray`
                       }
                       value={option}
                     >
@@ -81,7 +80,7 @@ export default function Select({
                           <span
                             className={`${
                               selected ? 'font-medium' : 'font-normal'
-                            } block truncate ${type === 'primary' ? 'text-fadeBlue2' : ''}`}
+                            } block truncate ${type === 'primary' ? 'text-16 text-fadeBlue2' : ''}`}
                           >
                             {option.name}
                           </span>

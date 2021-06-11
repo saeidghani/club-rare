@@ -68,7 +68,7 @@ function Create() {
   };
 
   return (
-    <Layout mainClassName="lg:ml-2" displayStickySidebar loading={loading}>
+    <Layout mainClassName="" displayStickySidebar loading={loading}>
       <div className="text-18 md:text-24 text-blue font-semibold mb-9 md:mb-15">
         {t('create.CreateACollectible')}
       </div>

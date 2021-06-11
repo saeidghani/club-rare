@@ -400,8 +400,9 @@
         "bidModal": {
           "PlaceABid": "Place a Bid",
           "Item": "Item",
-          "comissionFee.": "$$comission fee.",
+          "comission": "$$comission fee.",
           "TermsOfService": "Terms of Service",
+          "TermsOfServiceErrMsg": "Please Accept Terms Of Service",
           "Submit": "Submit"
         }
       },

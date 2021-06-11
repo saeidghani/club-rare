@@ -118,7 +118,7 @@ function Header() {
           <Link to={RouteMap.explore}>
             <div className="text-14 mx-2">{t('header.explore')}</div>
           </Link>
-          <Link to={RouteMap.liveAuctions}>
+          <Link to={RouteMap.liveAuctions.index}>
             <div className="text-14">{t('header.liveAuctions')}</div>
           </Link>
         </div>

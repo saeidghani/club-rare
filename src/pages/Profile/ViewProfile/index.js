@@ -45,7 +45,7 @@ function Profile() {
   );
 
   return (
-    <MainLayout loading={loading} displayStickySidebar>
+    <MainLayout mainClassName="" loading={loading} displayStickySidebar>
       <div className="flex flex-col space-y-9 sm:space-y-18">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-y-6 gap-x-6 lg:gap-12">
           <ProfileSummary

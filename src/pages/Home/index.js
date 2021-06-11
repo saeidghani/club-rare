@@ -15,7 +15,7 @@ export default function Home() {
   }, []);
 
   return (
-    <Layout mainClassName="md:ml-3 mt-6.5 lg:mt-0" loading={loading}>
+    <Layout mainClassName="mt-6.5 lg:mt-0" loading={loading}>
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-6 lg:gap-y-0 lg:gap-x-4 xl:gap-x-12">
         <Banner wrapperClass="col-span-1 lg:col-span-7" />
         <TopMembers wrapperClass="col-span-5" />

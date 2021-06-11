@@ -16,8 +16,8 @@ function LiveAuctions({ wrapperClass }) {
     variableWidth: true,
     swipeToSlide: true,
     speed: 500,
-    centerMode: true,
-    className: 'center',
+    //centerMode: true,
+    //className: 'center',
   };
 
   return (
@@ -33,7 +33,7 @@ function LiveAuctions({ wrapperClass }) {
           </div>
         </Link>
       </div>
-      <div className="grid grid-cols-1 mt-8 slick-slides-gap--24 c-slick-dots c-slick-dots-bottom--55 mx-7">
+      <div className="grid grid-cols-1 mt-8 slick-slides-gap--24 c-slick-dots c-slick-dots-bottom--55 mr-7">
         <Slider {...settings} style={{ maxHeight: 401 }}>
           {[1, 2, 3, 4, 5].map((i) => (
             <BidCard key={i} headerClass="px-6 mt-6" contentClass="p-0" displayTime />

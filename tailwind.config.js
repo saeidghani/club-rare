@@ -26,6 +26,7 @@ module.exports = {
         lightGray: '#ededed',
         lightGray2: '#E8E9EC',
         lightGray3: '#DFE0E3',
+        lightestGray: '#f5f5f5',
       },
       fontSize: {
         8: '0.5rem',
