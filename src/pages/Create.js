@@ -16,6 +16,7 @@ function Create() {
 
   const [selectedFile, setSelectedFile] = useState();
   const [preview, setPreview] = useState('');
+  const [loading, setLoading] = useState(true);
 
   const salesModels = [
     { key: 'fixedPrice', title: t('create.FixedPrice') },
@@ -40,6 +41,12 @@ function Create() {
   ];
 
   useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  }, []);
+
+  useEffect(() => {
     if (!selectedFile) {
       setPreview(undefined);
       return;
@@ -61,7 +68,7 @@ function Create() {
   };
 
   return (
-    <Layout mainClassName="lg:ml-2" displayStickySidebar>
+    <Layout mainClassName="lg:ml-2" displayStickySidebar loading={loading}>
       <div className="text-18 md:text-24 text-blue font-semibold mb-9 md:mb-15">
         {t('create.CreateACollectible')}
       </div>
@@ -86,6 +93,7 @@ function Create() {
               className="custom-file-input text-transparent cursor-pointer row-start-1 col-start-1 w-full
               font-semibold rounded-12 bg-white bg-opacity-20 border border-solid border-white h-25"
               type="file"
+              accept="image/*"
               onChange={onFileUpload}
             />
             <div className="row-start-1 col-start-1 justify-self-center z-10 text-16 md:text-20 text-gray pointer-events-none">

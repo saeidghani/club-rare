@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import Layout from '../../../layouts/MainLayout/MainLayout';
 import nature from '../../../assets/images/nature.png';
@@ -7,8 +7,20 @@ import switchBox from '../../../assets/icons/switchBox.svg';
 function ClaimingNFTSuccess() {
   const { t } = useTranslation();
 
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  }, []);
+
   return (
-    <Layout displaySidebar={false} mainClassName="grid grid-cols-1 md:grid-cols-12">
+    <Layout
+      displaySidebar={false}
+      mainClassName="grid grid-cols-1 md:grid-cols-12"
+      loading={loading}
+    >
       <div className="md:col-start-4 md:col-span-6 xl:col-start-5 xl:col-span-4">
         <div className="w-full mx-auto flex flex-col items-center mt-20 lg:mt-8">
           <div className="text-24 lg:text-34 text-blue font-bold">

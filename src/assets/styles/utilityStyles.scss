@@ -82,6 +82,10 @@ input, button, select {
   box-shadow: 0 10px 100px 10px rgba(0,0,0,0.05);
 }
 
+.slick-track {
+  display: flex !important;
+}
+
 .slick-slides-gap {
   &--24 {
    .slick-list {margin: 0 -24px;}

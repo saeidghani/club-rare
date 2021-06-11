@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import MainLayout from '../layouts/MainLayout/MainLayout';
 import metamask from '../assets/icons/metamask.svg';
@@ -8,8 +8,20 @@ import walletConnect from '../assets/icons/walletConnect.svg';
 function ConnectWallet() {
   const { t } = useTranslation();
 
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  }, []);
+
   return (
-    <MainLayout displaySidebar={false} mainClassName="flex flex-col justify-center items-center">
+    <MainLayout
+      displaySidebar={false}
+      mainClassName="flex flex-col justify-center items-center"
+      loading={loading}
+    >
       <div className="text-24 text-blue font-semibold">{t('connectWallet.title')}</div>
       <div className="text-18 text-blue mt-3.5">{t('connectWallet.text')}</div>
       <button

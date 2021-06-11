@@ -20,7 +20,7 @@ function ViaTwitter() {
 
   return (
     <Layout displaySidebar={false} mainClassName="grid grid-cols-1 md:grid-cols-12">
-      <div className="md:col-start-4 md:col-span-6 xl:col-start-5 xl:col-span-4 w-full flex flex-col justify-center items-center mx-auto mt-32">
+      <div className="md:col-start-4 md:col-span-6 xl:col-start-5 xl:col-span-4 w-full flex flex-col justify-center items-center mx-auto mt-21 md:mt-32">
         <div className="relative mt-7">
           <div className="text-24 md:text-34 text-blue font-bold text-center">
             {t('verifyProfileViaTwitter.title')}

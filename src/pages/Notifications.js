@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import avatar1 from '../assets/images/avatar-1.png';
 import boy from '../assets/images/boy.png';
+import Spinner from '../components/common/Spinner';
 
 function Notifications() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  }, []);
+
+  if (loading) return <Spinner />;
   return (
     <div className="pt-15 pb-10 px-10">
       <div className="border-b border-solid border-white pb-4 mb-11 mr-5 text-center text-18">

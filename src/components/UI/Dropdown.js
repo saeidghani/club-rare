@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Menu, Transition } from '@headlessui/react';
 import { ChevronDownIcon } from '@heroicons/react/solid';
@@ -11,21 +11,23 @@ export default function Dropdown({
   menuButtonClass,
   menuItemsClass,
   menuItemClass,
+  displaySelected,
   displayChevronDown = true,
 }) {
   const history = useHistory();
+  const [selected, setSelected] = useState();
 
   return (
     <div className={`relative text-center ${width}`}>
       <Menu as="div" className=" inline-block text-left w-full">
         {({ open }) => (
           <>
-            <div className={`absolute right-0 left-0 z-50 ${menuButtonWrapperClass || 'top-0'}`}>
+            <div className={`absolute right-0 left-0 z-30 ${menuButtonWrapperClass || 'top-0'}`}>
               <Menu.Button
                 className={`inline-flex items-center w-full
                 focus:outline-none ${menuButtonClass || 'justify-center px-4 py-2'}`}
               >
-                <div>{title}</div>
+                <div>{displaySelected && selected?.title ? selected?.title : title}</div>
                 {displayChevronDown && (
                   <ChevronDownIcon className="w-6 h-6 ml-2 -mr-1" aria-hidden="true" />
                 )}
@@ -48,17 +50,18 @@ export default function Dropdown({
                 }`}
               >
                 {items.map((i) => (
-                  <div key={i.key} className="w-full">
+                  <div key={i?.key} className="w-full">
                     <Menu.Item>
                       {({ active }) => (
                         <button
                           className={`${
-                            active ? 'text-black' : 'text-gray'
+                            i?.key === selected?.key ? 'text-primary' : 'text-gray'
                           } group flex items-center w-full focus:outline-none ${
                             menuItemClass ||
                             'rounded-md px-2 py-2 text-18 text-center justify-center'
                           }`}
                           onClick={() => {
+                            setSelected(i);
                             i?.href ? history.push(i.href) : i?.onClick ? i?.onClick() : {};
                           }}
                         >
@@ -70,9 +73,6 @@ export default function Dropdown({
                 ))}
               </Menu.Items>
             </Transition>
-            {/* <div className="h-60 relative" style={{ zIndex: -5, opacity: 0.1 }}>
-              <div className="radialGradient" />
-            </div>*/}
           </>
         )}
       </Menu>

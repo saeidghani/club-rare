@@ -16,6 +16,7 @@ module.exports = {
       },
       colors: {
         primary: '#EB6B5B',
+        green: '#30930f',
         blue: '#1B3142',
         fadeBlue: 'rgba(27, 49, 66, 0.3)',
         fadeBlue2: '#465866',
@@ -76,6 +77,7 @@ module.exports = {
         24: '6rem',
         25: '6.25rem',
         26: '6.5rem',
+        30: '7.5rem',
         36: '9rem',
         42: '10.5rem',
         100: '25rem',

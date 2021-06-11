@@ -16,14 +16,20 @@ function LiveAuction() {
   const { auctionAvailable, fixedPrice, auctionEnded, auctionNotStarted, putOnSale } =
     parsedQuery || {};
 
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     if (!auctionAvailable && !fixedPrice && !auctionEnded && !auctionNotStarted && !putOnSale) {
       setQuery({ auctionAvailable: true });
     }
+
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
   }, []);
 
   return (
-    <Layout mainClassName="lg:mx-4" displayStickySidebar>
+    <Layout mainClassName="lg:mx-4" displayStickySidebar loading={loading}>
       <BidModal open={bidOpen} onCloseModal={() => setBidOpen(false)} />
       <Poster wrapperClass="block md:hidden" />
       <div className="grid grid-cols-1 md:grid-cols-12 md:gap-x-4 xl:gap-x-12 gap-y-6 w-full mt-8">

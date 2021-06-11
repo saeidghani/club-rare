@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import Layout from '../../layouts/MainLayout/MainLayout';
 import nature from '../../assets/images/nature.png';
@@ -8,8 +8,17 @@ import { CryptoIcon } from '../../components/common/Icons';
 
 function ClaimingNFT() {
   const { t } = useTranslation();
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  }, []);
+
   return (
-    <Layout displaySidebar={false}>
+    <Layout displaySidebar={false} loading={loading}>
       <div className="w-full mx-auto flex flex-col items-center mt-28 lg:mt-8 pb-6">
         <div className="text-24 lg:text-34 text-blue font-bold">{t('claimingNFT.title')}</div>
         <div className="relative mt-2">
@@ -37,7 +46,7 @@ function ClaimingNFT() {
                 <div className="text-12 lg:text-14 text-blue opacity-70">
                   {t('claimingNFT.auctionEnded')}
                 </div>
-                <div className="text-14 lg:text-24 text-blue pb-1">15 Jan,2020</div>
+                <div className="text-14 lg:text-24 text-blue md:pb-1">15 Jan,2020</div>
               </div>
             </div>
             <div className="text-12 lg:text-16 text-blue mt-8.5">{t('claimingNFT.winningBid')}</div>

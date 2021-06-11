@@ -43,12 +43,13 @@ function Menu() {
 
   return (
     <div className="flex justify-center w-56">
-      <div className="relative z-30">
+      <div className="relative z-50">
         <Dropdown
           menuButtonClass="justify-center pl-4 -mt-1"
-          menuItemsClass="right-0 w-56 mt-10 rounded-md"
+          menuItemsClass="bg-white right-0 w-56 mt-10 rounded-md"
           title={title}
           items={items}
+          displaySelected
         />
       </div>
     </div>

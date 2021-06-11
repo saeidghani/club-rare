@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import girl from '../../assets/images/girl.png';
 import { CryptoIcon } from './Icons';
 
-function BidCard({ wrapperClass, headerClass, contentClass }) {
+function BidCard({ wrapperClass, headerClass, contentClass, displayTime }) {
   const { t } = useTranslation();
 
   return (
@@ -15,7 +15,7 @@ function BidCard({ wrapperClass, headerClass, contentClass }) {
       >
         <div className={`flex justify-between ${headerClass}`}>
           <div className="text-blue">Blondie</div>
-          <div className="text-gray">06:23:57</div>
+          {displayTime && <div className="text-gray">06:23:57</div>}
         </div>
         <img
           className="border border-solid border-white rounded-12 mt-3.5"

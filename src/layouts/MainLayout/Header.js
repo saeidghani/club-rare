@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { useLocation, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import roundSquare from '../../assets/icons/roundSquare.svg';
 import avatar from '../../assets/images/avatar-2.png';
@@ -14,8 +14,6 @@ import NotificationsModal from '../../components/common/NotificationsModal';
 import RouteMap from '../../routes/RouteMap';
 
 function Header() {
-  const { pathname, search } = useLocation();
-  const path = `${pathname}${search}`;
   const { t, i18n } = useTranslation();
 
   const [notificationsOpen, setNotificationsOpen] = useState(false);

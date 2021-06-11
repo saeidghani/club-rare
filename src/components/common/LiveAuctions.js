@@ -13,17 +13,18 @@ function LiveAuctions({ wrapperClass }) {
     dots: true,
     arrows: false,
     infinite: true,
-    speed: 500,
     variableWidth: true,
-    className: 'center',
+    swipeToSlide: true,
+    speed: 500,
     centerMode: true,
+    className: 'center',
   };
 
   return (
     <div className={wrapperClass}>
       <div className="flex justify-between items-center">
         <div className="text-18 text-blue font-semibold">{t('home.LiveAuctions')}</div>
-        <Link to={RouteMap.liveAuctions}>
+        <Link to={RouteMap.liveAuctions.index}>
           <div className="flex items-center space-x-1">
             <div className="hidden md:block textGradient text-18 text-blue font-semibold">
               {t('home.LiveAuctions')}
@@ -33,9 +34,9 @@ function LiveAuctions({ wrapperClass }) {
         </Link>
       </div>
       <div className="grid grid-cols-1 mt-8 slick-slides-gap--24 c-slick-dots c-slick-dots-bottom--55 mx-7">
-        <Slider {...settings} style={{ maxHeight: 400 }}>
+        <Slider {...settings} style={{ maxHeight: 401 }}>
           {[1, 2, 3, 4, 5].map((i) => (
-            <BidCard key={i} headerClass="px-6 mt-6" contentClass="p-0" />
+            <BidCard key={i} headerClass="px-6 mt-6" contentClass="p-0" displayTime />
           ))}
         </Slider>
       </div>

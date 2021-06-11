@@ -42,7 +42,7 @@ function Explore({ wrapperClass }) {
           {sortItems1.map((i) => (
             <div
               key={i.key}
-              className={`text-14 text-center rounded-12 p-2 border border-solid border-white ${
+              className={`text-14 text-center rounded-12 p-2 border border-solid border-white cursor-pointer ${
                 activeSort === i.key ? 'text-white linearGradient' : 'text-blue'
               } ${i.key === 1 ? 'w-19' : 'w-24 lg:w-26 xl:w-32'}`}
               onClick={() => setActiveSort(i.key)}
@@ -58,9 +58,10 @@ function Explore({ wrapperClass }) {
               items={sortItems2}
               menuButtonClass="linearGradient -mt-2 px-2 py-1 rounded-10 justify-between text-white z-30
                              border border-solid border-white rounded-12"
-              menuItemsClass="bg-lightGray3 w-25 pt-4 pb-3 pl-2 rounded-b-10 top-6 border border-solid border-white"
+              menuItemsClass="bg-lightGray3 w-32 pt-4 pb-3 pl-2 rounded-b-10 top-5 border border-solid border-white"
               menuItemClass="text-12 text-white"
-              width="w-25"
+              width="w-32"
+              displaySelected
             />
           </div>
           <div className="ml-4 -mr-4 lg:mr-0 lg:ml-0">
@@ -76,14 +77,14 @@ function Explore({ wrapperClass }) {
               menuButtonWrapperClass="-top-2"
               menuButtonClass="rounded-10 justify-between text-white"
               menuItemsClass="bg-white rounded-32 w-36 mt-2 py-5 -left-26 top-8"
-              menuItemClass="text-14 text-gray font-semibold justify-center"
+              menuItemClass="text-14 text-gray font-semibold justify-center py-2"
               width="w-12"
               displayChevronDown={false}
             />
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-y-9 gap-x-8 md:gap-x-12 mt-18 md:mt-15">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-y-9 gap-x-8 md:gap-x-12 mt-15">
         {[1, 2, 3, 4, 5, 6].map((i) => (
           <div key={i}>
             <BidCard contentClass="lightShadow p-6" />
