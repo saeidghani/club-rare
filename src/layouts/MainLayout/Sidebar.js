@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocation, useHistory } from 'react-router-dom';
+import { useLocation, useHistory, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import home from '../../assets/icons/home.svg';
 import homeColorful from '../../assets/icons/homeColorful.svg';
@@ -11,6 +11,7 @@ import RouteMap from '../../routes/RouteMap';
 
 function Sidebar({ displaySidebar, displayStickySidebar }) {
   const { pathname, search } = useLocation();
+  const { liveAuctionId } = useParams();
   const history = useHistory();
   const { t } = useTranslation();
 
@@ -22,7 +23,10 @@ function Sidebar({ displaySidebar, displayStickySidebar }) {
       icon: home,
       iconColorful: homeColorful,
       href: RouteMap.home,
-      relatedRoutes: [RouteMap.home],
+      relatedRoutes: [
+        RouteMap.home,
+        `${RouteMap.liveAuctions.view(liveAuctionId).split(':')[0]}${liveAuctionId}`,
+      ],
     },
     {
       key: 2,
@@ -43,7 +47,6 @@ function Sidebar({ displaySidebar, displayStickySidebar }) {
       relatedRoutes: [RouteMap.profile.index, RouteMap.profile.edit],
     },
   ];
-
   return (
     <aside className="">
       <div className={displaySidebar ? 'hidden lg:flex lg:flex-col lg:space-y-16' : 'hidden'}>

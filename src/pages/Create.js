@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useForm } from 'react-hook-form';
 import Select from '../components/UI/Select';
@@ -13,6 +13,9 @@ function Create() {
   } = useForm();
   const [activeSaleModel, setActiveSaleModel] = useState('fixedPrice');
   const onSubmit = (data) => console.log(data);
+
+  const [selectedFile, setSelectedFile] = useState();
+  const [preview, setPreview] = useState('');
 
   const salesModels = [
     { key: 'fixedPrice', title: t('create.FixedPrice') },
@@ -35,6 +38,27 @@ function Create() {
     { name: 'Photography', value: t('create.Photography') },
     { name: 'category2', value: t('create.category2') },
   ];
+
+  useEffect(() => {
+    if (!selectedFile) {
+      setPreview(undefined);
+      return;
+    }
+
+    const objectUrl = URL.createObjectURL(selectedFile);
+    setPreview(objectUrl);
+
+    return () => URL.revokeObjectURL(objectUrl);
+  }, [selectedFile]);
+
+  const onFileUpload = (e) => {
+    if (!e.target.files || e.target.files.length === 0) {
+      setSelectedFile(undefined);
+      return;
+    }
+
+    setSelectedFile(e.target.files[0]);
+  };
 
   return (
     <Layout mainClassName="lg:ml-2" displayStickySidebar>
@@ -60,9 +84,9 @@ function Create() {
           <div className="grid grid-cols-1 justify-items-start items-center mt-6.5">
             <input
               className="custom-file-input text-transparent cursor-pointer row-start-1 col-start-1 w-full
-              font-semibold rounded-12 bg-white bg-opacity-20 border border-solid border-white"
-              style={{ height: 99 }}
+              font-semibold rounded-12 bg-white bg-opacity-20 border border-solid border-white h-25"
               type="file"
+              onChange={onFileUpload}
             />
             <div className="row-start-1 col-start-1 justify-self-center z-10 text-16 md:text-20 text-gray pointer-events-none">
               {t('create.ChooseFile')}
@@ -207,10 +231,14 @@ function Create() {
         <div className="row-start-1 md:row-start-1 xl:col-span-2 justify-self-end md:pl-6 xl:pl-40 w-full">
           <div className="text-16 md:text-18 text-blue font-semibold">Preview</div>
           <div className="grid grid-cols-1 justify-items-center items-center">
-            <input
-              className="custom-file-input text-transparent cursor-pointer row-start-1 col-start-1 w-full rounded-50 bg-white bg-opacity-20 mt-6.5 h-60 md:h-140"
-              type="file"
-            />
+            {selectedFile ? (
+              <img
+                className="row-start-1 col-start-1 w-full rounded-50 bg-white bg-opacity-20 mt-6.5 h-60 md:h-140"
+                src={preview}
+              />
+            ) : (
+              <div className="row-start-1 col-start-1 w-full rounded-50 bg-white bg-opacity-20 mt-6.5 h-60 md:h-140"></div>
+            )}
             <div className="row-start-1 col-start-1 z-10 text-14 md:text-16 xl:text-20 text-gray pointer-events-none">
               {t('create.UploadFileToPreview')}
             </div>

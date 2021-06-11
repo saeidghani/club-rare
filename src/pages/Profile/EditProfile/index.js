@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useForm } from 'react-hook-form';
 import Layout from '../../../layouts/MainLayout/MainLayout';
@@ -11,22 +11,59 @@ function EditProfile() {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const [activeSaleModel, setActiveSaleModel] = useState('fixedPrice');
   const onSubmit = (data) => console.log(data);
+
+  const avatarFileRef = useRef(null);
+
+  const [selectedFile, setSelectedFile] = useState();
+  const [preview, setPreview] = useState('');
+
+  useEffect(() => {
+    if (!selectedFile) {
+      setPreview(undefined);
+      return;
+    }
+
+    const objectUrl = URL.createObjectURL(selectedFile);
+    setPreview(objectUrl);
+
+    return () => URL.revokeObjectURL(objectUrl);
+  }, [selectedFile]);
+
+  const onFileUpload = (e) => {
+    if (!e.target.files || e.target.files.length === 0) {
+      setSelectedFile(undefined);
+      return;
+    }
+
+    setSelectedFile(e.target.files[0]);
+  };
 
   return (
     <Layout mainClassName="px-10.5 md:px-0 grid grid-cols-1 md:grid-cols-3">
       <form className="md:col-start-2" onSubmit={handleSubmit(onSubmit)}>
         <div className="mt-6.5 flex flex-col items-center">
-          <input
-            className="custom-file-input text-transparent cursor-pointer w-full
+          {preview && (
+            <img
+              className="w-full
               text-16 lg:text-18 font-semibold rounded-full bg-white bg-opacity-20 border border-solid border-white"
+              style={{ height: 124, width: 124 }}
+              src={preview}
+              alt="avatar"
+            />
+          )}
+          <input
+            className={`custom-file-input text-transparent cursor-pointer w-full text-16 lg:text-18 font-semibold rounded-full bg-white bg-opacity-20
+                        border border-solid border-white ${preview ? 'hidden' : 'block'}`}
             style={{ height: 124, width: 124 }}
+            onChange={onFileUpload}
             type="file"
+            ref={avatarFileRef}
           />
           <div
-            className="z-30 text-20 text-gray pointer-events-none mt-1"
+            className="z-30 text-20 text-gray cursor-pointer mt-4"
             style={{ color: '#377CF6' }}
+            onClick={() => avatarFileRef?.current?.click()}
           >
             {t('editProfile.editPicture')}
           </div>
