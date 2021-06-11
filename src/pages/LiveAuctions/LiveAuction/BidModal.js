@@ -11,7 +11,7 @@ function NotificationsModal({ open, onCloseModal }) {
   const title = (
     <div className="grid grid-cols-3 items-center border-gray w-full border-b border-solid border-fadeBlue">
       <div className="col-start-2 text-18 md:text-22 text-center font-semibold p-4.5">
-        Place a Bid
+        {t('productPage.bidModal.PlaceABid')}
       </div>
       <div
         className="col-start-3 justify-self-end mr-9 cursor-pointer"
@@ -24,7 +24,9 @@ function NotificationsModal({ open, onCloseModal }) {
 
   const content = (
     <div className="flex flex-col py-9.5 px-12">
-      <div className="text-16 md:text-18 text-blue font-semibold">Item</div>
+      <div className="text-16 md:text-18 text-blue font-semibold">
+        {t('productPage.bidModal.Item')}
+      </div>
       <div className="flex items-center space-x-5 mt-4">
         <div className="gradient-box">
           <img className="rounded-12 w-full" src={nature} alt="nature" />
@@ -35,14 +37,18 @@ function NotificationsModal({ open, onCloseModal }) {
             <div className="text-16 md:text-20 text-blue font-bold">3.00 ETH</div>
             <CryptoIcon />
           </div>
-          <div className="text-14 md:text-16 text-blue opacity-60">$$comission fee.</div>
+          <div className="text-14 md:text-16 text-blue opacity-60">
+            {t('productPage.bidModal.comissionFee')}
+          </div>
         </div>
       </div>
       <div className="flex items-center space-x-2 mt-8">
         <div className="colorful-checkbox">
           <label>
             <input type="checkbox" name="checkbox" value="css" />
-            <span className="text-blue font-semibold">Terms of Service</span>
+            <span className="text-blue font-semibold">
+              {t('productPage.bidModal.TermsOfService')}
+            </span>
           </label>
         </div>
       </div>
@@ -52,7 +58,7 @@ function NotificationsModal({ open, onCloseModal }) {
           style={{ boxShadow: '10px 20px 25px 7px rgba(27, 49, 66, 0.13)' }}
           onClick={() => onCloseModal()}
         >
-          Submit
+          {t('productPage.bidModal.Submit')}
         </button>
       </div>
     </div>

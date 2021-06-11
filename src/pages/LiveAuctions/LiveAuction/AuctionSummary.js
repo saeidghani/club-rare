@@ -22,7 +22,7 @@ function AuctionSummary({ wrapperClass, onSetBidOpen }) {
       <div className="bg-white rounded-32 md:rounded-50 p-5 md:p-8">
         <div className="flex justify-between items-center">
           <div className="text-18 md:text-24 text-blue font-semibold">
-            {t('claimingNFT.sunlight')}
+            {t('productPage.auctionSummary.sunlight')}
           </div>
           {(auctionAvailable || fixedPrice) && (
             <div className="flex items-end space-x-2">
@@ -31,16 +31,36 @@ function AuctionSummary({ wrapperClass, onSetBidOpen }) {
                 <div className="">35m</div>
                 <div className="">12s</div>
               </div>
-              <div className="text-12 md:text-14 text-blue opacity-70 md:pb-1">Till End</div>
+              <div className="text-12 md:text-14 text-blue opacity-70 md:pb-1">
+                {t('productPage.auctionSummary.TillEnd')}
+              </div>
             </div>
           )}
-          {auctionEnded && <div className="text-14 md:text-24 text-blue">Auction Ended</div>}
+          {auctionEnded && (
+            <div className="text-14 md:text-24 text-blue">
+              {t('productPage.auctionSummary.AuctionEnded')}
+            </div>
+          )}
         </div>
-        {auctionAvailable && <div className="text-12 md:text-16 text-blue mt-8.5">Current Bid</div>}
-        {auctionEnded && <div className="text-12 md:text-16 text-blue mt-8.5">Sold For</div>}
-        {fixedPrice && <div className="text-12 md:text-16 text-blue mt-8.5">Price</div>}
+        {auctionAvailable && (
+          <div className="text-12 md:text-16 text-blue mt-8.5">
+            {t('productPage.auctionSummary.CurrentBid')}
+          </div>
+        )}
+        {auctionEnded && (
+          <div className="text-12 md:text-16 text-blue mt-8.5">
+            {t('productPage.auctionSummary.SoldFor')}
+          </div>
+        )}
+        {fixedPrice && (
+          <div className="text-12 md:text-16 text-blue mt-8.5">
+            {t('productPage.auctionSummary.Price')}
+          </div>
+        )}
         {auctionNotStarted && (
-          <div className="text-12 md:text-16 text-blue mt-8.5">Minimum Bid</div>
+          <div className="text-12 md:text-16 text-blue mt-8.5">
+            {t('productPage.auctionSummary.MinimumBid')}
+          </div>
         )}
         <div className={auctionEnded ? 'flex justify-between items-center' : ''}>
           <div
@@ -56,12 +76,12 @@ function AuctionSummary({ wrapperClass, onSetBidOpen }) {
         </div>
         {auctionAvailable && (
           <p className="text-12 md:text-15 text-blue opacity-80 mt-3">
-            You must at least bis 1% higher than current bid.
+            {t('productPage.auctionSummary.currentBidText')}
           </p>
         )}
         {auctionNotStarted && (
           <p className="text-15 text-blue opacity-80 mt-3">
-            You must at least bis 1% higher than minimum bid.
+            {t('productPage.auctionSummary.minimumBidText')}
           </p>
         )}
         {(auctionAvailable || auctionNotStarted) && (
@@ -73,7 +93,9 @@ function AuctionSummary({ wrapperClass, onSetBidOpen }) {
               {...register('bid', { required: true })}
             />
             {errors.bid && (
-              <p className="text-red justify-self-start mt-2 pl-2">Please Enter An Amount</p>
+              <p className="text-red justify-self-start mt-2 pl-2">
+                {t('productPage.auctionSummary.PleaseEnterAnAmount')}
+              </p>
             )}
 
             <div className="flex items-center space-x-5 w-full mt-8">
@@ -82,7 +104,7 @@ function AuctionSummary({ wrapperClass, onSetBidOpen }) {
                 style={{ boxShadow: '10px 20px 25px 7px rgba(27, 49, 66, 0.13)' }}
                 type="submit"
               >
-                Place a Bid
+                {t('productPage.auctionSummary.PlaceABid')}
               </button>
               <img className="" src={switchBox} alt="switchBox" />
             </div>
@@ -95,7 +117,7 @@ function AuctionSummary({ wrapperClass, onSetBidOpen }) {
               style={{ boxShadow: '10px 20px 25px 7px rgba(27, 49, 66, 0.13)' }}
               onClick={onSetBidOpen}
             >
-              Buy Now
+              {t('productPage.auctionSummary.BuyNow')}
             </button>
             <img className="" src={switchBox} alt="switchBox" />
           </div>

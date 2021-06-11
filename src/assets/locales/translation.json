@@ -33,37 +33,6 @@
           "alt": "create icon"
         }
       },
-      "profile": {
-        "summary": {
-          "paragraph": "Emilie Butler is the publisher of Whitehot Magazine of Contemporar Art. Emilie paintings have been exhibited around the world in museums and galleries.",
-          "report": {
-            "title": "Report",
-            "submitAReport": "Submit a report",
-            "text": "If you believe there's been a violation of Foundation's Terms of Service or Community Guidelines, please complete this report.\nFor all cases related to potential copyright infringement, please email trust@withfoundation.com directly with a formal DMCA Takedown Request.\nEmail address",
-            "email": {
-              "title": "Email Address",
-              "placeholder": "Email",
-              "pleaseEnterValidEmail": "Please Enter Valid Email",
-              "emailIsRequired": "Email Is Required"
-            },
-              "description": {
-                "title": "Description",
-                "placeholder": "Description",
-                "descriptionIsRequired": "Description Is Required"
-              },
-            "submit": "Submit"
-          }
-        },
-        "categories": {
-          "created": "Created",
-          "onSale": "On Sale",
-          "collectibles": "Collectibles"
-        },
-        "bid": {
-          "highestBid": "Highest Bid",
-          "placeABid": "Place a Bid"
-        }
-      },
       "home": {
         "banner": {
           "logo": {
@@ -100,6 +69,139 @@
       "connectWallet": {
         "title": "Connect your wallet",
         "text": "Connect with one of available wallet providers"
+      },
+      "create": {
+        "CreateACollectible": "Create a collectible",
+        "UploadYourArtwork": "Upload Your Artwork",
+        "Max30mb": "(Max 30mb)",
+        "ChooseFile": "Choose File",
+        "ChooseYourSalesModel": "Choose Your Sales Model",
+        "Price": "Price",
+        "PleaseEnterPrice": "Please Enter Price",
+        "MinimumBid": "Minimum Bid",
+        "StartingDate": "Starting Date",
+        "ExpirationDate": "Expiration Date",
+        "Title": "Title",
+        "28Characters": "28Characters",
+        "PleaseEnterTitle": "Please Enter Title",
+        "Description": "Description",
+        "PleaseEnterDescription": "Please Enter Description",
+        "Category": "Category",
+        "Royalties": "Royalties",
+        "PleaseEnterRoyalties": "Please Enter Royalties",
+        "Properties": "Properties",
+        "Optional": "(Optional)",
+        "Size": "Size",
+        "PleaseEnterProperties": "Please Enter Properties",
+        "CreateItem": "Create item",
+        "Preview": "Preview",
+        "UploadFileToPreview": "Upload file to preview your brand new NFT",
+        "FixedPrice": "Fixed Price",
+        "Auction": "Auction",
+        "RightAfterListing": "Right after listing",
+        "1Day": "1 Day",
+        "Photography": "Photography",
+        "category2": "category2"
+      },
+      "productPage": {
+        "auctionSummary": {
+          "sunlight": "Sunlight",
+          "TillEnd": "Till End",
+          "AuctionEnded": "Auction Ended",
+          "CurrentBid": "Current Bid",
+          "SoldFor": "Sold For",
+          "Price": "Price",
+          "MinimumBid": "Minimum Bid",
+          "currentBidText": "You must at least bis 1% higher than current bid.",
+          "minimumBidText": "You must at least bis 1% higher than minimum bid.",
+          "PleaseEnterAnAmount": "Please Enter An Amount",
+          "PlaceABid": "Place a Bid",
+          "BuyNow": "Buy Now"
+        },
+        "history": {
+          "BidPlacedBby": "Bid Placed by",
+          "SoldFor": "Sold for"
+        },
+        "Information": {
+          "CreatedBy": "Created by",
+          "Information": "Information",
+          "Edition": "Edition",
+          "of": "of",
+          "text": "Not everything that is faced can be changed, but nothing can be changed until it is faced.” Detail of a forgotten relic, broken off from the source and lost from memory. Featuring original sound and visual design by The Weeknd & Strangeloop Studios.",
+          "ViewOnopenSea": "View On openSea"
+        },
+        "PutOnSale": {
+          "FixedPrice": "Fixed Price",
+          "Auction": "Auction",
+          "rightAfterListing": "rightAfterListing",
+          "1Day": "1Day",
+          "ChooseYourSalesModel": "Choose Your Sales Model",
+          "Price": "Price",
+          "28Characters": "28 Characters",
+          "PleaseEnterPrice": "Please Enter Price",
+          "MinimumBid": "Minimum Bid",
+          "StartingDate": "Starting Date",
+          "ExpirationDate": "Expiration Date",
+          "Title": "Title",
+          "PleaseEnterTitle": "Please Enter Title",
+          "Description": "Description",
+          "PleaseEnterDescription": "Please Enter Description",
+          "PutOnSale": "Put on Sale"
+        },
+        "bidModal": {
+          "PlaceABid": "Place a Bid",
+          "Item": "Item",
+          "comissionFee.": "$$comission fee.",
+          "TermsOfService": "Terms of Service",
+          "Submit": "Submit"
+        }
+      },
+      "profile": {
+        "summary": {
+          "paragraph": "Emilie Butler is the publisher of Whitehot Magazine of Contemporar Art. Emilie paintings have been exhibited around the world in museums and galleries.",
+          "report": {
+            "title": "Report",
+            "submitAReport": "Submit a report",
+            "text": "If you believe there's been a violation of Foundation's Terms of Service or Community Guidelines, please complete this report.\nFor all cases related to potential copyright infringement, please email trust@withfoundation.com directly with a formal DMCA Takedown Request.\nEmail address",
+            "email": {
+              "title": "Email Address",
+              "placeholder": "Email",
+              "pleaseEnterValidEmail": "Please Enter Valid Email",
+              "emailIsRequired": "Email Is Required"
+            },
+            "description": {
+              "title": "Description",
+              "placeholder": "Description",
+              "descriptionIsRequired": "Description Is Required"
+            },
+            "submit": "Submit"
+          }
+        },
+        "categories": {
+          "created": "Created",
+          "onSale": "On Sale",
+          "collectibles": "Collectibles"
+        },
+        "bid": {
+          "highestBid": "Highest Bid",
+          "placeABid": "Place a Bid"
+        }
+      },
+      "editProfile": {
+        "editPicture": "Edit picture",
+        "name": "Name",
+        "pleaseEnterName": "Please Enter Name",
+        "customURl": "Custom URl",
+        "customURlPlaceholder": "Title",
+        "pleaseEnterCustomURl": "Please Enter Custom URl",
+        "bio": "Bio",
+        "bioPlaceholder": "Description",
+        "pleaseEnterBio": "Please Enter Bio",
+        "email": "Email",
+        "emailPlaceholder": "Size",
+        "pleaseEnterEmail": "Please Enter Email",
+        "verifiedTwitter": "Verified Twitter",
+        "updateProfile": "Update Profile"
       },
       "communityUpvote": {
         "title": {

@@ -24,7 +24,7 @@ function History({ wrapperClass }) {
           <div className="">
             <div className="flex flex-col md:flex-row">
               <div className="text-10 md:text-14 lg:text-18 text-blue opacity-80 mr-2">
-                Bid Placed by
+                {t('productPage.history.BidPlacedBby')}
               </div>
               <div className="text-14 md:text-14 lg:text-18 text-blue font-semibold">
                 @Chris Yang
@@ -35,7 +35,9 @@ function History({ wrapperClass }) {
           <div className="">
             <div className="flex items-center space-x-2">
               {auctionEnded ? (
-                <div className="text-18 text-blue font-semibold">Sold for 3.00</div>
+                <div className="text-18 text-blue font-semibold">
+                  {t('productPage.history.SoldFor')} <span className="ml-2">3.00</span>
+                </div>
               ) : (
                 <div className="text-14 md:text-20 text-blue font-bold">3.00 ETH</div>
               )}

@@ -18,7 +18,7 @@ function Information() {
           <div className="w-full border border-solid border-white bg-white bg-opacity-20 rounded-50 py-2.5 md:py-3 pl-10">
             <div className="flex">
               <div className="text-14 md:text-14 xl:text-18 text-blue opacity-80 mr-2">
-                Sunlight Created by
+                <span className="mr-1">Sunlight</span> {t('productPage.Information.CreatedBy')}
               </div>
               <div className="text-14 md:text-14 xl:text-18 text-blue font-semibold">
                 @Chris Yang
@@ -29,20 +29,21 @@ function Information() {
         </div>
       </div>
       <div className="mt-11.5">
-        <div className="text-18 md:text-24 text-blue font-semibold">Information</div>
+        <div className="text-18 md:text-24 text-blue font-semibold">
+          {t('productPage.Information.Information')}
+        </div>
         <div className="bg-white rounded-50 p-8 mt-7">
           <div className="text-16 md:text-22 text-blue font-semibold">Sunlight</div>
           <div className="text-12 md:text-16 text-blue font-bold opacity-50 mt-2.5">
-            Edition 1 of 1
+            <span className="mr-1">{t('productPage.Information.Edition')}</span> 1
+            <span className="mx-1">{t('productPage.Information.of')}</span> 1
           </div>
           <p className="text-14 md:text-18 text-blue opacity-80 leading-6 text-justify mt-3">
-            Not everything that is faced can be changed, but nothing can be changed until it is
-            faced.” Detail of a forgotten relic, broken off from the source and lost from memory.
-            Featuring original sound and visual design by The Weeknd & Strangeloop Studios.
+            {t('productPage.Information.text')}
           </p>
           <button className="flex items-center space-x-2 border border-solid border-blue rounded-12 p-3 mt-4">
             <img src={openSeaLogo} alt="" />
-            <div className="">View On openSea</div>
+            <div className="">{t('productPage.Information.ViewOnopenSea')}</div>
           </button>
         </div>
       </div>
