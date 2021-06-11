@@ -9,7 +9,7 @@ import create from '../../assets/icons/create.svg';
 import createColorful from '../../assets/icons/createColorful.svg';
 import RouteMap from '../../routes/RouteMap';
 
-function Sidebar() {
+function Sidebar({ displaySidebar, displayStickySidebar }) {
   const { pathname, search } = useLocation();
   const history = useHistory();
   const { t } = useTranslation();
@@ -22,6 +22,7 @@ function Sidebar() {
       icon: home,
       iconColorful: homeColorful,
       href: RouteMap.home,
+      relatedRoutes: [RouteMap.home],
     },
     {
       key: 2,
@@ -30,6 +31,7 @@ function Sidebar() {
       icon: create,
       iconColorful: createColorful,
       href: RouteMap.create,
+      relatedRoutes: [RouteMap.create],
     },
     {
       key: 3,
@@ -38,39 +40,49 @@ function Sidebar() {
       icon: user,
       iconColorful: userColorful,
       href: RouteMap.profile.index,
+      relatedRoutes: [RouteMap.profile.index, RouteMap.profile.edit],
     },
   ];
 
   return (
     <aside className="">
-      <div className="hidden lg:flex lg:flex-col lg:space-y-16">
+      <div className={displaySidebar ? 'hidden lg:flex lg:flex-col lg:space-y-16' : 'hidden'}>
         {navItems?.map((n) => (
           <div className="relative cursor-pointer" key={n.key} onClick={() => history.push(n.href)}>
             <div
               className={`flex flex-col items-center text-center ${
-                n.href === pathname ? 'p-2 border border-solid border-white rounded-12' : ''
+                n.relatedRoutes.includes(pathname)
+                  ? 'p-2 border border-solid border-white rounded-12'
+                  : ''
               }`}
             >
-              <img src={n.href === pathname ? n.iconColorful : n.icon} alt={n.alt} />
+              <img src={n.relatedRoutes.includes(pathname) ? n.iconColorful : n.icon} alt={n.alt} />
               <div
                 className={`text-18 font-semibold mt-4 ${
-                  n.href === pathname ? 'text-white' : 'text-gray'
+                  n.relatedRoutes.includes(pathname) ? 'text-white' : 'text-gray'
                 }`}
               >
                 {n.title}
               </div>
             </div>
-            <div className={n.href === pathname ? 'radialGradient' : ''} />
+            <div className={n.relatedRoutes.includes(pathname) ? 'radialGradient' : ''} />
           </div>
         ))}
       </div>
       <div
-        className="lg:hidden flex items-center justify-between p-5
-                      border border-solid border-white rounded-t-40 bg-gray2"
+        className={
+          displayStickySidebar
+            ? 'flex lg:hidden items-center justify-between p-5 border border-solid border-white rounded-t-40 bg-gray2'
+            : 'hidden'
+        }
       >
         {navItems.map((n) => (
           <div className="" key={n.key} onClick={() => history.push(n.href)}>
-            <img className="" src={n.href === pathname ? n.iconColorful : n.icon} alt={n.alt} />
+            <img
+              className=""
+              src={n.relatedRoutes.includes(pathname) ? n.iconColorful : n.icon}
+              alt={n.alt}
+            />
           </div>
         ))}
       </div>

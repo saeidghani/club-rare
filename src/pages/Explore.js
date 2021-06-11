@@ -4,7 +4,7 @@ import Explore from '../components/common/Explore';
 
 function ExplorePage() {
   return (
-    <Layout>
+    <Layout displayStickySidebar>
       <Explore />
     </Layout>
   );

@@ -32,13 +32,13 @@ function PutOnSale() {
   ];
 
   return (
-    <div className="w-full border border-solid border-white bg-white bg-opacity-20 rounded-50 py-2 lg:py-9 px-12">
-      <div className="mb-4">Choose Your Sales Model</div>
+    <div className="w-full border border-solid border-white bg-white bg-opacity-20 rounded-50 py-2 md:py-9 px-4 md:px-12">
+      <div className="mt-9 md:mt-0 mb-4">Choose Your Sales Model</div>
       <div className="flex flex-col space-y-6">
         {salesModels.map((m) => (
           <button
             key={m.key}
-            className={`w-full text-16 lg:text-18 font-semibold rounded-12 py-4 lg:py-3.5 border border-solid border-white ${
+            className={`w-full text-16 md:text-18 font-semibold rounded-12 py-4 md:py-3.5 border border-solid border-white ${
               m.key === activeSaleModel
                 ? 'text-white linearGradient'
                 : 'text-blue bg-white bg-opacity-20'
@@ -55,7 +55,7 @@ function PutOnSale() {
             <div className="text-18 text-blue mt-5">Price</div>
             <input
               className="responsive-placeholder bg-transparent border-b border-solid border-white
-                   px-5 py-3.5 w-full"
+                   py-3.5 w-full"
               placeholder="0.00$"
               {...register('price', { required: true })}
             />
@@ -73,11 +73,11 @@ function PutOnSale() {
             <div className="flex justify-between w-full">
               <div className="">
                 <div className="text-18 text-blue mt-5 mb-4">Starting Date</div>
-                <Select options={startingDateOptions} width="w-42" />
+                <Select options={startingDateOptions} width="w-32 md:w-42" />
               </div>
               <div className="">
                 <div className="text-18 text-blue mt-5 mb-4">Expiration Date</div>
-                <Select options={expirationDateOptions} width="w-42" />
+                <Select options={expirationDateOptions} width="w-32 md:w-42" />
               </div>
             </div>
           </div>
@@ -85,7 +85,7 @@ function PutOnSale() {
         <div className="text-18 text-blue mt-5">Title</div>
         <input
           className="responsive-placeholder bg-transparent border-b border-solid border-white
-                   px-5 py-3.5 w-full"
+                   py-3.5 w-full"
           placeholder="28 Characters"
           {...register('title', { required: true })}
         />
@@ -96,7 +96,7 @@ function PutOnSale() {
         <div className="text-18 text-blue mt-5">Description</div>
         <input
           className="responsive-placeholder bg-transparent border-b border-solid border-white
-                   px-5 py-3.5 w-full"
+                   py-3.5 w-full"
           placeholder="Description"
           {...register('description', { required: true })}
         />
@@ -105,7 +105,7 @@ function PutOnSale() {
         )}
 
         <button
-          className="w-full text-16 lg:text-20 text-white font-semibold bg-blue rounded-12 rounded-b-30 py-4 lg:py-3.5 mt-10"
+          className="w-full text-16 md:text-20 text-white font-semibold bg-blue rounded-12 rounded-b-30 py-4 md:py-3.5 mt-10"
           style={{ boxShadow: '10px 20px 25px 7px rgba(27, 49, 66, 0.13)' }}
           type="submit"
         >

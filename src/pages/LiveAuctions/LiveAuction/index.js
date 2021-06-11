@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import Layout from '../../../layouts/MainLayout/MainLayout';
 import { useQuery } from '../../../hooks/useQuery';
@@ -12,18 +12,26 @@ import PutOnSale from './PutOnSale';
 function LiveAuction() {
   const { t } = useTranslation();
   const [parsedQuery, query, setQuery] = useQuery();
-  const { putOnSale } = parsedQuery || {};
   const [bidOpen, setBidOpen] = useState(false);
+  const { auctionAvailable, fixedPrice, auctionEnded, auctionNotStarted, putOnSale } =
+    parsedQuery || {};
+
+  useEffect(() => {
+    if (!auctionAvailable && !fixedPrice && !auctionEnded && !auctionNotStarted && !putOnSale) {
+      setQuery({ auctionAvailable: true });
+    }
+  }, []);
 
   return (
-    <Layout mainClassName="mx-4">
+    <Layout mainClassName="lg:mx-4" displayStickySidebar>
       <BidModal open={bidOpen} onCloseModal={() => setBidOpen(false)} />
-      <div className="grid grid-cols-1 md:grid-cols-12 md:gap-x-12 gap-y-6 w-full mt-8">
-        <div className="md:col-start-1 md:col-span-5 lg:col-start-1 lg:col-span-5">
-          <Poster />
+      <Poster wrapperClass="block md:hidden" />
+      <div className="grid grid-cols-1 md:grid-cols-12 md:gap-x-4 xl:gap-x-12 gap-y-6 w-full mt-8">
+        <div className="row-start-2 md:row-start-1 md:col-start-1 md:col-span-5 lg:col-start-1 lg:col-span-5">
+          <Poster wrapperClass="hidden md:block" />
           <Information />
         </div>
-        <div className="md:col-start-6 md:col-span-7 lg:col-start-6 lg:col-span-7 w-full">
+        <div className="row-start-1 md:row-start-1 md:col-start-6 md:col-span-7 lg:col-start-6 lg:col-span-7 w-full">
           {putOnSale ? (
             <PutOnSale />
           ) : (

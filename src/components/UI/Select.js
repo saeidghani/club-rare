@@ -36,7 +36,9 @@ export default function Select({
                   <div>
                     {label && <div className={labelClassName}>{label}</div>}
                     <span
-                      className={`block truncate ${type === 'primary' ? 'text-fadeBlue2' : ''}`}
+                      className={`block truncate ${
+                        type === 'primary' ? 'text-fadeBlue2 text-12 md:text-16' : ''
+                      }`}
                     >
                       {selected?.name}
                     </span>

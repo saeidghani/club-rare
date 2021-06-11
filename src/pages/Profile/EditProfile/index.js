@@ -16,8 +16,8 @@ function EditProfile() {
   const onSubmit = (data) => console.log(data);
 
   return (
-    <Layout mainClassName="ml-2 grid grid-cols-3">
-      <form className="col-start-2" onSubmit={handleSubmit(onSubmit)}>
+    <Layout mainClassName="px-10.5 md:px-0 grid grid-cols-1 md:grid-cols-3">
+      <form className="md:col-start-2" onSubmit={handleSubmit(onSubmit)}>
         <div className="mt-6.5 flex flex-col items-center">
           <input
             className="custom-file-input text-transparent cursor-pointer w-full
