@@ -30,7 +30,9 @@ function History({ wrapperClass }) {
                 @Chris Yang
               </div>
             </div>
-            <div className="text-12 md:text-blue opacity-60 md:mt-1.5">May 11, 2021 at 4:30pm</div>
+            <div className="text-12 lg:text-16 md:text-blue opacity-60 md:mt-1.5">
+              May 11, 2021 at 4:30pm
+            </div>
           </div>
           <div className="">
             <div className="flex items-center space-x-2">
@@ -41,9 +43,9 @@ function History({ wrapperClass }) {
               ) : (
                 <div className="text-14 md:text-20 text-blue font-bold">3.00 ETH</div>
               )}
-              <CryptoIcon />
+              <CryptoIcon size="29" />
             </div>
-            <div className="text-12 md:text-18 text-blue opacity-60">$232.10</div>
+            <div className="text-12 md:text-16 text-blue opacity-60">$232.10</div>
           </div>
         </div>
       </div>

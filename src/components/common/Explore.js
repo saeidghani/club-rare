@@ -78,6 +78,7 @@ function Explore({ wrapperClass }) {
               menuButtonClass="rounded-10 justify-between text-white"
               menuItemsClass="bg-white rounded-32 w-36 mt-2 py-5 -left-26 top-8"
               menuItemClass="text-14 text-gray font-semibold justify-center py-2"
+              selectedItemClass="text-blue"
               width="w-12"
               displayChevronDown={false}
             />

@@ -52,9 +52,11 @@ function PutOnSale() {
       <form className="mt-3.5 w-full flex flex-col" onSubmit={handleSubmit(onSubmit)}>
         {activeSaleModel === 'fixedPrice' && (
           <>
-            <div className="text-18 text-blue mt-5">{t('productPage.PutOnSale.Price')}</div>
+            <div className="text-18 text-blue font-semibold mt-5">
+              {t('productPage.PutOnSale.Price')}
+            </div>
             <input
-              className="responsive-placeholder bg-transparent border-b border-solid border-white
+              className="responsive-placeholder bg-transparent border-b-2 border-solid border-white
                    py-3.5 w-full"
               placeholder="0.00$"
               {...register('price', { required: true })}
@@ -69,20 +71,34 @@ function PutOnSale() {
         {activeSaleModel === 'auction' && (
           <div className="flex flex-col space-y-5 w-full">
             <div className="">
-              <div className="text-18 text-blue mt-5 mb-4">
+              <div className="text-18 text-blue font-semibold mt-5 mb-4">
                 {t('productPage.PutOnSale.MinimumBid')}
               </div>
-              <Select {...register('minimumBid')} options={minimumBidOptions} width="w-full" />
+              <div className="flex items-center justify-between">
+                <div className="w-full">
+                  <input
+                    className="responsive-placeholder bg-transparent border-b-2 border-solid border-white w-full"
+                    placeholder="Enter minimum bid"
+                    {...register('minimumBidText', { required: true })}
+                  />
+                  {errors.minimumBidText && (
+                    <p className="text-red justify-self-start mt-2 pl-2">
+                      {t('productPage.PutOnSale.PleaseEnterPrice')}Please Enter Price
+                    </p>
+                  )}
+                </div>
+                <Select {...register('minimumBid')} options={minimumBidOptions} width="w-28" />
+              </div>
             </div>
             <div className="flex justify-between w-full">
               <div className="">
-                <div className="text-18 text-blue mt-5 mb-4">
+                <div className="text-18 text-blue font-semibold mt-5 mb-4">
                   {t('productPage.PutOnSale.StartingDate')}
                 </div>
                 <Select options={startingDateOptions} width="w-32 md:w-42" />
               </div>
               <div className="">
-                <div className="text-18 text-blue mt-5 mb-4">
+                <div className="text-18 text-blue font-semibold mt-5 mb-4">
                   {t('productPage.PutOnSale.ExpirationDate')}
                 </div>
                 <Select options={expirationDateOptions} width="w-32 md:w-42" />
@@ -90,9 +106,11 @@ function PutOnSale() {
             </div>
           </div>
         )}
-        <div className="text-18 text-blue mt-5">{t('productPage.PutOnSale.Title')}</div>
+        <div className="text-18 text-blue font-semibold mt-5">
+          {t('productPage.PutOnSale.Title')}
+        </div>
         <input
-          className="responsive-placeholder bg-transparent border-b border-solid border-white
+          className="responsive-placeholder bg-transparent border-b-2 border-solid border-white
                    py-3.5 w-full"
           placeholder={t('productPage.PutOnSale.28Characters')}
           {...register('title', { required: true })}
@@ -103,9 +121,11 @@ function PutOnSale() {
           </p>
         )}
 
-        <div className="text-18 text-blue mt-5">{t('productPage.PutOnSale.Description')}</div>
+        <div className="text-18 text-blue font-semibold mt-5">
+          {t('productPage.PutOnSale.Description')}
+        </div>
         <input
-          className="responsive-placeholder bg-transparent border-b border-solid border-white
+          className="responsive-placeholder bg-transparent border-b-2 border-solid border-white
                    py-3.5 w-full"
           placeholder={t('productPage.PutOnSale.Description')}
           {...register('description', { required: true })}

@@ -1,7 +1,13 @@
 import React from 'react';
 
-export const CryptoIcon = ({ fill }) => (
-  <svg width="11" height="17" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+export const CryptoIcon = ({ fill, size }) => (
+  <svg
+    width={size || '11'}
+    height={size || '17'}
+    viewBox="0 0 11 17"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <g clipPath="url(#clip0)">
       <path
         opacity="0.6"

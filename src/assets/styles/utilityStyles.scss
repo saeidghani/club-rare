@@ -44,6 +44,10 @@ input, button, select {
   }
 }
 
+.lgPlaceholder::placeholder {
+  font-size: 22px !important;
+}
+
 .radialGradient {
   background: linear-gradient(180deg, #EB6B5B 0%, #ECBAF6 100%);
   filter: blur(70px);

@@ -75,14 +75,18 @@ function Header() {
       ),
       onClick: () => {},
     };
-    const mainOptions = [2, 3].map((i) => ({
-      key: i,
+    const mainOptionsItems = [
+      { key: 2, title: 'Balance' },
+      { key: 3, title: 'Bidding Balance' },
+    ];
+    const mainOptions = mainOptionsItems.map((i) => ({
+      key: i.key,
       title: (
         <div className="flex justify-between items-end w-full px-4">
           <div className="flex items-center space-x-3">
-            <CryptoIcon2 fill={i === 2 ? '#377CF6' : '#818D97'} />
+            <CryptoIcon2 fill={i.key === 2 ? '#377CF6' : '#818D97'} />
             <div className="flex flex-col items-start">
-              <div className="text-14 text-gray font-semibold">Balance</div>
+              <div className="text-14 text-gray font-semibold">{i.title}</div>
               <div className="text-16 text-blue font-semibold">0 ETH</div>
             </div>
           </div>
@@ -91,19 +95,19 @@ function Header() {
       ),
       onClick: () => {},
     }));
-    const seeAllOption = {
+    const lastOption = {
       key: mainOptions.length + 2,
       title: (
         <div
           className="text-14 text-blue font-bold border border-solid border-gray
-                        py-3 px-6 rounded-12 w-full mx-10"
+                        py-3 px-6 rounded-12 w-full mx-6.5"
         >
           {t('header.DisconnectWallet')}
         </div>
       ),
       onClick: () => {},
     };
-    return [titleOption, ...mainOptions, seeAllOption];
+    return [titleOption, ...mainOptions, lastOption];
   }, []);
 
   const SearchInput = () => (
@@ -127,7 +131,7 @@ function Header() {
         <SearchInput />
       </MenuDrawer>
       <div className="hidden lg:flex justify-between items-center pt-10 px-4 lg:px-8">
-        <div className="flex items-center justify-between w-full max-w-350">
+        <div className="text-blue flex items-center justify-between w-full max-w-350">
           <div className="text-18 lg:text-24 font-Ubuntu pb-1">
             {t('header.logo.part1')} <span className="font-bold">{t('header.logo.part2')}</span>
           </div>
@@ -153,8 +157,9 @@ function Header() {
             displayChevronDown={false}
             width="w-18"
             menuButtonClass="justify-center px-4 -mt-1"
-            menuItemsClass="bg-white absolute focus:outline-none top-12 right-4 w-22 rounded-10 shadow-lg"
-            menuItemClass="group flex justify-center rounded-40 items-center w-full px-2 py-1.5 text-18 text-center text-blue focus:outline-none"
+            menuItemsClass="bg-white absolute focus:outline-none top-12 right-4 w-36 rounded-32 shadow-lg pb-4"
+            menuItemClass="group flex justify-center rounded-40 items-center w-full px-2 pt-4 text-20 font-semibold text-center text-gray focus:outline-none"
+            selectedItemClass="text-blue"
           />
           <div className="z-30">
             <Dropdown
@@ -170,7 +175,7 @@ function Header() {
               displayChevronDown={false}
               width="w-18"
               menuButtonClass="justify-center px-4 -mt-1"
-              menuItemsClass="bg-white absolute focus:outline-none top-12 right-4 w-72 rounded-10 shadow-lg
+              menuItemsClass="bg-white absolute focus:outline-none top-12 -left-26 w-72 rounded-10 shadow-lg
               flex flex-col space-y-4 pt-4 pb-2"
               menuItemClass="group flex justify-center rounded-40 items-center py-1.5 text-18 text-center text-blue focus:outline-none"
             />
@@ -184,7 +189,7 @@ function Header() {
                 displayChevronDown={false}
                 width="w-18"
                 menuButtonClass="justify-center px-4 -mt-1"
-                menuItemsClass="bg-white absolute focus:outline-none top-12 right-4 w-72 rounded-10 shadow-lg
+                menuItemsClass="bg-white absolute focus:outline-none top-12 right-4 w-72 rounded-32 shadow-lg
               flex flex-col space-y-4 pt-4 pb-2"
                 menuItemClass="group flex justify-center rounded-40 items-center py-1.5 text-18 text-center text-blue focus:outline-none"
               />

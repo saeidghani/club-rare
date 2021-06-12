@@ -29,7 +29,7 @@ function TopMembers({ wrapperClass }) {
         style={{ height: 282 }}
       >
         <div className="flex items-center">
-          <div className="text-20 font-semibold mr-3">{t('home.topMembers.top')}</div>
+          <div className="text-20 lg:text-24 font-semibold mr-3">{t('home.topMembers.top')}</div>
           <div className="flex border border-solid border-white rounded-12 h-9">
             {memberTypes.map((i) => (
               <div

@@ -30,21 +30,21 @@ function Sidebar({ displaySidebar, displayStickySidebar }) {
     },
     {
       key: 2,
-      title: t('sidebar.create.title'),
-      alt: t('sidebar.create.alt'),
-      icon: create,
-      iconColorful: createColorful,
-      href: RouteMap.create,
-      relatedRoutes: [RouteMap.create],
-    },
-    {
-      key: 3,
       title: t('sidebar.myItems.title'),
       alt: t('sidebar.myItems.alt'),
       icon: user,
       iconColorful: userColorful,
       href: RouteMap.profile.index,
       relatedRoutes: [RouteMap.profile.index, RouteMap.profile.edit],
+    },
+    {
+      key: 3,
+      title: t('sidebar.create.title'),
+      alt: t('sidebar.create.alt'),
+      icon: create,
+      iconColorful: createColorful,
+      href: RouteMap.create,
+      relatedRoutes: [RouteMap.create],
     },
   ];
   return (

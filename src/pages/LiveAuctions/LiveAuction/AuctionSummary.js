@@ -66,9 +66,9 @@ function AuctionSummary({ wrapperClass, onSetBidOpen }) {
           <div
             className={`flex mt-1 ${auctionEnded ? 'flex-col' : 'justify-between items-center'}`}
           >
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-1.5">
               <div className="text-16 md:text-22 text-blue font-bold">3.00 ETH</div>
-              <CryptoIcon />
+              <CryptoIcon size="19" />
             </div>
             <div className="text-12 md:text-16 text-blue">$3,600</div>
           </div>
@@ -87,16 +87,16 @@ function AuctionSummary({ wrapperClass, onSetBidOpen }) {
         {(auctionAvailable || auctionNotStarted) && (
           <form className="mt-3.5 w-full flex flex-col" onSubmit={handleSubmit(onSubmit)}>
             <div className="relative">
-              <div className="absolute top-4.5 left-4">
+              <div className="absolute top-5.5 left-4">
                 <CryptoIcon fill="#8E8E8E" />
               </div>
               <input
-                className="responsive-placeholder bg-transparent border border-solid border-blue rounded-12
-                   pl-9 pr-5 py-3.5 w-full"
+                className="lgPlaceholder bg-transparent border border-solid border-blue rounded-12
+                   pl-9 pr-5 w-full h-15 pt-2"
                 placeholder="0.00"
                 {...register('bid', { required: true })}
               />
-              <div className="absolute top-4.5 right-4 text-gray3">0.00$</div>
+              <div className="absolute top-4 right-4 text-gray3 text-22">0.00$</div>
             </div>
             {errors.bid && (
               <p className="text-red justify-self-start mt-2 pl-2">

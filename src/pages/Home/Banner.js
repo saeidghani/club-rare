@@ -18,7 +18,10 @@ function Banner({ wrapperClass }) {
             </div>
             <div className="flex flex-col md:flex-row-reverse md:self-start md:justify-between items-center w-full md:pr-4">
               <img className="mt-3" src={purse} alt="purse" />
-              <p className="text-14 md:text-20 xl:text-26 text-white text-center md:text-left font-semibold uppercase mt-3 px-2 lg:pr-2 xl:pr-8 md:pl-0">
+              <p
+                className="text-14 md:text-20 xl:text-26 text-white text-center md:text-left 
+                            font-semibold uppercase mt-3 px-2 lg:pr-2 xl:pr-0 md:pl-0"
+              >
                 {t('home.banner.text')}
               </p>
             </div>

@@ -1,5 +1,6 @@
 import React, { Fragment, useState } from 'react';
 import { Listbox, Transition } from '@headlessui/react';
+import roundArrow from '../../assets/icons/roundArrow.svg';
 import { ChevronDownIcon } from '@heroicons/react/solid';
 
 export default function Select({
@@ -45,8 +46,10 @@ export default function Select({
                   </div>
                 </div>
                 <span className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
-                  <ChevronDownIcon
-                    className={`w-6 mr-2 ${type === 'primary' ? 'text-fadeBlue2' : ''}`}
+                  <img
+                    className={`mr-2 ${type === 'primary' ? 'text-fadeBlue2' : ''}`}
+                    src={roundArrow}
+                    alt="Arrow"
                     aria-hidden="true"
                   />
                 </span>

@@ -43,7 +43,7 @@ function Information() {
           </p>
           <button className="flex items-center space-x-2 border border-solid border-blue rounded-12 p-3 mt-4">
             <img src={openSeaLogo} alt="" />
-            <div className="">{t('productPage.Information.ViewOnopenSea')}</div>
+            <div className="text-blue">{t('productPage.Information.ViewOnopenSea')}</div>
           </button>
         </div>
       </div>

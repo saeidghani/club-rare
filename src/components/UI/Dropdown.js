@@ -11,6 +11,8 @@ export default function Dropdown({
   menuButtonClass,
   menuItemsClass,
   menuItemClass,
+  selectedItemClass,
+  unselectedItemClass,
   displaySelected,
   displayChevronDown = true,
 }) {
@@ -55,7 +57,9 @@ export default function Dropdown({
                       {({ active }) => (
                         <button
                           className={`${
-                            i?.key === selected?.key ? 'text-primary' : 'text-gray'
+                            i?.key === selected?.key
+                              ? selectedItemClass || 'text-primary'
+                              : unselectedItemClass || 'text-gray'
                           } group flex items-center w-full focus:outline-none ${
                             menuItemClass ||
                             'rounded-md px-2 py-2 text-18 text-center justify-center'

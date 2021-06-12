@@ -36,7 +36,7 @@ function LiveAuctions({ wrapperClass }) {
   return (
     <div className={wrapperClass}>
       <div className="flex justify-between items-center">
-        <div className="text-18 text-blue font-semibold">{t('home.LiveAuctions')}</div>
+        <div className="text-18 lg:text-24 text-blue font-semibold">{t('home.LiveAuctions')}</div>
         <Link to={RouteMap.liveAuctions.index}>
           <div className="flex items-center space-x-1">
             <div className="hidden md:block textGradient text-18 text-blue font-semibold">
