@@ -84,7 +84,7 @@ function Explore({ wrapperClass }) {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-y-9 gap-x-8 md:gap-x-12 mt-15">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-y-9 gap-x-8 md:gap-x-12 mt-15">
         {[1, 2, 3, 4, 5, 6].map((i) => (
           <div key={i}>
             <BidCard contentClass="lightShadow p-6" />
