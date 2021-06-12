@@ -4,7 +4,7 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import RouteMap from './RouteMap';
 import NotFound from '../pages/NotFound';
 import Home from '../pages/Home';
-import Notifications from '../pages/Notifications';
+import Notifications from '../components/common/Notifications';
 import LiveAuctions from '../pages/LiveAuctions';
 import LiveAuction from '../pages/LiveAuctions/LiveAuction';
 import Explore from '../pages/Explore';

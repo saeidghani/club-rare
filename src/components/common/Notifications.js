@@ -1,24 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import avatar1 from '../assets/images/avatar-1.png';
-import boy from '../assets/images/boy.png';
-import Spinner from '../components/common/Spinner';
+import React from 'react';
+import avatar1 from '../../assets/images/avatar-1.png';
+import boy from '../../assets/images/boy.png';
 
 function Notifications() {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 1000);
-  }, []);
-
-  if (loading) return <Spinner />;
   return (
-    <div className="pt-15 pb-10 px-10">
+    <div className="pt-15 pb-8 px-10">
       <div className="border-b border-solid border-white pb-4 mb-11 mr-5 text-center text-18">
         Notifications
       </div>
-      <div className="flex flex-col space-y-4 h-120 overflow-x-auto pr-5">
+      <div className="flex flex-col space-y-4 overflow-x-auto pr-5" style={{ height: 460 }}>
         {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].map((i) => (
           <div key={i} className="flex items-center justify-between">
             <div className="flex items-center space-x-4">

@@ -8,6 +8,8 @@ import Routes from './routes/index';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import 'react-toastify/dist/ReactToastify.css';
+import 'rc-drawer/assets/index.css';
+import './assets/styles/customStyles.scss';
 import './assets/styles/utilityStyles.scss';
 import './assets/styles/tailwind.css';
 import './i18n';

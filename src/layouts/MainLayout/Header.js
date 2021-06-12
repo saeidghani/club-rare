@@ -12,11 +12,13 @@ import { CryptoIcon2 } from '../../components/common/Icons';
 import Dropdown from '../../components/UI/Dropdown';
 import NotificationsModal from '../../components/common/NotificationsModal';
 import RouteMap from '../../routes/RouteMap';
+import MenuDrawer from '../../components/common/MenuDrawer';
 
 function Header() {
   const { t, i18n } = useTranslation();
 
   const [notificationsOpen, setNotificationsOpen] = useState(false);
+  const [open, setOpen] = useState(false);
 
   const languageOptions = [
     { key: 1, title: t('header.langOption1'), onClick: () => i18n.changeLanguage('en') },
@@ -104,12 +106,26 @@ function Header() {
     return [titleOption, ...mainOptions, seeAllOption];
   }, []);
 
+  const SearchInput = () => (
+    <div className="relative mx-4 w-full max-w-390">
+      <input
+        className="left-space-placeholder fadeBgWhite border border-solid border-white rounded-12
+                   pl-12 pr-6 py-2 w-full"
+        placeholder={t('header.search')}
+      />
+      <img className="absolute top-2.5 left-4" src={magnifier} alt="" />
+    </div>
+  );
+
   return (
     <header className="">
       <NotificationsModal
         open={notificationsOpen}
         onCloseModal={() => setNotificationsOpen(false)}
       />
+      <MenuDrawer open={open} onClose={() => setOpen(false)} wrapperClass="pt-15">
+        <SearchInput />
+      </MenuDrawer>
       <div className="hidden lg:flex justify-between items-center pt-10 px-4 lg:px-8">
         <div className="flex items-center justify-between w-full max-w-350">
           <div className="text-18 lg:text-24 font-Ubuntu pb-1">
@@ -122,14 +138,7 @@ function Header() {
             <div className="text-14">{t('header.liveAuctions')}</div>
           </Link>
         </div>
-        <div className="relative mx-4 w-full max-w-390">
-          <input
-            className="left-space-placeholder fadeBgWhite border border-solid border-white rounded-12
-                   pl-12 pr-6 py-2 w-full"
-            placeholder={t('header.search')}
-          />
-          <img className="absolute top-2.5 left-4" src={magnifier} alt="" />
-        </div>
+        <SearchInput />
         <div className="flex items-center justify-between w-full max-w-350">
           <Dropdown
             title={
@@ -187,7 +196,9 @@ function Header() {
         className="lg:hidden flex items-center justify-between lightShadow px-5 pt-15 pb-3
                       border border-solid border-white rounded-b-40"
       >
-        <img src={magnifier} alt="" />
+        <div className="cursor-pointer" onClick={() => setOpen(true)}>
+          <img src={magnifier} alt="" />
+        </div>
         <Menu />
         <img className="" src={wallet} alt="round square" />
       </div>

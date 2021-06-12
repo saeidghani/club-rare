@@ -1,16 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import Dropdown from '../UI/Dropdown';
+import MenuDrawer from '../../components/common/MenuDrawer';
 import RouteMap from '../../routes/RouteMap';
+import arrowBasic from '../../assets/icons/arrowBasic.svg';
+import Notifications from './Notifications';
 
 function Menu() {
   const { t, i18n } = useTranslation();
+  const history = useHistory();
 
-  const title = (
-    <div className="text-24 font-Ubuntu pb-1">
-      {t('header.logo.part1')} <span className="font-bold">{t('header.logo.part2')}</span>
-    </div>
-  );
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [notificationsOpen, setNotificationsOpen] = useState(false);
 
   const items = [
     {
@@ -19,7 +20,9 @@ function Menu() {
         <div className="flex border border-solid border-white rounded-12 h-9">
           <div
             className={`px-5 rounded-12 flex items-center ${
-              i18n.language === 'en' ? 'border-r border-solid border-white linearGradient' : ''
+              i18n.language === 'en'
+                ? 'text-white border-r border-solid border-white linearGradient'
+                : ''
             }`}
             onClick={() => i18n.changeLanguage('en')}
           >
@@ -27,7 +30,9 @@ function Menu() {
           </div>
           <div
             className={`px-5 rounded-12 flex items-center ${
-              i18n.language === 'kr' ? 'border-r border-solid border-white linearGradient' : ''
+              i18n.language === 'kr'
+                ? 'text-white border-r border-solid border-white linearGradient'
+                : ''
             }`}
             onClick={() => i18n.changeLanguage('kr')}
           >
@@ -36,22 +41,42 @@ function Menu() {
         </div>
       ),
     },
-    { key: 2, title: t('header.notifications'), href: RouteMap.notifications },
-    { key: 3, title: t('header.liveAuctions'), href: RouteMap.liveAuctions },
-    { key: 4, title: t('header.explore'), href: RouteMap.explore },
+    {
+      key: 2,
+      title: t('header.notifications'),
+      onClick: () => {
+        setMenuOpen(false);
+        setNotificationsOpen(true);
+      },
+    },
+    {
+      key: 3,
+      title: t('header.liveAuctions'),
+      onClick: () => history.push(RouteMap.liveAuctions.index),
+    },
+    { key: 4, title: t('header.explore'), onClick: () => history.push(RouteMap.explore) },
   ];
 
   return (
     <div className="flex justify-center w-56">
-      <div className="relative z-50">
-        <Dropdown
-          menuButtonClass="justify-center pl-4 -mt-1"
-          menuItemsClass="bg-white right-0 w-56 mt-10 rounded-md"
-          title={title}
-          items={items}
-          displaySelected
-        />
+      <div className="flex items-center space-x-2 cursor-pointer" onClick={() => setMenuOpen(true)}>
+        <div className="text-24 font-Ubuntu pb-1">
+          {t('header.logo.part1')} <span className="font-bold">{t('header.logo.part2')}</span>
+        </div>
+        <img src={arrowBasic} alt="arrow" />
       </div>
+      <MenuDrawer open={menuOpen} onClose={() => setMenuOpen(false)} wrapperClass="pt-20">
+        <div className="absolute top-32 flex flex-col items-center space-y-5 w-full z-10">
+          {items.map((i) => (
+            <div key={i.key} className="text-18 text-blue cursor-pointer" onClick={i.onClick}>
+              {i.title}
+            </div>
+          ))}
+        </div>
+      </MenuDrawer>
+      <MenuDrawer open={notificationsOpen} onClose={() => setNotificationsOpen(false)}>
+        <Notifications />
+      </MenuDrawer>
     </div>
   );
 }
