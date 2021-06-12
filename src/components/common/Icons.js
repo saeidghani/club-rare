@@ -1,22 +1,37 @@
 import React from 'react';
 
-export const CryptoIcon = () => (
+export const CryptoIcon = ({ fill }) => (
   <svg width="11" height="17" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g clipPath="url(#clip0)">
       <path
         opacity="0.6"
         d="M5.49803 0L5.37793 0.38729V11.6256L5.49803 11.7393L10.9964 8.65573L5.49803 0Z"
-        fill="#1B3142"
+        fill={fill || '#1B3142'}
       />
-      <path opacity="0.2" d="M5.49837 0L0 8.65573L5.49837 11.7393V6.28462V0Z" fill="#1B3142" />
+      <path
+        opacity="0.2"
+        d="M5.49837 0L0 8.65573L5.49837 11.7393V6.28462V0Z"
+        fill={fill || '#1B3142'}
+      />
       <path
         opacity="0.8"
         d="M5.49834 12.727L5.43066 12.8053V16.8086L5.49834 16.9962L11 9.64502L5.49834 12.727Z"
-        fill="#1B3142"
+        fill={fill || '#1B3142'}
       />
-      <path opacity="0.2" d="M5.49837 16.9961V12.7269L0 9.6449L5.49837 16.9961Z" fill="#1B3142" />
-      <path d="M5.49805 11.7393L10.9963 8.65578L5.49805 6.28467V11.7393Z" fill="#1B3142" />
-      <path opacity="0.6" d="M0 8.65578L5.49828 11.7393V6.28467L0 8.65578Z" fill="#1B3142" />
+      <path
+        opacity="0.2"
+        d="M5.49837 16.9961V12.7269L0 9.6449L5.49837 16.9961Z"
+        fill={fill || '#1B3142'}
+      />
+      <path
+        d="M5.49805 11.7393L10.9963 8.65578L5.49805 6.28467V11.7393Z"
+        fill={fill || '#1B3142'}
+      />
+      <path
+        opacity="0.6"
+        d="M0 8.65578L5.49828 11.7393V6.28467L0 8.65578Z"
+        fill={fill || '#1B3142'}
+      />
     </g>
     <defs>
       <clipPath id="clip0">

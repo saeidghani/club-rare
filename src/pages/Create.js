@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useForm } from 'react-hook-form';
 import Select from '../components/UI/Select';
 import Layout from '../layouts/MainLayout/MainLayout';
+import { CryptoIcon } from '../components/common/Icons';
 
 function Create() {
   const { t } = useTranslation();
@@ -121,12 +122,17 @@ function Create() {
           {activeSaleModel === 'fixedPrice' && (
             <>
               <div className="text-16 md:text-18 text-blue mb-5.5">{t('create.Price')}</div>
-              <input
-                className="responsive-placeholder bg-transparent border-b border-solid border-white
-                    w-full"
-                placeholder="0.00$"
-                {...register('price', { required: true })}
-              />
+              <div className="relative">
+                <input
+                  className="responsive-placeholder bg-transparent border-b border-solid border-white w-full"
+                  placeholder="0.00 $"
+                  {...register('price', { required: true })}
+                />
+                <div className="absolute top-0 right-0 text-gray3 flex items-center">
+                  <span className="mr-2">0.00</span>
+                  <CryptoIcon fill="#8E8E8E" />
+                </div>
+              </div>
               {errors.price && (
                 <p className="text-red justify-self-start mt-2 pl-2">
                   {t('create.PleaseEnterPrice')}
@@ -184,12 +190,14 @@ function Create() {
           </div>
 
           <div className="text-16 md:text-18 text-blue mt-9 mb-5.5">{t('create.Royalties')}</div>
-          <input
-            className="responsive-placeholder bg-transparent border-b border-solid border-white
-                    w-full"
-            placeholder="10"
-            {...register('royalties', { required: true })}
-          />
+          <div className="relative">
+            <input
+              className="responsive-placeholder bg-transparent border-b border-solid border-white w-full"
+              placeholder="10"
+              {...register('royalties', { required: true })}
+            />
+            <div className="absolute top-0 right-0 text-gray3">%</div>
+          </div>
           {errors.royalties && (
             <p className="text-red justify-self-start mt-2 pl-2">
               {t('create.PleaseEnterRoyalties')}

@@ -86,12 +86,18 @@ function AuctionSummary({ wrapperClass, onSetBidOpen }) {
         )}
         {(auctionAvailable || auctionNotStarted) && (
           <form className="mt-3.5 w-full flex flex-col" onSubmit={handleSubmit(onSubmit)}>
-            <input
-              className="responsive-placeholder bg-transparent border border-solid border-blue rounded-12
-                   px-5 py-3.5 w-full"
-              placeholder=""
-              {...register('bid', { required: true })}
-            />
+            <div className="relative">
+              <div className="absolute top-4.5 left-4">
+                <CryptoIcon fill="#8E8E8E" />
+              </div>
+              <input
+                className="responsive-placeholder bg-transparent border border-solid border-blue rounded-12
+                   pl-9 pr-5 py-3.5 w-full"
+                placeholder="0.00"
+                {...register('bid', { required: true })}
+              />
+              <div className="absolute top-4.5 right-4 text-gray3">0.00$</div>
+            </div>
             {errors.bid && (
               <p className="text-red justify-self-start mt-2 pl-2">
                 {t('productPage.auctionSummary.PleaseEnterAnAmount')}
