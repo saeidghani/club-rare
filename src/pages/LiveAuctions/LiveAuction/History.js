@@ -55,7 +55,7 @@ function History({ wrapperClass }) {
   return (
     <div className={wrapperClass}>
       {auctionEnded && <HistoryItem wrapperClass="mb-8.5" auctionEnded />}
-      <div className="text-18 md:text-24 text-blue font-semibold pl-8 mb-5">History</div>
+      <div className="text-18 md:text-24 text-blue font-semibold md:pl-8 mb-5">History</div>
       {!auctionNotStarted && (
         <div className="flex flex-col space-y-8">
           {[1, 2, 3, 4, 5, 6, 7].map((i) => (

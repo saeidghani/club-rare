@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useForm } from 'react-hook-form';
 import Select from '../../../components/UI/Select';
+import { CryptoIcon } from '../../../components/common/Icons';
 
 function PutOnSale() {
   const { t } = useTranslation();
@@ -55,12 +56,18 @@ function PutOnSale() {
             <div className="text-18 text-blue font-semibold mt-5">
               {t('productPage.PutOnSale.Price')}
             </div>
-            <input
-              className="responsive-placeholder bg-transparent border-b-2 border-solid border-white
-                   py-3.5 w-full"
-              placeholder="0.00$"
-              {...register('price', { required: true })}
-            />
+            <div className="relative mt-3">
+              <input
+                className="responsive-placeholder bg-transparent border-b-2 border-solid border-white
+                   py-1.5 w-full"
+                placeholder="0.00$"
+                {...register('price', { required: true })}
+              />
+              <div className="absolute top-2 right-0 flex items-center space-x-2">
+                <div className="text-gray3">0.00$</div>
+                <CryptoIcon fill="#8E8E8E" />
+              </div>
+            </div>
             {errors.price && (
               <p className="text-red justify-self-start mt-2 pl-2">
                 {t('productPage.PutOnSale.PleaseEnterPrice')}Please Enter Price
@@ -74,7 +81,7 @@ function PutOnSale() {
               <div className="text-18 text-blue font-semibold mt-5 mb-4">
                 {t('productPage.PutOnSale.MinimumBid')}
               </div>
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-between mt-3">
                 <div className="w-full">
                   <input
                     className="responsive-placeholder bg-transparent border-b-2 border-solid border-white w-full"
@@ -92,13 +99,13 @@ function PutOnSale() {
             </div>
             <div className="flex justify-between w-full">
               <div className="">
-                <div className="text-18 text-blue font-semibold mt-5 mb-4">
+                <div className="text-18 text-blue font-semibold mb-4">
                   {t('productPage.PutOnSale.StartingDate')}
                 </div>
                 <Select options={startingDateOptions} width="w-32 md:w-42" />
               </div>
               <div className="">
-                <div className="text-18 text-blue font-semibold mt-5 mb-4">
+                <div className="text-18 text-blue font-semibold mb-4">
                   {t('productPage.PutOnSale.ExpirationDate')}
                 </div>
                 <Select options={expirationDateOptions} width="w-32 md:w-42" />
@@ -111,7 +118,7 @@ function PutOnSale() {
         </div>
         <input
           className="responsive-placeholder bg-transparent border-b-2 border-solid border-white
-                   py-3.5 w-full"
+                   py-1.5 w-full mt-3"
           placeholder={t('productPage.PutOnSale.28Characters')}
           {...register('title', { required: true })}
         />
@@ -126,7 +133,7 @@ function PutOnSale() {
         </div>
         <input
           className="responsive-placeholder bg-transparent border-b-2 border-solid border-white
-                   py-3.5 w-full"
+                   py-1.5 w-full mt-3"
           placeholder={t('productPage.PutOnSale.Description')}
           {...register('description', { required: true })}
         />

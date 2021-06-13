@@ -85,14 +85,13 @@ input, button, select {
 }
 
 .blueBgShadow {
-  background: linear-gradient(180deg, rgba(27, 49, 66, 0.5) 50%, rgba(27, 49, 66, 0.5) 100%);
-  filter: blur(10px);
+  background: linear-gradient(180deg, #1B3142 0%, #1B3142 100%);
+  filter: blur(100px);
   border-radius: 50%;
-  width: 15px;
-  height: 15px;
+  width: 90%;
+  height: 50px;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 100px;
 }
 
 .linearGradient {
@@ -110,7 +109,7 @@ input, button, select {
 }
 
 .lightShadow {
-  box-shadow: 0 10px 100px 10px rgba(0,0,0,0.05);
+  box-shadow: 30px 70px 120px rgba(27, 49, 66, 0.13);
 }
 
 .gradient-box {

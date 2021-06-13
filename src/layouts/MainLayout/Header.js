@@ -134,9 +134,11 @@ function Header() {
       </MenuDrawer>
       <div className="hidden lg:flex justify-between items-center pt-10 px-4 lg:px-8">
         <div className="text-blue flex items-center justify-between w-full max-w-350">
-          <div className="text-18 lg:text-24 font-Ubuntu pb-1">
-            {t('header.logo.part1')} <span className="font-bold">{t('header.logo.part2')}</span>
-          </div>
+          <Link to={RouteMap.home}>
+            <div className="text-18 lg:text-24 font-Ubuntu pb-1">
+              {t('header.logo.part1')} <span className="font-bold">{t('header.logo.part2')}</span>
+            </div>
+          </Link>
           <Link to={RouteMap.explore}>
             <div className="text-14 mx-2">{t('header.explore')}</div>
           </Link>
@@ -144,7 +146,9 @@ function Header() {
             <div className="text-14">{t('header.liveAuctions')}</div>
           </Link>
         </div>
-        <SearchInput wrapperClass="max-w-390 mx-4" />
+        <div className="w-full lg:pl-4 xl:pr-8" style={{ maxWidth: 440 }}>
+          <SearchInput wrapperClass="" />
+        </div>
         <div className="flex items-center justify-between w-full max-w-350">
           <Dropdown
             title={
@@ -168,7 +172,7 @@ function Header() {
               title={
                 <div className="relative">
                   <img className="" src={bell} alt="bell" />
-                  <span className="absolute -top-1 -right-1 text-11 bg-primary py px-1 rounded">
+                  <span className="absolute -top-1 -right-1 text-white text-11 bg-primary py px-1 rounded">
                     12
                   </span>
                 </div>

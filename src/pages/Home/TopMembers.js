@@ -24,7 +24,7 @@ function TopMembers({ wrapperClass }) {
   return (
     <div className={wrapperClass}>
       <div
-        className="bg-white bg-opacity-20 border border-solid border-white rounded-50
+        className="relative bg-white bg-opacity-20 border border-solid border-white rounded-50
       py-4 xl:py-5 px-2 xs:px-2 xl:px-6 lightShadow"
         style={{ height: 282 }}
       >
@@ -49,7 +49,7 @@ function TopMembers({ wrapperClass }) {
           </div>
           <div
             className="z-10 grid grid-cols-1 c-slick-dots c-slick-dots-bottom--40
-           px-2 xs:px-14 sm:px-32 md:px-56 lg:px-0 mt-4 xl:mt-4"
+           px-2 xs:px-14 sm:px-32 md:px-48 lg:px-0 mt-4 xl:mt-4"
           >
             <Slider
               {...settings}
@@ -89,6 +89,7 @@ function TopMembers({ wrapperClass }) {
             </Slider>
           </div>
         </div>
+        <div className="blueBgShadow"></div>
       </div>
     </div>
   );

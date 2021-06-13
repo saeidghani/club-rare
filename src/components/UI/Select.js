@@ -45,9 +45,9 @@ export default function Select({
                     </span>
                   </div>
                 </div>
-                <span className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
+                <span className="absolute inset-y-0 right-0 flex items-center pointer-events-none">
                   <img
-                    className={`mr-2 ${type === 'primary' ? 'text-fadeBlue2' : ''}`}
+                    className={`${type === 'primary' ? 'text-fadeBlue2' : ''}`}
                     src={roundArrow}
                     alt="Arrow"
                     aria-hidden="true"

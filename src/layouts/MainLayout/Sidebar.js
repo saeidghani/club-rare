@@ -49,7 +49,7 @@ function Sidebar({ displaySidebar, displayStickySidebar }) {
   ];
 
   return (
-    <aside className="">
+    <aside className="relative">
       <div className={displaySidebar ? 'hidden lg:flex lg:flex-col lg:space-y-16' : 'hidden'}>
         {navItems?.map((n) => (
           <div className="relative cursor-pointer" key={n.key} onClick={() => history.push(n.href)}>
@@ -71,22 +71,24 @@ function Sidebar({ displaySidebar, displayStickySidebar }) {
           </div>
         ))}
       </div>
-      <div
-        className={
-          displayStickySidebar
-            ? 'flex lg:hidden items-center justify-between p-5 border border-solid border-white rounded-t-40 bg-gray2'
-            : 'hidden'
-        }
-      >
-        {[navItems[0], navItems[2], navItems[1]].map((n) => (
-          <div className="" key={n.key} onClick={() => history.push(n.href)}>
-            <img
-              className=""
-              src={n.relatedRoutes.includes(pathname) ? n.iconColorful : n.icon}
-              alt={n.alt}
-            />
-          </div>
-        ))}
+      <div className="">
+        <div
+          className={
+            displayStickySidebar
+              ? 'flex lg:hidden items-center justify-between p-5 border border-solid border-white rounded-t-40 bg-gray2'
+              : 'hidden'
+          }
+        >
+          {[navItems[0], navItems[2], navItems[1]].map((n) => (
+            <div className="" key={n.key} onClick={() => history.push(n.href)}>
+              <img
+                className=""
+                src={n.relatedRoutes.includes(pathname) ? n.iconColorful : n.icon}
+                alt={n.alt}
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </aside>
   );

@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import MainLayout from '../layouts/MainLayout/MainLayout';
-import metamask from '../assets/icons/metamask.svg';
-import metamaskLogo from '../assets/icons/metamaskLogo.svg';
-import walletConnect from '../assets/icons/walletConnect.svg';
+import metamaskLogo from '../assets/images/metamask-fox-wordmark-horizontal.svg';
+import walletConnect from '../assets/images/walletConnect-banner.svg';
 
 function ConnectWallet() {
   const { t } = useTranslation();
@@ -29,17 +28,18 @@ function ConnectWallet() {
         {t('connectWallet.text')}
       </div>
       <button
-        className="flex justify-center space-x-4 items-center border border-solid border-white rounded-10 py-2.5 mt-6.5"
-        style={{ width: 188 }}
+        className="flex justify-center space-x-4 items-center border border-solid border-white
+        rounded-10 mt-6.5 bg-white bg-opacity-20"
+        style={{ width: 188, height: 53 }}
       >
-        <img src={metamaskLogo} alt="" />
-        <img src={metamask} alt="" />
+        <img className="w-40" src={metamaskLogo} alt="" />
       </button>
       <button
-        className="flex justify-center space-x-4 items-center border border-solid border-white rounded-10 py-3.5 mt-4"
-        style={{ width: 188, boxShadow: '30px 70px 120px rgba(27, 49, 66, 0.2)' }}
+        className="flex justify-center space-x-4 items-center border border-solid border-white
+        rounded-10 mt-4"
+        style={{ width: 188, height: 53, boxShadow: '30px 70px 120px rgba(27, 49, 66, 0.2)' }}
       >
-        <img src={walletConnect} alt="" />
+        <img className="w-40" src={walletConnect} alt="" />
       </button>
     </MainLayout>
   );

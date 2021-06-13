@@ -61,22 +61,36 @@ function EditProfile() {
                 alt="avatar"
               />
             )}
-            <input
-              className={`custom-file-input text-transparent cursor-pointer w-full text-16 lg:text-18 font-semibold rounded-full bg-white bg-opacity-20
+            <div className="relative">
+              <input
+                className={`custom-file-input text-transparent cursor-pointer w-full text-16 lg:text-18 font-semibold
+               rounded-full bg-gray bg-opacity-50
                         border border-solid border-white ${preview ? 'hidden' : 'block'}`}
-              style={{ height: 124, width: 124 }}
-              onChange={onFileUpload}
-              type="file"
-              accept="image/*"
-              ref={avatarFileRef}
-            />
-            <div
-              className="z-30 text-20 text-gray cursor-pointer mt-4"
-              style={{ color: '#377CF6' }}
-              onClick={() => avatarFileRef?.current?.click()}
-            >
-              {t('editProfile.editPicture')}
+                style={{ height: 124, width: 124 }}
+                onChange={onFileUpload}
+                type="file"
+                accept="image/*"
+                ref={avatarFileRef}
+              />
+              {!preview && (
+                <div
+                  className="absolute top-8 left-3 z-30 text-18 font-semibold cursor-pointer mt-4"
+                  style={{ color: '#377CF6' }}
+                  onClick={() => avatarFileRef?.current?.click()}
+                >
+                  Add Picture
+                </div>
+              )}
             </div>
+            {preview && (
+              <div
+                className="z-30 text-18 font-semibold cursor-pointer mt-4"
+                style={{ color: '#377CF6' }}
+                onClick={() => avatarFileRef?.current?.click()}
+              >
+                {t('editProfile.editPicture')}
+              </div>
+            )}
           </div>
           <div className="text-18 text-blue mt-9 mb-5.5">{t('editProfile.name')}</div>
           <input

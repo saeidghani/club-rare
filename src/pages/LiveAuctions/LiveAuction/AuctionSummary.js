@@ -66,9 +66,9 @@ function AuctionSummary({ wrapperClass, onSetBidOpen }) {
           <div
             className={`flex mt-1 ${auctionEnded ? 'flex-col' : 'justify-between items-center'}`}
           >
-            <div className="flex items-center space-x-1.5">
+            <div className="flex items-center space-x-1">
               <div className="text-16 md:text-22 text-blue font-bold">3.00 ETH</div>
-              <CryptoIcon size="19" />
+              <CryptoIcon size="29" />
             </div>
             <div className="text-12 md:text-16 text-blue">$3,600</div>
           </div>
