@@ -97,7 +97,7 @@ function Create() {
               accept="image/*"
               onChange={onFileUpload}
             />
-            <div className="row-start-1 col-start-1 justify-self-center z-10 text-16 md:text-20 text-gray pointer-events-none">
+            <div className="row-start-1 col-start-1 justify-self-center z-10 text-16 md:text-20 text-blue pointer-events-none">
               {t('create.ChooseFile')}
             </div>
           </div>

@@ -14,6 +14,7 @@ import ClaimingNFT from '../pages/ClaimingNFT';
 import ClaimingNFTSuccess from '../pages/ClaimingNFT/Success';
 import Profile from '../pages/Profile/ViewProfile';
 import EditProfile from '../pages/Profile/EditProfile';
+import Upvote from '../pages/Profile/Upvote';
 import CommunityUpvote from '../pages/Profile/CommunityUpvote';
 import VerifyProfile from '../pages/Profile/VerifyProfile';
 import VerifyProfileViaTwitter from '../pages/Profile/VerifyProfile/ViaTwitter';
@@ -33,6 +34,7 @@ const Routes = () => {
       <Route path={RouteMap.claimingNFT.index} component={ClaimingNFT} />
       <Route path={RouteMap.profile.verifyProfile.viaTwitter} component={VerifyProfileViaTwitter} />
       <Route path={RouteMap.profile.verifyProfile.index} component={VerifyProfile} />
+      <Route path={RouteMap.profile.upvote} component={Upvote} />
       <Route path={RouteMap.profile.communityUpvote} component={CommunityUpvote} />
       <Route path={RouteMap.profile.edit} component={EditProfile} />
       <Route path={RouteMap.profile.index} component={Profile} />

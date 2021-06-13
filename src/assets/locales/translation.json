@@ -82,7 +82,7 @@
         "StartingDate": "Starting Date",
         "ExpirationDate": "Expiration Date",
         "Title": "Title",
-        "28Characters": "28Characters",
+        "28Characters": "28 Characters",
         "PleaseEnterTitle": "Please Enter Title",
         "Description": "Description",
         "PleaseEnterDescription": "Please Enter Description",
@@ -216,7 +216,10 @@
       "verifyProfile": {
         "title": "Please verify your profile",
         "text1": "Verify profile via at least one social media account tp prove the authenticitly of your profile on vital Hint",
-        "verifyViaTwitter": "Verify via twitter"
+        "verifyViaTwitter": {
+          "part1": "Verify",
+          "part2": "via twitter"
+        }
       },
       "verifyProfileViaTwitter": {
         "title": "Post a public tweet",

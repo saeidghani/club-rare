@@ -17,6 +17,7 @@ export default {
   profile: {
     index: '/profile',
     edit: '/profile/edit',
+    upvote: '/profile/upvote',
     communityUpvote: '/profile/community-upvote',
     verifyProfile: {
       index: '/profile/verify-profile',

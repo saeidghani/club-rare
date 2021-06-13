@@ -35,7 +35,7 @@ function Sidebar({ displaySidebar, displayStickySidebar }) {
       icon: user,
       iconColorful: userColorful,
       href: RouteMap.profile.index,
-      relatedRoutes: [RouteMap.profile.index, RouteMap.profile.edit],
+      relatedRoutes: [RouteMap.profile.index, RouteMap.profile.edit, RouteMap.profile.upvote],
     },
     {
       key: 3,
@@ -47,6 +47,7 @@ function Sidebar({ displaySidebar, displayStickySidebar }) {
       relatedRoutes: [RouteMap.create],
     },
   ];
+
   return (
     <aside className="">
       <div className={displaySidebar ? 'hidden lg:flex lg:flex-col lg:space-y-16' : 'hidden'}>
@@ -77,7 +78,7 @@ function Sidebar({ displaySidebar, displayStickySidebar }) {
             : 'hidden'
         }
       >
-        {navItems.map((n) => (
+        {[navItems[0], navItems[2], navItems[1]].map((n) => (
           <div className="" key={n.key} onClick={() => history.push(n.href)}>
             <img
               className=""

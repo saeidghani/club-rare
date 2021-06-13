@@ -78,6 +78,17 @@ input, button, select {
   top: 200px;
 }
 
+.blueBgShadow {
+  background: linear-gradient(180deg, rgba(27, 49, 66, 0.5) 50%, rgba(27, 49, 66, 0.5) 100%);
+  filter: blur(10px);
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .linearGradient {
   background: linear-gradient(to right, #EB6B5B 0, #ECBAF6 90%);
 }

@@ -19,7 +19,7 @@ function CommunityUpvote() {
   return (
     <Layout displaySidebar={false} loading={loading}>
       <div className="grid grid-cols-1 md:grid-cols-12">
-        <div className="md:col-start-4 md:col-span-6 xl:col-start-5 xl:col-span-4 w-full flex flex-col justify-center items-center mx-auto mt-32">
+        <div className="md:col-start-3 md:col-span-8 xl:col-start-4 xl:col-span-6 w-full flex flex-col justify-center items-center mx-auto mt-32">
           <div className="relative w-full">
             <div className="text-24 md:text-34 text-blue font-bold text-center">
               {t('communityUpvote.title.part1')}
@@ -28,7 +28,7 @@ function CommunityUpvote() {
             </div>
             <div className="hidden lg:block radialGradient radialGradient--md left-24 top-8"></div>
           </div>
-          <p className="text-14 md:text-24 text-blue mt-8 text-center opacity-80">
+          <p className="text-14 md:text-24 text-blue mt-8 text-center opacity-80 px-16 sm:px-0">
             {t('communityUpvote.text1')}
           </p>
           <p className="text-16 md:text-22 text-blue text-center mt-8.5 opacity-80">

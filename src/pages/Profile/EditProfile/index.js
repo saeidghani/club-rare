@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useForm } from 'react-hook-form';
 import Layout from '../../../layouts/MainLayout/MainLayout';
 import twitter from '../../../assets/icons/twitterWhite.svg';
+import avatar from '../../../assets/images/avatar-2.png';
 
 function EditProfile() {
   const { t } = useTranslation();
@@ -56,7 +57,7 @@ function EditProfile() {
                 className="w-full
               text-16 lg:text-18 font-semibold rounded-full bg-white bg-opacity-20 border border-solid border-white"
                 style={{ height: 124, width: 124 }}
-                src={preview}
+                src={preview || avatar}
                 alt="avatar"
               />
             )}
