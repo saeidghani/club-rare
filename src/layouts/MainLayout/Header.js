@@ -110,10 +110,10 @@ function Header() {
     return [titleOption, ...mainOptions, lastOption];
   }, []);
 
-  const SearchInput = () => (
-    <div className="relative mx-4 w-full max-w-390">
+  const SearchInput = ({ wrapperClass }) => (
+    <div className={`relative w-full ${wrapperClass}`}>
       <input
-        className="left-space-placeholder fadeBgWhite border border-solid border-white rounded-12
+        className="bluePlaceholder left-space-placeholder fadeBgWhite border border-solid border-white rounded-12
                    pl-12 pr-6 py-2 w-full"
         placeholder={t('header.search')}
       />
@@ -128,7 +128,9 @@ function Header() {
         onCloseModal={() => setNotificationsOpen(false)}
       />
       <MenuDrawer open={open} onClose={() => setOpen(false)} wrapperClass="pt-15">
-        <SearchInput />
+        <div className="px-8">
+          <SearchInput />
+        </div>
       </MenuDrawer>
       <div className="hidden lg:flex justify-between items-center pt-10 px-4 lg:px-8">
         <div className="text-blue flex items-center justify-between w-full max-w-350">
@@ -142,7 +144,7 @@ function Header() {
             <div className="text-14">{t('header.liveAuctions')}</div>
           </Link>
         </div>
-        <SearchInput />
+        <SearchInput wrapperClass="max-w-390 mx-4" />
         <div className="flex items-center justify-between w-full max-w-350">
           <Dropdown
             title={

@@ -187,6 +187,10 @@
           "placeABid": "Place a Bid"
         }
       },
+      "upvote": {
+        "giveUpvote": "Give this profile an upvote so they can receive early access to Foundation’s creator tools.",
+        "text": "Emilie butler collection is empty."
+      },
       "editProfile": {
         "editPicture": "Edit picture",
         "name": "Name",
@@ -291,8 +295,8 @@
             "part1": "Vital",
             "part2": "Hint"
           },
-          "text": "In this box you promote artists’ artworks",
-          "viewArtwork": "View Artwork"
+          "text": "i sangja-eseo atiseuteuui jagpum-eul hongbohabnida.",
+          "viewArtwork": "sabhwabogi"
         },
         "topMembers": {
           "top": "TOP",

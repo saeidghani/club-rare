@@ -35,16 +35,16 @@ function Explore({ wrapperClass }) {
   return (
     <div className={wrapperClass}>
       <div className="flex justify-between items-center">
-        <div className="text-18 text-blue font-semibold mr-4 lg:mr-6 xl:mr-8.5">
+        <div className="text-18 lg:text-24 text-blue font-semibold mr-4 lg:mr-6 xl:mr-8.5">
           {t('home.explore.title')}
         </div>
         <div className="hidden md:flex justify-between w-full max-w-600 lg:max-w-850 mr-6">
           {sortItems1.map((i) => (
             <div
               key={i.key}
-              className={`text-14 text-center rounded-12 p-2 border border-solid border-white cursor-pointer ${
+              className={`text-center rounded-12 p-2 border border-solid border-white cursor-pointer ${
                 activeSort === i.key ? 'text-white linearGradient' : 'text-blue'
-              } ${i.key === 1 ? 'w-19' : 'w-24 lg:w-26 xl:w-32'}`}
+              } ${i.key === 1 ? 'text-16 w-19' : 'text-14 w-24 lg:w-26 xl:w-32'}`}
               onClick={() => setActiveSort(i.key)}
             >
               {i.title}

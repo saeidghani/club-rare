@@ -44,10 +44,7 @@ function ProfileSummary({
     <div className={wrapperClass}>
       <div className="flex items-center space-x-3">
         <img className="" src={arrowBox} alt="arrow box" />
-        <div className="text-blue">
-          Give this profile an upvote so they can receive early access to Foundation’s creator
-          tools.
-        </div>
+        <div className="text-blue">{t('upvote.giveUpvote')}</div>
       </div>
     </div>
   );

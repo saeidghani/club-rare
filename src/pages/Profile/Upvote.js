@@ -39,7 +39,7 @@ function Upvote() {
           />
         </div>
         <div className="flex justify-center items-center pt-16">
-          <div className="text-blue opacity-70">Emilie butler collection is empty.</div>
+          <div className="text-blue opacity-70">{t('upvote.text')}</div>
         </div>
       </div>
     </MainLayout>

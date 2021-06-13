@@ -48,6 +48,12 @@ input, button, select {
   font-size: 22px !important;
 }
 
+.bluePlaceholder::placeholder {
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  color: #1B3142 !important;
+}
+
 .radialGradient {
   background: linear-gradient(180deg, #EB6B5B 0%, #ECBAF6 100%);
   filter: blur(70px);
