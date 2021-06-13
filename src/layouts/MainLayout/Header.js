@@ -146,7 +146,7 @@ function Header() {
             <div className="text-14">{t('header.liveAuctions')}</div>
           </Link>
         </div>
-        <div className="w-full lg:pl-4 xl:pr-8" style={{ maxWidth: 440 }}>
+        <div className="w-full lg:pl-4 xl:pr-24" style={{ maxWidth: 500 }}>
           <SearchInput wrapperClass="" />
         </div>
         <div className="flex items-center justify-between w-full max-w-350">
