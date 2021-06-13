@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import MainLayout from '../layouts/MainLayout/MainLayout';
 import metamaskLogo from '../assets/images/metamask-fox-wordmark-horizontal.svg';
-import walletConnect from '../assets/images/walletConnect-banner.svg';
+import walletConnect from '../assets/images/wallet-connect.svg';
 
 function ConnectWallet() {
   const { t } = useTranslation();
