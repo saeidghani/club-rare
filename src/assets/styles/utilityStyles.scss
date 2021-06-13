@@ -26,15 +26,11 @@ input, button, select {
   border-radius: 5px;
 }
 
-.fadeBgWhite {
-  background-color: rgba(255,255,255,0.2);
-}
-
-.left-space-placeholder::placeholder {
-  color: #1B3142 !important;
+.bluePlaceholder::placeholder {
   opacity: 50%;
   font-size: 15px !important;
   font-weight: 600 !important;
+  color: #1B3142 !important;
 }
 
 .responsive-placeholder::placeholder {
@@ -46,12 +42,6 @@ input, button, select {
 
 .lgPlaceholder::placeholder {
   font-size: 22px !important;
-}
-
-.bluePlaceholder::placeholder {
-  font-size: 15px !important;
-  font-weight: 600 !important;
-  color: #1B3142 !important;
 }
 
 .radialGradient {

@@ -113,7 +113,7 @@ function Header() {
   const SearchInput = ({ wrapperClass }) => (
     <div className={`relative w-full ${wrapperClass}`}>
       <input
-        className="bluePlaceholder left-space-placeholder fadeBgWhite border border-solid border-white rounded-12
+        className="bluePlaceholder bg-white bg-opacity-20 border border-solid border-white rounded-12
                    pl-12 pr-6 py-2 w-full"
         placeholder={t('header.search')}
       />
