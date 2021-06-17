@@ -3,8 +3,8 @@
     "translation": {
       "header": {
         "logo": {
-          "part1": "Vital",
-          "part2": "Hint"
+          "part1": "Club",
+          "part2": "Rare"
         },
         "explore": "Explore",
         "liveAuctions": "Live Auctions",
@@ -36,8 +36,8 @@
       "home": {
         "banner": {
           "logo": {
-            "part1": "Vital",
-            "part2": "Hint"
+            "part1": "Club",
+            "part2": "Rare"
           },
           "text": "In this box you promote artists’ artworks",
           "viewArtwork": "View Artwork"
@@ -256,8 +256,8 @@
     "translation": {
       "header": {
         "logo": {
-          "part1": "Vital",
-          "part2": "Hint"
+          "part1": "Club",
+          "part2": "Rare"
         },
         "explore": "Explore",
         "liveAuctions": "Live Auctions",
@@ -289,8 +289,8 @@
       "home": {
         "banner": {
           "logo": {
-            "part1": "Vital",
-            "part2": "Hint"
+            "part1": "Club",
+            "part2": "Rare"
           },
           "text": "i sangja-eseo atiseuteuui jagpum-eul hongbohabnida.",
           "viewArtwork": "sabhwabogi"

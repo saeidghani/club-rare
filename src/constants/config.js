@@ -12,7 +12,7 @@ if (host.includes('stage.')) env = 'stage';
  */
 export default {
   // App Details
-  appName: 'vital-hint',
+  appName: 'Club-Rare',
 
   // Build Configuration - eg. Debug or Release?
   isDevEnv: env === 'development',
