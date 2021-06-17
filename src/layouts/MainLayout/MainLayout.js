@@ -18,7 +18,7 @@ function MainLayout({
           <Sidebar displaySidebar={displaySidebar} displayStickySidebar={displayStickySidebar} />
         </div>
         <main
-          className={`w-full px-5 lg:pl-4 pb-40 ${mainClassName || ''} ${
+          className={`w-full px-5 lg:pl-4 pb-40 lg:pb-4 ${mainClassName || ''} ${
             displaySidebar ? 'lg:pr-12' : ''
           } ${displayStickySidebar ? '-mt-12 lg:mt-0 lg:pt-10' : 'lg:mt-0 lg:pt-10'}`}
         >

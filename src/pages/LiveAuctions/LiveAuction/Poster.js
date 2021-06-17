@@ -1,12 +1,12 @@
 import React from 'react';
-import nature from '../../../assets/images/nature.png';
+import bag1 from '../../../assets/images/products/bag-1.png';
 
 function Poster({ wrapperClass }) {
   return (
     <div className={wrapperClass}>
       <img
         className="w-full border border-solid border-white rounded-50 p-7"
-        src={nature}
+        src={bag1}
         alt="nature"
       />
     </div>

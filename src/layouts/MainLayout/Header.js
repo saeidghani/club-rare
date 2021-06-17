@@ -7,6 +7,7 @@ import girl from '../../assets/images/girl.png';
 import bell from '../../assets/icons/bell.svg';
 import wallet from '../../assets/icons/wallet.svg';
 import magnifier from '../../assets/icons/magnifier.svg';
+import logo from '../../assets/icons/logo.svg';
 import Menu from '../../components/common/Menu';
 import { CryptoIcon2 } from '../../components/common/Icons';
 import Dropdown from '../../components/UI/Dropdown';
@@ -135,9 +136,7 @@ function Header() {
       <div className="hidden lg:flex justify-between items-center pt-10 px-4 lg:px-8">
         <div className="text-blue flex items-center justify-between w-full max-w-350">
           <Link to={RouteMap.home}>
-            <div className="text-18 lg:text-24 font-Ubuntu pb-1">
-              {t('header.logo.part1')} <span className="font-bold">{t('header.logo.part2')}</span>
-            </div>
+            <img src={logo} alt="" />
           </Link>
           <Link to={RouteMap.explore}>
             <div className="text-14 mx-2">{t('header.explore')}</div>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import Layout from '../../layouts/MainLayout/MainLayout';
-import nature from '../../assets/images/nature.png';
+import bag from '../../assets/images/products/bag-1.png';
 import avatar from '../../assets/images/avatar-2.png';
 import switchBox from '../../assets/icons/switchBox.svg';
 import { CryptoIcon } from '../../components/common/Icons';
@@ -33,7 +33,7 @@ function ClaimingNFT() {
         <hr className="hidden lg:block row-start-1 col-start-2 col-span-10 mb-8" />
         <img
           className="md:justify-self-start md:row-start-2 md:col-start-1 md:col-span-5 lg:col-start-2 lg:col-span-4 w-full border border-solid border-white rounded-50 p-7"
-          src={nature}
+          src={bag}
           alt="nature"
         />
         <div className="md:row-start-2 md:col-start-6 md:col-span-7 lg:col-start-6 lg:col-span-6 self-center w-full">

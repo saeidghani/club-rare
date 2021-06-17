@@ -1,9 +1,8 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import girl from '../../assets/images/girl.png';
 import { CryptoIcon } from './Icons';
 
-function BidCard({ wrapperClass, headerClass, contentClass, displayTime }) {
+function BidCard({ wrapperClass, headerClass, contentClass, displayTime, src }) {
   const { t } = useTranslation();
 
   return (
@@ -18,9 +17,9 @@ function BidCard({ wrapperClass, headerClass, contentClass, displayTime }) {
           {displayTime && <div className="text-gray">06:23:57</div>}
         </div>
         <img
-          className="border border-solid border-white rounded-12 mt-3.5"
-          style={{ height: 233, objectFit: 'cover' }}
-          src={girl}
+          className="border border-solid border-white rounded-12 mt-3.5 object-contain"
+          style={{ height: 233 }}
+          src={src}
           alt=""
         />
         <div
