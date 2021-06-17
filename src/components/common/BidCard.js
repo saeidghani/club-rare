@@ -45,5 +45,5 @@ function BidCard({ wrapperClass, headerClass, contentClass, displayTime, src }) 
     </div>
   );
 }
-
+//
 export default BidCard;
