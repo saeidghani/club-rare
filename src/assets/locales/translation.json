@@ -43,7 +43,7 @@
           "viewArtwork": "View Artwork"
         },
         "topMembers": {
-          "top": "TOP",
+          "top": "Top",
           "sellers": "Sellers",
           "buyers": "Buyers"
         },
@@ -219,11 +219,8 @@
       },
       "verifyProfile": {
         "title": "Please verify your profile",
-        "text1": "Verify profile via at least one social media account tp prove the authenticitly of your profile on vital Hint",
-        "verifyViaTwitter": {
-          "part1": "Verify",
-          "part2": "via twitter"
-        }
+        "text1": "Verify profile via at least one social media account tp prove the authenticitly of your profile on Club Rare",
+        "verifyViaTwitter": "Verify via twitter"
       },
       "verifyProfileViaTwitter": {
         "title": "Post a public tweet",
@@ -307,11 +304,11 @@
           "title": "Explore",
           "sortItems": {
             "all": "All",
-            "FanArt": "FanArt",
-            "Photography": "Photography",
-            "FineArt": "FineArt",
-            "Food": "Food",
-            "Memes": "Memes"
+            "Handbags": "Handbags",
+            "Watches": "Watches",
+            "Jewellery": "Jewellery",
+            "Art": "Art",
+            "Food": "Food"
           },
           "filterItems": {
             "MostRecent": "Most Recent",
@@ -473,7 +470,7 @@
       },
       "verifyProfile": {
         "title": "Please verify your profile",
-        "text1": "Verify profile via at least one social media account tp prove the authenticitly of your profile on vital Hint",
+        "text1": "Verify profile via at least one social media account tp prove the authenticitly of your profile on Club Rare",
         "verifyViaTwitter": "Verify via twitter"
       },
       "verifyProfileViaTwitter": {

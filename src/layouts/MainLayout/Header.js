@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import roundSquare from '../../assets/icons/roundSquare.svg';
 import avatar from '../../assets/images/avatar-2.png';
@@ -17,6 +17,7 @@ import MenuDrawer from '../../components/common/MenuDrawer';
 
 function Header() {
   const { t, i18n } = useTranslation();
+  const { pathname } = useLocation();
 
   const [notificationsOpen, setNotificationsOpen] = useState(false);
   const [open, setOpen] = useState(false);
@@ -114,7 +115,7 @@ function Header() {
   const SearchInput = ({ wrapperClass }) => (
     <div className={`relative w-full ${wrapperClass}`}>
       <input
-        className="bluePlaceholder bg-white bg-opacity-20 border border-solid border-white rounded-12
+        className="bg-white bg-opacity-20 border border-solid border-white rounded-12
                    pl-12 pr-6 py-2 w-full"
         placeholder={t('header.search')}
       />
@@ -139,10 +140,22 @@ function Header() {
             <img src={logo} alt="" />
           </Link>
           <Link to={RouteMap.explore}>
-            <div className="text-14 mx-2">{t('header.explore')}</div>
+            <div
+              className={`text-14 text-blue mx-2 ${
+                pathname === RouteMap.explore ? 'font-bold' : ''
+              }`}
+            >
+              {t('header.explore')}
+            </div>
           </Link>
           <Link to={RouteMap.liveAuctions.index}>
-            <div className="text-14">{t('header.liveAuctions')}</div>
+            <div
+              className={`text-14 text-blue ${
+                pathname === RouteMap.liveAuctions.index ? 'font-bold' : ''
+              }`}
+            >
+              {t('header.liveAuctions')}
+            </div>
           </Link>
         </div>
         <div className="w-full lg:pl-4 xl:pr-24" style={{ maxWidth: 500 }}>
@@ -153,7 +166,7 @@ function Header() {
             title={
               <div className="relative">
                 <img className="" src={roundSquare} alt="round square" />
-                <span className="absolute top-2 left-2 text-13 font-semibold">
+                <span className="absolute top-2 left-2 text-13 text-blue font-semibold">
                   {i18n.language.toUpperCase()}
                 </span>
               </div>
@@ -180,7 +193,7 @@ function Header() {
               displayChevronDown={false}
               width="w-18"
               menuButtonClass="justify-center px-4 -mt-1"
-              menuItemsClass="bg-white absolute focus:outline-none top-12 -left-26 w-72 rounded-10 shadow-lg
+              menuItemsClass="bg-white absolute focus:outline-none top-12 -left-26 w-72 rounded-32 shadow-lg
               flex flex-col space-y-4 pt-4 pb-2"
               menuItemClass="group flex justify-center rounded-40 items-center py-1.5 text-18 text-center text-blue focus:outline-none"
             />

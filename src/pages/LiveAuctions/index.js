@@ -47,7 +47,7 @@ function LiveAuctionsPage() {
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-y-9 gap-x-8 md:gap-x-12 mt-16 md:mt-8">
         {items.map((i) => (
           <div key={i.key}>
-            <BidCard src={i.src} contentClass="lightShadow p-6" />
+            <BidCard id={i.key} src={i.src} contentClass="lightShadow p-6" />
           </div>
         ))}
       </div>

@@ -4,7 +4,7 @@ export default {
   liveAuctions: {
     index: '/live-auctions',
     view(liveAuctionId) {
-      return `/live-auctions/:${liveAuctionId}`;
+      return `/live-auctions/${liveAuctionId}`;
     },
   },
   explore: '/explore',

@@ -92,7 +92,7 @@ function EditProfile() {
               </div>
             )}
           </div>
-          <div className="text-18 text-blue mt-9 mb-5.5">{t('editProfile.name')}</div>
+          <div className="text-18 text-blue font-semibold mt-9 mb-5.5">{t('editProfile.name')}</div>
           <input
             className="responsive-placeholder bg-transparent border-b border-solid border-white
                     w-full"
@@ -105,7 +105,9 @@ function EditProfile() {
             </p>
           )}
 
-          <div className="text-18 text-blue mt-9 mb-5.5">{t('editProfile.customURl')}</div>
+          <div className="text-18 text-blue font-semibold mt-9 mb-5.5">
+            {t('editProfile.customURl')}
+          </div>
           <input
             className="responsive-placeholder bg-transparent border-b border-solid border-white
                     w-full"
@@ -118,7 +120,7 @@ function EditProfile() {
             </p>
           )}
 
-          <div className="text-18 text-blue mt-9 mb-5.5">{t('editProfile.bio')}</div>
+          <div className="text-18 text-blue font-semibold mt-9 mb-5.5">{t('editProfile.bio')}</div>
           <input
             className="responsive-placeholder bg-transparent border-b border-solid border-white
                     w-full"
@@ -131,7 +133,9 @@ function EditProfile() {
             </p>
           )}
 
-          <div className="text-18 text-blue mt-9 mb-5.5">{t('editProfile.email')}</div>
+          <div className="text-18 text-blue font-semibold mt-9 mb-5.5">
+            {t('editProfile.email')}
+          </div>
           <input
             className="responsive-placeholder bg-transparent border-b border-solid border-white
                     w-full"
@@ -149,7 +153,7 @@ function EditProfile() {
           </div>
           <div className="inline-flex justify-center items-center space-x-3 mx-auto mt-9 bg-blue rounded-12 p-3">
             <img src={twitter} alt="twitter" />
-            <div className="text-18 text-white font-semibold">@emillieporsme</div>
+            <div className="text-18 text-white">@emillieporsme</div>
           </div>
 
           <button

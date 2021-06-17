@@ -36,7 +36,7 @@ function Profile() {
       <div className="flex flex-col space-y-9 sm:space-y-18">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-y-6 gap-x-6 lg:gap-12">
           <ProfileSummary
-            wrapperClassName="col-span-1 md:col-span-8"
+            wrapperClassName="col-span-1 md:col-span-8 h-full"
             categories={categories}
             activeCategory={activeCategory}
             onSetCategories={(catKey) => setActiveCategory(catKey)}
@@ -50,7 +50,7 @@ function Profile() {
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-12">
           {items.map((i) => (
             <div key={i.key}>
-              <BidCard src={i.src} contentClass="lightShadow p-6" displayTime />
+              <BidCard id={i.key} src={i.src} contentClass="lightShadow p-6" displayTime />
             </div>
           ))}
         </div>

@@ -22,19 +22,19 @@ function Explore({ wrapperClass }) {
 
   const sortItems1 = [
     { key: 1, title: t('home.explore.sortItems.all'), onClick: () => {} },
-    { key: 2, title: t('home.explore.sortItems.FanArt'), onClick: () => {} },
-    { key: 3, title: t('home.explore.sortItems.Photography'), onClick: () => {} },
-    { key: 4, title: t('home.explore.sortItems.FineArt'), onClick: () => {} },
-    { key: 5, title: t('home.explore.sortItems.Food'), onClick: () => {} },
-    { key: 6, title: t('home.explore.sortItems.Memes'), onClick: () => {} },
+    { key: 2, title: 'Handbags', onClick: () => {} },
+    { key: 3, title: 'Watches', onClick: () => {} },
+    { key: 4, title: 'Jewellery', onClick: () => {} },
+    { key: 5, title: 'Art', onClick: () => {} },
+    { key: 6, title: 'Food', onClick: () => {} },
   ];
 
   const sortItems2 = [
-    { key: 1, title: t('home.explore.sortItems.FanArt'), onClick: () => {} },
-    { key: 2, title: t('home.explore.sortItems.Memes'), onClick: () => {} },
-    { key: 3, title: t('home.explore.sortItems.FineArt'), onClick: () => {} },
-    { key: 4, title: t('home.explore.sortItems.Food'), onClick: () => {} },
-    { key: 5, title: t('home.explore.sortItems.Photography'), onClick: () => {} },
+    { key: 1, title: 'Handbags', onClick: () => {} },
+    { key: 2, title: 'Watches', onClick: () => {} },
+    { key: 3, title: 'Jewellery', onClick: () => {} },
+    { key: 4, title: 'Art', onClick: () => {} },
+    { key: 5, title: 'Food', onClick: () => {} },
   ];
 
   const filterItems = [
@@ -62,10 +62,10 @@ function Explore({ wrapperClass }) {
   return (
     <div className={wrapperClass}>
       <div className="flex justify-between items-center">
-        <div className="text-18 lg:text-24 text-blue font-semibold mr-4 lg:mr-6 xl:mr-8.5">
+        <div className="text-18 lg:text-24 text-blue font-semibold mr-4 lg:mr-5 xl:mr-8.5">
           {t('home.explore.title')}
         </div>
-        <div className="hidden md:flex justify-between w-full max-w-600 lg:max-w-850 mr-6">
+        <div className="hidden md:flex justify-between w-full max-w-600 lg:max-w-850 mr-4">
           {sortItems1.map((i) => (
             <div
               key={i.key}
@@ -104,7 +104,7 @@ function Explore({ wrapperClass }) {
               menuButtonWrapperClass="-top-2"
               menuButtonClass="rounded-10 justify-between text-white"
               menuItemsClass="bg-white rounded-32 w-36 mt-2 py-5 -left-26 top-8"
-              menuItemClass="text-14 text-gray font-semibold justify-center py-2"
+              menuItemClass="text-16 text-gray font-semibold justify-center py-2"
               selectedItemClass="text-blue"
               width="w-12"
               displayChevronDown={false}
@@ -115,7 +115,7 @@ function Explore({ wrapperClass }) {
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-y-9 gap-x-8 md:gap-x-12 mt-15">
         {items.map((i) => (
           <div key={i.key}>
-            <BidCard src={i.src} contentClass="lightShadow p-6" />
+            <BidCard id={i.key} src={i.src} contentClass="lightShadow p-6" />
           </div>
         ))}
       </div>

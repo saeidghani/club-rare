@@ -39,10 +39,7 @@ function VerifyProfile() {
               onClick={() => history.push(RouteMap.profile.verifyProfile.viaTwitter)}
             >
               <img src={twitter} alt="twitter" />
-              <div className="">
-                <span className="mr-4">{t('verifyProfile.verifyViaTwitter.part1')}</span>
-                <span className="">{t('verifyProfile.verifyViaTwitter.part2')}</span>
-              </div>
+              <div className="">{t('verifyProfile.verifyViaTwitter')}</div>
             </button>
             <div className="hidden lg:block radialGradient radialGradient--lg left-80 -top-8 opacity-30"></div>
           </div>

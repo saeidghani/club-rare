@@ -25,7 +25,7 @@ const Routes = () => {
       <Route exact path="/" render={() => <Redirect to={RouteMap.home} />} />
       <Route path={RouteMap.home} component={Home} />
       <Route path={RouteMap.notifications} component={Notifications} />
-      <Route path={RouteMap.liveAuctions.view('liveAuctionId')} component={LiveAuction} />
+      <Route path={RouteMap.liveAuctions.view(':liveAuctionId')} component={LiveAuction} />
       <Route path={RouteMap.liveAuctions.index} component={LiveAuctions} />
       <Route path={RouteMap.explore} component={Explore} />
       <Route path={RouteMap.create} component={Create} />

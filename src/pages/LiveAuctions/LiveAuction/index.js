@@ -13,6 +13,7 @@ function LiveAuction() {
   const { t } = useTranslation();
   const [parsedQuery, query, setQuery] = useQuery();
   const [bidOpen, setBidOpen] = useState(false);
+  const [bidModalTitle, setBidModalTitle] = useState('');
   const { auctionAvailable, fixedPrice, auctionEnded, auctionNotStarted, putOnSale } =
     parsedQuery || {};
 
@@ -30,7 +31,11 @@ function LiveAuction() {
 
   return (
     <Layout displayStickySidebar loading={loading}>
-      <BidModal open={bidOpen} onCloseModal={() => setBidOpen(false)} />
+      <BidModal
+        bidModalTitle={bidModalTitle}
+        open={bidOpen}
+        onCloseModal={() => setBidOpen(false)}
+      />
       <Poster wrapperClass="block md:hidden" />
       <div className="grid grid-cols-1 md:grid-cols-12 md:gap-x-4 xl:gap-x-12 gap-y-6 w-full mt-8">
         <div className="row-start-2 md:row-start-1 md:col-start-1 md:col-span-5 lg:col-start-1 lg:col-span-5">
@@ -41,7 +46,10 @@ function LiveAuction() {
           {putOnSale ? (
             <PutOnSale />
           ) : (
-            <AuctionSummary wrapperClass="" onSetBidOpen={() => setBidOpen(true)} />
+            <AuctionSummary
+              onSetBidModalTitle={(title) => setBidModalTitle(title)}
+              onSetBidOpen={() => setBidOpen(true)}
+            />
           )}
           <History wrapperClass="mt-11.5" />
         </div>

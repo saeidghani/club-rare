@@ -20,7 +20,7 @@ export default function Dropdown({
   const [selected, setSelected] = useState();
 
   return (
-    <div className={`relative text-center ${width}`}>
+    <div className={`relative text-center z-10 ${width}`}>
       <Menu as="div" className=" inline-block text-left w-full">
         {({ open }) => (
           <>

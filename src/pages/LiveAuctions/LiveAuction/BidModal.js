@@ -5,7 +5,7 @@ import closeBox from '../../../assets/icons/closeBox.svg';
 import nature from '../../../assets/images/nature.png';
 import { CryptoIcon } from '../../../components/common/Icons';
 
-function NotificationsModal({ open, onCloseModal }) {
+function BidModal({ open, onCloseModal, bidModalTitle }) {
   const { t } = useTranslation();
   const [accepted, setAccepted] = useState(false);
   const [displayErrMsg, setDisplayErrMsg] = useState(false);
@@ -13,7 +13,7 @@ function NotificationsModal({ open, onCloseModal }) {
   const title = (
     <div className="grid grid-cols-3 items-center border-gray w-full border-b border-solid border-fadeBlue">
       <div className="col-start-2 text-18 md:text-22 text-center font-semibold p-4.5">
-        {t('productPage.bidModal.PlaceABid')}
+        {bidModalTitle || t('productPage.bidModal.PlaceABid')}
       </div>
       <div
         className="col-start-3 justify-self-end mr-9 cursor-pointer"
@@ -90,4 +90,4 @@ function NotificationsModal({ open, onCloseModal }) {
   );
 }
 
-export default NotificationsModal;
+export default BidModal;

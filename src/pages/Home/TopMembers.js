@@ -30,7 +30,9 @@ function TopMembers({ wrapperClass }) {
       >
         <div className="flex flex-col items-center">
           <div className="flex items-center">
-            <div className="text-20 lg:text-24 font-semibold mr-3">{t('home.topMembers.top')}</div>
+            <div className="text-20 lg:text-24 text-blue font-semibold mr-3">
+              {t('home.topMembers.top')}
+            </div>
             <div className="flex border border-solid border-white rounded-12 h-9">
               {memberTypes.map((i) => (
                 <div
@@ -38,7 +40,7 @@ function TopMembers({ wrapperClass }) {
                   className={`text-14 font-semibold px-5 rounded-12 flex items-center cursor-pointer ${
                     topMembersType === i.key
                       ? 'text-white border-r border-solid border-white linearGradient'
-                      : ''
+                      : 'text-blue'
                   }`}
                   onClick={() => setTopMembersType(i.key)}
                 >
@@ -51,10 +53,7 @@ function TopMembers({ wrapperClass }) {
             className="z-10 grid grid-cols-1 c-slick-dots c-slick-dots-bottom--40
            px-2 xs:px-14 sm:px-32 md:px-48 lg:px-0 mt-4 xl:mt-4"
           >
-            <Slider
-              {...settings}
-              //style={{ maxHeight: 400 }}
-            >
+            <Slider {...settings}>
               {[1, 2, 3].map((i) => (
                 <div key={i}>
                   <div
@@ -62,23 +61,19 @@ function TopMembers({ wrapperClass }) {
                     className="grid grid-cols-2 gap-x-2.5 xs:gap-x-3.5 md:gap-x-2 xl:gap-x-6 gap-y-8.5"
                   >
                     {[1, 2, 3, 4].map((i) => (
-                      <div
-                        key={i}
-                        className=""
-                        //style={{ boxShadow: '30px 70px 120px rgba(27, 49, 66, 0.13)' }}
-                      >
+                      <div key={i} className="">
                         <div className="flex justify-center mt-2">
                           <div className="relative -mr-4">
                             <img
-                              className="border-r border-solid border-white rounded-full w-11.5 h-11.5 md:w-12 md:h-12 z-10"
+                              className="border-r border-solid border-white rounded-full w-11.5 h-11.5 md:w-14 md:h-14 z-10"
                               src={avatar2}
                               alt=""
                             />
                             <div className="absolute -top-2 left-0 text-white">{i}.</div>
                           </div>
                           <div className="rounded-40 px-4.5 xs:px-5.5 py-1.5 md:py-2 md:px-4 xl:px-8 border border-solid border-white">
-                            <div className="text-12 text-center text-blue">Emilie Butler</div>
-                            <div className="text-10 text-center opacity-60">10.5ETH</div>
+                            <div className="text-14 text-center text-blue">Emilie Butler</div>
+                            <div className="text-12 text-center opacity-60">10.5ETH</div>
                           </div>
                         </div>
                       </div>

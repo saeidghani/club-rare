@@ -33,7 +33,7 @@ function PutOnSale() {
   ];
 
   return (
-    <div className="w-full border border-solid border-white bg-white bg-opacity-20 rounded-50 py-2 md:py-9 px-4 md:px-12">
+    <div className="w-full border border-solid border-white bg-white bg-opacity-20 rounded-50 py-2 md:py-9 px-4 md:px-8 lg:px-12">
       <div className="mt-9 md:mt-0 mb-4">{t('productPage.PutOnSale.ChooseYourSalesModel')}</div>
       <div className="flex flex-col space-y-6">
         {salesModels.map((m) => (
@@ -94,7 +94,7 @@ function PutOnSale() {
                     </p>
                   )}
                 </div>
-                <Select {...register('minimumBid')} options={minimumBidOptions} width="w-28" />
+                <Select {...register('minimumBid')} options={minimumBidOptions} width="w-42" />
               </div>
             </div>
             <div className="flex justify-between w-full">

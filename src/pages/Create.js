@@ -121,7 +121,9 @@ function Create() {
           </div>
           {activeSaleModel === 'fixedPrice' && (
             <>
-              <div className="text-16 md:text-18 text-blue mb-5.5">{t('create.Price')}</div>
+              <div className="text-16 md:text-18 text-blue font-semibold mb-5.5">
+                {t('create.Price')}
+              </div>
               <div className="relative">
                 <input
                   className="responsive-placeholder bg-transparent border-b border-solid border-white w-full"
@@ -143,24 +145,30 @@ function Create() {
           {activeSaleModel === 'auction' && (
             <div className="flex flex-col space-y-5 w-full">
               <div className="">
-                <div className="text-16 md:text-18 text-blue mt-5 mb-4">
+                <div className="text-16 md:text-18 text-blue font-semibold mt-5 mb-4">
                   {t('create.MinimumBid')}
                 </div>
                 <Select {...register('minimumBid')} options={minimumBidOptions} width="w-full" />
               </div>
               <div className="flex justify-between w-full">
                 <div className="">
-                  <div className="text-18 text-blue mt-5 mb-4">{t('create.StartingDate')}</div>
+                  <div className="text-18 text-blue font-semibold mt-5 mb-4">
+                    {t('create.StartingDate')}
+                  </div>
                   <Select options={startingDateOptions} width="w-42" />
                 </div>
                 <div className="">
-                  <div className="text-18 text-blue mt-5 mb-4">{t('create.ExpirationDate')}</div>
+                  <div className="text-18 text-blue font-semibold mt-5 mb-4">
+                    {t('create.ExpirationDate')}
+                  </div>
                   <Select options={expirationDateOptions} width="w-42" />
                 </div>
               </div>
             </div>
           )}
-          <div className="text-16 md:text-18 text-blue mt-9 mb-5.5">{t('create.Title')}</div>
+          <div className="text-16 md:text-18 text-blue font-semibold mt-9 mb-5.5">
+            {t('create.Title')}
+          </div>
           <input
             className="responsive-placeholder bg-transparent border-b border-solid border-white
                     w-full"
@@ -171,7 +179,9 @@ function Create() {
             <p className="text-red justify-self-start mt-2 pl-2">{t('create.PleaseEnterTitle')}</p>
           )}
 
-          <div className="text-16 md:text-18 text-blue mt-9 mb-5.5">{t('create.Description')}</div>
+          <div className="text-16 md:text-18 text-blue font-semibold mt-9 mb-5.5">
+            {t('create.Description')}
+          </div>
           <input
             className="responsive-placeholder bg-transparent border-b border-solid border-white
                     w-full"
@@ -185,11 +195,15 @@ function Create() {
           )}
 
           <div className="">
-            <div className="text-16 md:text-18 text-blue mt-9 mb-5.5">{t('create.Category')}</div>
+            <div className="text-16 md:text-18 text-blue font-semibold mt-9 mb-5.5">
+              {t('create.Category')}
+            </div>
             <Select {...register('category')} options={categoryOptions} width="w-full" />
           </div>
 
-          <div className="text-16 md:text-18 text-blue mt-9 mb-5.5">{t('create.Royalties')}</div>
+          <div className="text-16 md:text-18 text-blue font-semibold mt-9 mb-5.5">
+            {t('create.Royalties')}
+          </div>
           <div className="relative">
             <input
               className="responsive-placeholder bg-transparent border-b border-solid border-white w-full"
@@ -205,35 +219,41 @@ function Create() {
           )}
 
           <div className="w-full">
-            <div className="text-16 md:text-18 text-blue mt-9 mb-5.5">
-              {t('create.Properties')}{' '}
-              <span className="text-14 opacity-50">{t('create.Optional')}</span>
+            <div className="mt-9 mb-5.5">
+              <span className="text-16 md:text-18 text-blue font-semibold mr-2">
+                {t('create.Properties')}
+              </span>
+              <span className="text-14 text-blue opacity-50">{t('create.Optional')}</span>
             </div>
             <div className="flex justify-between">
-              <input
-                className="responsive-placeholder bg-transparent border-b border-solid border-white
+              <div>
+                <input
+                  className="responsive-placeholder bg-transparent border-b border-solid border-white
                     w-full"
-                placeholder={t('create.Size')}
-                {...register('royalties', { required: true })}
-                style={{ maxWidth: 135 }}
-              />
-              {errors.royalties && (
-                <p className="text-red justify-self-start mt-2 pl-2">
-                  {t('create.PleaseEnterProperties')}
-                </p>
-              )}
-              <input
-                className="responsive-placeholder bg-transparent border-b border-solid border-white
+                  placeholder={t('create.Size')}
+                  {...register('royalties', { required: true })}
+                  style={{ maxWidth: 135 }}
+                />
+                {errors.royalties && (
+                  <p className="text-red justify-self-start mt-2 pl-2">
+                    {t('create.PleaseEnterProperties')}
+                  </p>
+                )}
+              </div>
+              <div>
+                <input
+                  className="responsive-placeholder bg-transparent border-b border-solid border-white
                     w-full"
-                placeholder="M"
-                {...register('royalties', { required: true })}
-                style={{ maxWidth: 135 }}
-              />
-              {errors.royalties && (
-                <p className="text-red justify-self-start mt-2 pl-2">
-                  {t('create.PleaseEnterProperties')}
-                </p>
-              )}
+                  placeholder="M"
+                  {...register('royalties', { required: true })}
+                  style={{ maxWidth: 135 }}
+                />
+                {errors.royalties && (
+                  <p className="text-red justify-self-start mt-2 pl-2">
+                    {t('create.PleaseEnterProperties')}
+                  </p>
+                )}
+              </div>
             </div>
           </div>
 
@@ -255,9 +275,11 @@ function Create() {
             ) : (
               <div className="row-start-1 col-start-1 w-full rounded-50 bg-white bg-opacity-20 mt-6.5 h-60 md:h-140"></div>
             )}
-            <div className="row-start-1 col-start-1 z-10 text-14 md:text-16 xl:text-20 text-gray pointer-events-none">
-              {t('create.UploadFileToPreview')}
-            </div>
+            {!selectedFile && (
+              <div className="row-start-1 col-start-1 z-10 text-14 md:text-16 xl:text-20 text-gray pointer-events-none">
+                {t('create.UploadFileToPreview')}
+              </div>
+            )}
           </div>
         </div>
       </form>

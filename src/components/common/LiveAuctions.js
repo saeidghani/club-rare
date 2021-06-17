@@ -60,6 +60,7 @@ function LiveAuctions({ wrapperClass }) {
           {items.map((i) => (
             <BidCard
               key={i.key}
+              id={i.key}
               src={i.src}
               headerClass="px-6 mt-6"
               contentClass="p-0"

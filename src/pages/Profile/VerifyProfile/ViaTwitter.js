@@ -43,24 +43,20 @@ function ViaTwitter() {
         <p className="text-14 md:text-24 text-blue mt-8 text-center opacity-80">
           {t('verifyProfileViaTwitter.text2')}
         </p>
-        <form
-          className="mt-6 w-full flex flex-col"
-          onSubmit={handleSubmit(onSubmit)}
-          //style={{ maxWidth: 400 }}
-        >
-          <input
-            className="responsive-placeholder bg-transparent border border-solid border-white rounded-12
-                   px-5 py-3.5 mt-2 w-full mx-auto"
-            style={{ maxWidth: 399 }}
-            placeholder="Tweet URL"
-            {...register('twitter', { required: true })}
-          />
-          {errors.twitter && (
-            <p className="text-red justify-self-start mt-2 pl-2">
-              {t('verifyProfileViaTwitter.twitterUrlErrorMsg')}
-            </p>
-          )}
-
+        <form className="mt-6 w-full flex flex-col" onSubmit={handleSubmit(onSubmit)}>
+          <div className="mt-2 mx-auto w-full" style={{ maxWidth: 399 }}>
+            <input
+              className="responsive-placeholder bg-transparent border border-solid border-white rounded-12
+                   px-5 py-3.5 w-full"
+              placeholder="Tweet URL"
+              {...register('twitter', { required: true })}
+            />
+            {errors.twitter && (
+              <p className="text-red mt-2 pl-2">
+                {t('verifyProfileViaTwitter.twitterUrlErrorMsg')}
+              </p>
+            )}
+          </div>
           <button
             className="w-full md:max-w-270 mt-9 bg-blue mx-auto text-16 md:text-20 text-white font-semibold py-3 rounded-12"
             type="submit"

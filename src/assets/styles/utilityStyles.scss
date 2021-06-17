@@ -27,14 +27,14 @@ input, button, select {
 }
 
 .bluePlaceholder::placeholder {
-  opacity: 50%;
+  opacity: 50% !important;
   font-size: 15px !important;
   font-weight: 600 !important;
   color: #1B3142 !important;
 }
 
 .responsive-placeholder::placeholder {
-  font-size: 15px !important;
+  font-size: 16px !important;
   @media(max-width: 1024px) {
    font-size: 12px !important;
   }

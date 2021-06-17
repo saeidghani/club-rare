@@ -52,7 +52,7 @@ function ProfileSummary({
   return (
     <div className={wrapperClassName}>
       <ReportModal open={reportOpen} onCloseModal={() => setReportOpen(false)} />
-      <div className="bg-white rounded-24 px-5 py-8 lightShadow">
+      <div className="bg-white rounded-24 px-5 py-8 lightShadow h-full">
         <div className="flex items-start justify-between mx-auto">
           <DotsDropdown wrapperClass="sm:hidden" menuItemsClass="left-0" />
           <div className="flex flex-col sm:flex-row sm:space-x-4 items-center">

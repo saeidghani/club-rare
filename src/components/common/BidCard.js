@@ -1,14 +1,17 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { CryptoIcon } from './Icons';
+import RouteMap from '../../routes/RouteMap';
 
-function BidCard({ wrapperClass, headerClass, contentClass, displayTime, src }) {
+function BidCard({ wrapperClass, headerClass, contentClass, displayTime, src, id }) {
   const { t } = useTranslation();
+  const history = useHistory();
 
   return (
-    <div className={wrapperClass}>
+    <div className={wrapperClass} onClick={() => history.push(RouteMap.liveAuctions.view(id))}>
       <div
-        className={`flex flex-col justify-center border border-solid border-white rounded-50 ${
+        className={`flex flex-col justify-center border border-solid border-white rounded-50 cursor-pointer ${
           contentClass || 'p-6'
         }`}
       >

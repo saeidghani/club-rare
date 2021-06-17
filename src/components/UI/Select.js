@@ -1,7 +1,6 @@
 import React, { Fragment, useState } from 'react';
 import { Listbox, Transition } from '@headlessui/react';
 import roundArrow from '../../assets/icons/roundArrow.svg';
-import { ChevronDownIcon } from '@heroicons/react/solid';
 
 export default function Select({
   type = 'primary',

@@ -5,7 +5,7 @@ import switchBox from '../../../assets/icons/switchBox.svg';
 import { CryptoIcon } from '../../../components/common/Icons';
 import { useQuery } from '../../../hooks/useQuery';
 
-function AuctionSummary({ wrapperClass, onSetBidOpen }) {
+function AuctionSummary({ wrapperClass, onSetBidOpen, onSetBidModalTitle }) {
   const { t } = useTranslation();
   const {
     register,
@@ -15,7 +15,10 @@ function AuctionSummary({ wrapperClass, onSetBidOpen }) {
   const [parsedQuery, query, setQuery] = useQuery();
   const { auctionAvailable, fixedPrice, auctionEnded, auctionNotStarted } = parsedQuery || {};
 
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    console.log(data);
+    onSetBidOpen();
+  };
 
   return (
     <div className={wrapperClass}>
@@ -121,7 +124,10 @@ function AuctionSummary({ wrapperClass, onSetBidOpen }) {
             <button
               className="w-full text-16 md:text-20 text-white font-semibold bg-blue rounded-12 rounded-bl-30 py-4 md:py-3.5"
               style={{ boxShadow: '10px 20px 25px 7px rgba(27, 49, 66, 0.13)' }}
-              onClick={onSetBidOpen}
+              onClick={() => {
+                onSetBidOpen();
+                onSetBidModalTitle('Checkout');
+              }}
             >
               {t('productPage.auctionSummary.BuyNow')}
             </button>
