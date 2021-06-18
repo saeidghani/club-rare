@@ -72,13 +72,20 @@ function ProfileSummary({
         <p className="text-14 sm:text-16 text-blue text-center sm:text-left opacity-75 mt-2 sm:mt-4.5">
           {t('profile.summary.paragraph')}
         </p>
-        <div className="flex justify-center sm:justify-start items-center mt-4 sm:mt-9">
-          <div className="flex items-center space-x-2 linearGradient rounded-12 w-full sm:max-w-230 px-2 h-12 mr-4">
-            <div className="text-12 text-white flex-grow">0x4A34639...5wqdgyieyvqjva81</div>
-            <img className="" src={layers} alt="layers" />
+        <div className="flex lg:flex-col xl:flex-row justify-center sm:justify-start lg:items-start xl:items-center mt-4 xl:mt-9">
+          <div className="flex w-full sm:max-w-320">
+            <div
+              className="flex items-center space-x-2 linearGradient rounded-12
+                            w-full px-2 h-12 mr-4"
+            >
+              <div className="text-12 text-white flex-grow">0x4A34639...5wqdgyieyvqjva81</div>
+              <img className="" src={layers} alt="layers" />
+            </div>
+            <img className="w-12 h-12" src={switchBox} alt="switch box" />
           </div>
-          <img className="w-12 h-12" src={switchBox} alt="switch box" />
-          {isUpvote && <UpvoteContent wrapperClass="hidden sm:block ml-11" />}
+          {isUpvote && (
+            <UpvoteContent wrapperClass="hidden sm:block w-full ml-4 lg:ml-0 xl:ml-11 lg:mt-4 xl:mt-0" />
+          )}
         </div>
         <div
           className="sm:hidden flex justify-between border border-solid border-lightGray2

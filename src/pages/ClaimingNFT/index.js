@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Layout from '../../layouts/MainLayout/MainLayout';
 import bag from '../../assets/images/products/bag-1.png';
 import avatar from '../../assets/images/avatar-2.png';
 import switchBox from '../../assets/icons/switchBox.svg';
 import { CryptoIcon } from '../../components/common/Icons';
+import RouteMap from '../../routes/RouteMap';
 
 function ClaimingNFT() {
   const { t } = useTranslation();
+  const history = useHistory();
 
   const [loading, setLoading] = useState(true);
 
@@ -19,7 +22,7 @@ function ClaimingNFT() {
 
   return (
     <Layout displaySidebar={false} loading={loading}>
-      <div className="w-full mx-auto flex flex-col items-center mt-28 lg:mt-8 pb-6">
+      <div className="w-full mx-auto flex flex-col items-center mt-7.5 md:mt-28 lg:mt-8 pb-6">
         <div className="text-24 lg:text-34 text-blue font-bold">{t('claimingNFT.title')}</div>
         <div className="relative mt-2">
           <div className="text-14 lg:text-18 text-center">
@@ -30,11 +33,11 @@ function ClaimingNFT() {
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-12 md:gap-x-12 gap-y-6 w-full mt-8">
-        <hr className="hidden lg:block row-start-1 col-start-2 col-span-10 mb-8" />
         <img
-          className="md:justify-self-start md:row-start-2 md:col-start-1 md:col-span-5 lg:col-start-2 lg:col-span-4 w-full border border-solid border-white rounded-50 p-7"
+          className="md:justify-self-start md:row-start-2 md:col-start-1 md:col-span-5 lg:col-start-2 lg:col-span-4
+          w-full border border-solid border-white rounded-50 p-7 xl:w-483px xl:h-483px"
           src={bag}
-          alt="nature"
+          alt="bag"
         />
         <div className="md:row-start-2 md:col-start-6 md:col-span-7 lg:col-start-6 lg:col-span-6 self-center w-full">
           <div className="bg-white rounded-32 lg:rounded-50 p-5 lg:p-8">
@@ -61,13 +64,14 @@ function ClaimingNFT() {
               <button
                 className="w-full text-16 lg:text-20 text-white font-semibold bg-blue rounded-12 rounded-bl-30 py-4 lg:py-3.5"
                 style={{ boxShadow: '10px 20px 25px 7px rgba(27, 49, 66, 0.13)' }}
+                onClick={() => history.push(RouteMap.claimingNFT.success)}
               >
                 {t('claimingNFT.claimYourNFT')}
               </button>
               <img className="" src={switchBox} alt="switchBox" />
             </div>
           </div>
-          <div className="relative flex w-full items-center mt-10.5">
+          <div className="relative flex w-full items-center mt-10.5 md:mt-6 xl:mt-10.5">
             <img
               className="w-16 h-16 lg:w-21 lg:h-21 -mr-8 z-30 border border-solid border-white rounded-full"
               src={avatar}

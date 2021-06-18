@@ -14,7 +14,7 @@ function MainLayout({
     <div>
       <Header />
       <div className="lg:flex">
-        <div className="sticky top-140 z-50 lg:pr-8 lg:pl-16 lg:pt-40">
+        <div className={`sticky top-140 z-50 lg:pt-40 ${displaySidebar ? 'lg:pl-16 lg:pr-8' : ''}`}>
           <Sidebar displaySidebar={displaySidebar} displayStickySidebar={displayStickySidebar} />
         </div>
         <main

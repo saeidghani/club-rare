@@ -24,10 +24,10 @@ function Upvote() {
   return (
     <MainLayout mainClassName="" loading={loading} displayStickySidebar>
       <div className="flex flex-col space-y-9 sm:space-y-18">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-y-6 gap-x-6 lg:gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-6 lg:gap-x-6 xl:gap-12">
           <ProfileSummary
             isUpvote
-            wrapperClassName="col-span-1 md:col-span-8"
+            wrapperClassName="col-span-1 lg:col-span-8"
             categories={categories}
             activeCategory={activeCategory}
             onSetCategories={(catKey) => setActiveCategory(catKey)}

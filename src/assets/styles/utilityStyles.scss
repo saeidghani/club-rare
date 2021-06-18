@@ -26,11 +26,13 @@ input, button, select {
   border-radius: 5px;
 }
 
-.bluePlaceholder::placeholder {
-  opacity: 50% !important;
-  font-size: 15px !important;
-  font-weight: 600 !important;
-  color: #1B3142 !important;
+header {
+  ::placeholder {
+    opacity: 50% !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    color: #1B3142 !important;
+  }
 }
 
 .responsive-placeholder::placeholder {

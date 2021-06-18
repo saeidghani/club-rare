@@ -33,16 +33,18 @@ function ReportModal({ open, onCloseModal }) {
   console.log(watch('example')); // watch input value by passing the name of it
 
   const title = (
-    <div className="flex items-center justify-between text-26 font-bold pt-11 px-11">
-      <div className="text-26 font-bold">{t('profile.summary.report.submitAReport')}</div>
-      <div className="cursor-pointer" onClick={onCloseModal}>
+    <div className="flex flex-col-reverse sm:flex-row items-center justify-between text-26 font-bold pt-6 sm:pt-11 px-4 sm:px-11">
+      <div className="self-start sm:self-center text-26 font-bold">
+        {t('profile.summary.report.submitAReport')}
+      </div>
+      <div className="self-end sm:self-center cursor-pointer" onClick={onCloseModal}>
         <img src={closeBox} alt="" />
       </div>
     </div>
   );
 
   const content = (
-    <div className="px-11 pb-6.5">
+    <div className="px-4.5 sm:px-11 pb-6.5 mt-2.5 sm:mt-0">
       <p className="text-20 font-semibold">{t('profile.summary.report.text')}</p>
       <form className="mt-6" onSubmit={handleSubmit(onSubmit)}>
         <div className="text-blue text-18 font-semibold">

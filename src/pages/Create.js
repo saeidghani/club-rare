@@ -155,13 +155,13 @@ function Create() {
                   <div className="text-18 text-blue font-semibold mt-5 mb-4">
                     {t('create.StartingDate')}
                   </div>
-                  <Select options={startingDateOptions} width="w-42" />
+                  <Select options={startingDateOptions} width="w-36 sm:w-42" />
                 </div>
                 <div className="">
                   <div className="text-18 text-blue font-semibold mt-5 mb-4">
                     {t('create.ExpirationDate')}
                   </div>
-                  <Select options={expirationDateOptions} width="w-42" />
+                  <Select options={expirationDateOptions} width="w-36 sm:w-42" />
                 </div>
               </div>
             </div>

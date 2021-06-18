@@ -37,7 +37,7 @@ function LiveAuction() {
         onCloseModal={() => setBidOpen(false)}
       />
       <Poster wrapperClass="block md:hidden" />
-      <div className="grid grid-cols-1 md:grid-cols-12 md:gap-x-4 xl:gap-x-12 gap-y-6 w-full mt-8">
+      <div className="grid grid-cols-1 md:grid-cols-12 md:gap-x-4 lg:gap-x-2 xl:gap-x-12 gap-y-6 w-full mt-8">
         <div className="row-start-2 md:row-start-1 md:col-start-1 md:col-span-5 lg:col-start-1 lg:col-span-5">
           <Poster wrapperClass="hidden md:block" />
           <Information />

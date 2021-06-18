@@ -20,7 +20,10 @@ function ViaTwitter() {
 
   return (
     <Layout displaySidebar={false} mainClassName="grid grid-cols-1 md:grid-cols-12">
-      <div className="md:col-start-3 md:col-span-8 xl:col-start-4 xl:col-span-6 w-full flex flex-col justify-center items-center mx-auto mt-21 md:mt-32">
+      <div
+        className="md:col-start-3 md:col-span-8 xl:col-start-4 xl:col-span-6 w-full flex flex-col
+      justify-center items-center mx-auto mt-21 md:mt-32 px-5 md:px-0"
+      >
         <div className="relative mt-7">
           <div className="text-24 md:text-34 text-blue font-bold text-center">
             {t('verifyProfileViaTwitter.title')}
@@ -44,7 +47,7 @@ function ViaTwitter() {
           {t('verifyProfileViaTwitter.text2')}
         </p>
         <form className="mt-6 w-full flex flex-col" onSubmit={handleSubmit(onSubmit)}>
-          <div className="mt-2 mx-auto w-full" style={{ maxWidth: 399 }}>
+          <div className="mt-2 mx-auto w-full max-w-400">
             <input
               className="responsive-placeholder bg-transparent border border-solid border-white rounded-12
                    px-5 py-3.5 w-full"
@@ -58,7 +61,7 @@ function ViaTwitter() {
             )}
           </div>
           <button
-            className="w-full md:max-w-270 mt-9 bg-blue mx-auto text-16 md:text-20 text-white font-semibold py-3 rounded-12"
+            className="w-full max-w-400 md:max-w-270 mt-9 bg-blue mx-auto text-16 md:text-20 text-white font-semibold py-3 rounded-12"
             type="submit"
           >
             {t('verifyProfileViaTwitter.submit')}

@@ -19,7 +19,7 @@ function History({ wrapperClass }) {
         />
         <div
           className="w-full flex justify-between items-center border border-solid border-white
-                  bg-white bg-opacity-20 rounded-50 py-1 md:py-3 pl-10 pr-5 xl:pr-10"
+                  bg-white bg-opacity-20 rounded-50 py-1 md:py-3 pl-9 pr-4 xl:pr-10"
         >
           <div className="">
             <div className="flex flex-col md:flex-row">
