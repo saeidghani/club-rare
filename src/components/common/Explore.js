@@ -20,7 +20,7 @@ function Explore({ wrapperClass }) {
   const { t } = useTranslation();
   const [activeSort, setActiveSort] = useState(1);
 
-  const sortItems1 = [
+  const filterItems1 = [
     { key: 1, title: t('home.explore.sortItems.all'), onClick: () => {} },
     { key: 2, title: 'Handbags', onClick: () => {} },
     { key: 3, title: 'Watches', onClick: () => {} },
@@ -29,7 +29,7 @@ function Explore({ wrapperClass }) {
     { key: 6, title: 'Food', onClick: () => {} },
   ];
 
-  const sortItems2 = [
+  const filterItems2 = [
     { key: 1, title: 'Handbags', onClick: () => {} },
     { key: 2, title: 'Watches', onClick: () => {} },
     { key: 3, title: 'Jewellery', onClick: () => {} },
@@ -37,7 +37,7 @@ function Explore({ wrapperClass }) {
     { key: 5, title: 'Food', onClick: () => {} },
   ];
 
-  const filterItems = [
+  const sortItems = [
     { key: 1, title: t('home.explore.filterItems.MostRecent'), onClick: () => {} },
     { key: 2, title: t('home.explore.filterItems.Cheapest'), onClick: () => {} },
     { key: 3, title: t('home.explore.filterItems.HighestPrice'), onClick: () => {} },
@@ -66,10 +66,10 @@ function Explore({ wrapperClass }) {
           {t('home.explore.title')}
         </div>
         <div className="hidden md:flex justify-between w-full max-w-600 lg:max-w-850 mr-4">
-          {sortItems1.map((i) => (
+          {filterItems1.map((i) => (
             <div
               key={i.key}
-              className={`text-center rounded-12 p-2 border border-solid border-white cursor-pointer ${
+              className={`text-center rounded-12 p-2 border border-solid border-white cursor-pointer bg-white bg-opacity-20 ${
                 activeSort === i.key ? 'text-white linearGradient' : 'text-blue'
               } ${i.key === 1 ? 'text-16 w-19' : 'text-14 w-24 lg:w-26 xl:w-32'}`}
               onClick={() => setActiveSort(i.key)}
@@ -82,7 +82,7 @@ function Explore({ wrapperClass }) {
           <div className="md:hidden">
             <Dropdown
               title={<div className="py-0.5">{t('home.explore.sortItems.all')}</div>}
-              items={sortItems2}
+              items={filterItems2}
               menuButtonClass="linearGradient -mt-2 px-2 py-1 rounded-10 justify-between text-white z-30
                              border border-solid border-white rounded-12"
               menuItemsClass="bg-lightGray3 w-32 pt-4 pb-3 pl-2 rounded-b-10 top-5 border border-solid border-white"
@@ -100,7 +100,7 @@ function Explore({ wrapperClass }) {
                   alt="filter"
                 />
               }
-              items={filterItems}
+              items={sortItems}
               menuButtonWrapperClass="-top-2"
               menuButtonClass="rounded-10 justify-between text-white"
               menuItemsClass="bg-white rounded-32 w-36 mt-2 py-5 -left-26 top-8"

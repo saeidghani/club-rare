@@ -37,11 +37,12 @@ function TopMembers({ wrapperClass }) {
               {memberTypes.map((i) => (
                 <div
                   key={i.key}
-                  className={`text-14 font-semibold px-5 rounded-12 flex items-center cursor-pointer ${
+                  className={`text-14 font-semibold rounded-12 flex items-center cursor-pointer flex justify-center ${
                     topMembersType === i.key
                       ? 'text-white border-r border-solid border-white linearGradient'
                       : 'text-blue'
                   }`}
+                  style={{ width: 86 }}
                   onClick={() => setTopMembersType(i.key)}
                 >
                   {i.title}

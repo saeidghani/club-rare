@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 import dotsDropdown from '../../assets/icons/dotsDropdown.svg';
 import edit from '../../assets/icons/edit.svg';
 import tickBox from '../../assets/icons/tickBox.svg';
@@ -79,7 +80,9 @@ function ProfileSummary({
                             w-full px-2 h-12 mr-4"
             >
               <div className="text-12 text-white flex-grow">0x4A34639...5wqdgyieyvqjva81</div>
-              <img className="" src={layers} alt="layers" />
+              <CopyToClipboard text="0x4A34639...5wqdgyieyvqjva81">
+                <img className="cursor-pointer" src={layers} alt="layers" />
+              </CopyToClipboard>
             </div>
             <img className="w-12 h-12" src={switchBox} alt="switch box" />
           </div>

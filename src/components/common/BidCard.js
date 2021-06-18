@@ -4,19 +4,29 @@ import { useTranslation } from 'react-i18next';
 import { CryptoIcon } from './Icons';
 import RouteMap from '../../routes/RouteMap';
 
-function BidCard({ wrapperClass, headerClass, contentClass, displayTime, src, id }) {
+function BidCard({
+  wrapperClass,
+  headerClass,
+  contentClass,
+  displayTime,
+  src,
+  id,
+  isPutOnSale,
+  isSold,
+  title,
+}) {
   const { t } = useTranslation();
   const history = useHistory();
 
   return (
     <div className={wrapperClass} onClick={() => history.push(RouteMap.liveAuctions.view(id))}>
       <div
-        className={`flex flex-col justify-center border border-solid border-white rounded-50 cursor-pointer ${
+        className={`flex flex-col justify-center border border-solid border-white rounded-50 cursor-pointer bg-white bg-opacity-20 ${
           contentClass || 'p-6'
         }`}
       >
         <div className={`flex justify-between ${headerClass}`}>
-          <div className="text-18 text-blue">Blondie</div>
+          <div className="text-18 text-blue font-semibold">Blondie</div>
           {displayTime && <div className="text-gray">06:23:57</div>}
         </div>
         <img
@@ -26,23 +36,36 @@ function BidCard({ wrapperClass, headerClass, contentClass, displayTime, src, id
           alt=""
         />
         <div
-          className="flex items-center justify-between bg-white px-5 pt-2 pb-5
-                      rounded-t-16 rounded-b-40 mt-7"
+          className={`flex items-center justify-between bg-white px-5
+                      rounded-t-16 rounded-b-40 mt-7 ${
+                        isPutOnSale || isSold ? 'py-4' : 'pt-2 pb-4'
+                      }`}
+          style={{ height: 79 }}
         >
-          <div className="">
-            <div className="text-18">{t('profile.bid.highestBid')}</div>
-            <div className="flex items-center space-x-2 mt-1">
-              <div className="sm:text-18 sm:font-semibold">0.5</div>
-              <CryptoIcon />
-              <div className="text-12 sm:text-14 opacity-50">$2,000</div>
+          {!isPutOnSale && (
+            <div
+              className={`flex ${
+                isSold ? 'w-full justify-between items-center' : 'flex-col space-y-1'
+              }`}
+            >
+              <div className="text-18">{title || t('profile.bid.highestBid')}</div>
+              <div className="flex items-center space-x-2">
+                <div className="sm:text-18 sm:font-semibold">0.5</div>
+                <CryptoIcon />
+                <div className="text-12 sm:text-14 opacity-50">$2,000</div>
+              </div>
             </div>
-          </div>
-          <div
-            className="text-18 bg-blue px-6 py-3 rounded-10 rounded-br-30 text-white"
-            style={{ boxShadow: '10px 10px 15px 7px rgba(27, 49, 66, 0.13)' }}
-          >
-            {t('profile.bid.placeABid')}
-          </div>
+          )}
+          {!isSold && (
+            <button
+              className={`text-18 bg-blue px-6 py-3 text-white rounded-10 text-center ${
+                isPutOnSale ? 'w-full rounded-b-30' : 'rounded-br-30'
+              }`}
+              style={{ boxShadow: '10px 10px 15px 7px rgba(27, 49, 66, 0.13)' }}
+            >
+              {isPutOnSale ? 'Put on Sale' : t('profile.bid.placeABid')}
+            </button>
+          )}
         </div>
       </div>
     </div>

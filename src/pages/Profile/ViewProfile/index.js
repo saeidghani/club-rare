@@ -26,9 +26,9 @@ function Profile() {
   ];
 
   const items = [
-    { key: 1, src: bag3 },
-    { key: 2, src: watch2 },
-    { key: 3, src: bag4 },
+    { key: 1, isPutOnSale: true, isSold: false, title: '', src: bag3 },
+    { key: 2, isPutOnSale: false, isSold: true, title: 'Sold For:', src: watch2 },
+    { key: 3, isPutOnSale: false, isSold: false, title: 'Starter Bid:', src: bag4 },
   ];
 
   return (
@@ -50,7 +50,15 @@ function Profile() {
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-12">
           {items.map((i) => (
             <div key={i.key}>
-              <BidCard id={i.key} src={i.src} contentClass="lightShadow p-6" displayTime />
+              <BidCard
+                isPutOnSale={i.isPutOnSale}
+                isSold={i.isSold}
+                title={i.title}
+                id={i.key}
+                src={i.src}
+                contentClass="lightShadow p-6"
+                displayTime
+              />
             </div>
           ))}
         </div>
