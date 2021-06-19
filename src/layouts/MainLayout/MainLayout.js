@@ -14,7 +14,10 @@ function MainLayout({
     <div>
       <Header />
       <div className="lg:flex">
-        <div className={`sticky top-140 z-50 lg:pt-40 ${displaySidebar ? 'lg:pl-16 lg:pr-8' : ''}`}>
+        <div
+          className={`sticky z-50 lg:pt-40 ${displaySidebar ? 'lg:pl-16 lg:pr-8' : ''}`}
+          style={{ top: 827 }}
+        >
           <Sidebar displaySidebar={displaySidebar} displayStickySidebar={displayStickySidebar} />
         </div>
         <main

@@ -1,12 +1,16 @@
 import React from 'react';
 import avatar1 from '../../assets/images/avatar-1.png';
 import boy from '../../assets/images/boy.png';
+import closeBox from '../../assets/icons/closeBox.svg';
 
-function Notifications() {
+function Notifications({ onClose }) {
   return (
     <div className="pt-15 pb-8 px-10">
-      <div className="border-b border-solid border-white pb-4 mb-11 mr-5 text-center text-18">
-        Notifications
+      <div className="grid grid-cols-3 items-center border-b border-solid border-white pb-4 mb-11 mr-5 ">
+        <div className="col-start-2 text-center text-18">Notifications</div>
+        <div className="col-start-3 justify-self-end cursor-pointer" onClick={onClose}>
+          <img src={closeBox} alt="" />
+        </div>
       </div>
       <div className="flex flex-col space-y-4 overflow-x-auto pr-5" style={{ height: 460 }}>
         {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].map((i) => (

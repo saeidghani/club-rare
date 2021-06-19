@@ -75,7 +75,7 @@ function Menu() {
         </div>
       </MenuDrawer>
       <MenuDrawer open={notificationsOpen} onClose={() => setNotificationsOpen(false)}>
-        <Notifications />
+        <Notifications onClose={() => setNotificationsOpen(false)} />
       </MenuDrawer>
     </div>
   );

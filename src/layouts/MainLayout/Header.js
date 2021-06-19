@@ -14,6 +14,7 @@ import Dropdown from '../../components/UI/Dropdown';
 import NotificationsModal from '../../components/common/NotificationsModal';
 import RouteMap from '../../routes/RouteMap';
 import MenuDrawer from '../../components/common/MenuDrawer';
+import closeBox from '../../assets/icons/closeBox.svg';
 
 function Header() {
   const { t, i18n } = useTranslation();
@@ -123,6 +124,21 @@ function Header() {
     </div>
   );
 
+  const WalletDropdown = () => (
+    <div className="z-30">
+      <Dropdown
+        title={<img className="" src={wallet} alt="wallet" />}
+        items={walletOptions}
+        displayChevronDown={false}
+        width="w-12"
+        menuButtonClass="justify-center -mt-1"
+        menuItemsClass="bg-white absolute focus:outline-none top-12 right-4 w-72 rounded-32 shadow-lg
+              flex flex-col space-y-4 pt-4 pb-2"
+        menuItemClass="group flex justify-center rounded-40 items-center py-1.5 text-18 text-center text-blue focus:outline-none"
+      />
+    </div>
+  );
+
   return (
     <header className="">
       <NotificationsModal
@@ -131,7 +147,12 @@ function Header() {
       />
       <MenuDrawer open={open} onClose={() => setOpen(false)} wrapperClass="pt-15">
         <div className="px-8">
-          <SearchInput />
+          <div className="flex items-center">
+            <SearchInput />
+            <div className="cursor-pointer ml-2" onClick={() => setOpen(false)}>
+              <img src={closeBox} alt="" />
+            </div>
+          </div>
         </div>
       </MenuDrawer>
       <div className="hidden lg:flex justify-between items-center pt-10 px-4 lg:px-8">
@@ -200,18 +221,7 @@ function Header() {
           </div>
           <div className="flex items-center">
             <div className="text-18 font-semibold textGradient">0 ETH</div>
-            <div className="z-30">
-              <Dropdown
-                title={<img className="" src={wallet} alt="wallet" />}
-                items={walletOptions}
-                displayChevronDown={false}
-                width="w-18"
-                menuButtonClass="justify-center px-4 -mt-1"
-                menuItemsClass="bg-white absolute focus:outline-none top-12 right-4 w-72 rounded-32 shadow-lg
-              flex flex-col space-y-4 pt-4 pb-2"
-                menuItemClass="group flex justify-center rounded-40 items-center py-1.5 text-18 text-center text-blue focus:outline-none"
-              />
-            </div>
+            <WalletDropdown />
           </div>
         </div>
       </div>
@@ -223,7 +233,7 @@ function Header() {
           <img src={magnifier} alt="" />
         </div>
         <Menu />
-        <img className="" src={wallet} alt="round square" />
+        <WalletDropdown />
       </div>
     </header>
   );

@@ -72,13 +72,7 @@ function Sidebar({ displaySidebar, displayStickySidebar }) {
         ))}
       </div>
       <div className="">
-        <div
-          className={
-            displayStickySidebar
-              ? 'flex lg:hidden items-center justify-between p-5 border border-solid border-white rounded-t-40 bg-gray2'
-              : 'hidden'
-          }
-        >
+        <div className="flex lg:hidden items-center justify-between p-5 border border-solid border-white rounded-t-40 bg-gray2">
           {[navItems[0], navItems[2], navItems[1]].map((n) => (
             <div className="" key={n.key} onClick={() => history.push(n.href)}>
               <img
