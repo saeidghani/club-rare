@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import MenuDrawer from '../../components/common/MenuDrawer';
 import RouteMap from '../../routes/RouteMap';
 import arrowBasic from '../../assets/icons/arrowBasic.svg';
+import logo from '../../assets/icons/logo.svg';
 import Notifications from './Notifications';
 
 function Menu() {
@@ -17,9 +18,9 @@ function Menu() {
     {
       key: 1,
       title: (
-        <div className="flex border border-solid border-white rounded-12 h-9">
+        <div className="flex border border-solid border-white rounded-12" style={{ height: 38 }}>
           <div
-            className={`px-5 rounded-12 flex items-center ${
+            className={`px-4 h-full rounded-12 flex items-center ${
               i18n.language === 'en'
                 ? 'text-white border-r border-solid border-white linearGradient'
                 : ''
@@ -29,7 +30,7 @@ function Menu() {
             English
           </div>
           <div
-            className={`px-5 rounded-12 flex items-center ${
+            className={`px-4 h-full rounded-12 flex items-center ${
               i18n.language === 'kr'
                 ? 'text-white border-r border-solid border-white linearGradient'
                 : ''
@@ -58,12 +59,10 @@ function Menu() {
   ];
 
   return (
-    <div className="flex justify-center w-56">
-      <div className="flex items-center space-x-2 cursor-pointer" onClick={() => setMenuOpen(true)}>
-        <div className="text-24 font-Ubuntu pb-1">
-          {t('header.logo.part1')} <span className="font-bold">{t('header.logo.part2')}</span>
-        </div>
-        <img src={arrowBasic} alt="arrow" />
+    <div className="flex justify-center">
+      <div className="flex items-center space-x-1 cursor-pointer" onClick={() => setMenuOpen(true)}>
+        <img src={logo} alt="logo" />
+        <img className="" src={arrowBasic} alt="arrow" />
       </div>
       <MenuDrawer open={menuOpen} onClose={() => setMenuOpen(false)} wrapperClass="pt-20">
         <div className="absolute top-32 flex flex-col items-center space-y-5 w-full z-10">

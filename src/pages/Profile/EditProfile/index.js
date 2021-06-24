@@ -51,7 +51,7 @@ function EditProfile() {
     <Layout loading={loading}>
       <div className="px-10.5 md:px-0 grid grid-cols-1 md:grid-cols-3">
         <form className="md:col-start-2" onSubmit={handleSubmit(onSubmit)}>
-          <div className="mt-6.5 flex flex-col items-center">
+          <div className="md:mt-6.5 flex flex-col items-center">
             {preview && (
               <img
                 className="w-full

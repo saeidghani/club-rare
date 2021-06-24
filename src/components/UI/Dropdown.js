@@ -4,6 +4,8 @@ import { Menu, Transition } from '@headlessui/react';
 import { ChevronDownIcon } from '@heroicons/react/solid';
 
 export default function Dropdown({
+  selected,
+  onSelect,
   width = 'w-56',
   title,
   items,
@@ -17,7 +19,6 @@ export default function Dropdown({
   displayChevronDown = true,
 }) {
   const history = useHistory();
-  const [selected, setSelected] = useState();
 
   return (
     <div className={`relative text-center z-10 ${width}`}>
@@ -65,7 +66,7 @@ export default function Dropdown({
                             'rounded-md px-2 py-2 text-18 text-center justify-center'
                           }`}
                           onClick={() => {
-                            setSelected(i);
+                            onSelect(i);
                             i?.href ? history.push(i.href) : i?.onClick ? i?.onClick() : {};
                           }}
                         >

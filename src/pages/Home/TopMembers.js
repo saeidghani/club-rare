@@ -25,7 +25,7 @@ function TopMembers({ wrapperClass }) {
     <div className={wrapperClass}>
       <div
         className="relative bg-white bg-opacity-20 border border-solid border-white rounded-50
-      py-4 xl:py-5 px-2 xs:px-2 xl:px-6 lightShadow"
+      py-4 xl:py-5 px-2 xs:px-2 xl:px-4 lightShadow"
         style={{ height: 282 }}
       >
         <div className="flex flex-col items-center">
@@ -52,19 +52,19 @@ function TopMembers({ wrapperClass }) {
           </div>
           <div
             className="z-10 grid grid-cols-1 c-slick-dots c-slick-dots-bottom--40
-           px-2 xs:px-14 sm:px-32 md:px-48 lg:px-0 mt-4 xl:mt-4"
+           px-0 xs:px-10 sm:px-32 md:px-48 lg:px-0 mt-4 xl:mt-4"
           >
             <Slider {...settings}>
               {[1, 2, 3].map((i) => (
                 <div key={i}>
                   <div
                     key={i}
-                    className="grid grid-cols-2 gap-x-2.5 xs:gap-x-3.5 md:gap-x-2 xl:gap-x-6 gap-y-8.5"
+                    className="grid grid-cols-2 gap-x-2.5 xs:gap-x-3.5 md:gap-x-2 xl:gap-x-4 gap-y-8.5"
                   >
                     {[1, 2, 3, 4].map((i) => (
                       <div key={i} className="">
                         <div className="flex justify-center mt-2">
-                          <div className="relative -mr-4">
+                          <div className="relative -mr-4 lg:-mr-3.5 xl:-mr-4">
                             <img
                               className="border-r border-solid border-white rounded-full w-11.5 h-11.5 md:w-14 md:h-14 z-10"
                               src={avatar2}
@@ -72,7 +72,7 @@ function TopMembers({ wrapperClass }) {
                             />
                             <div className="absolute -top-2 left-0 text-white">{i}.</div>
                           </div>
-                          <div className="rounded-40 px-4.5 xs:px-5.5 py-1.5 md:py-2 md:px-4 xl:px-8 border border-solid border-white">
+                          <div className="rounded-40 py-1.5 md:py-2 pl-4 pr-3 xs:px-5.5 md:px-4 lg:pl-3.5 lg:pr-3 xl:px-8 border border-solid border-white">
                             <div className="text-14 text-center text-blue">Emilie Butler</div>
                             <div className="text-12 text-center opacity-60">10.5ETH</div>
                           </div>

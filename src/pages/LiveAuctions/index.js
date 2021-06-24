@@ -27,27 +27,27 @@ function LiveAuctionsPage() {
   }, []);
 
   const items = [
-    { key: 1, src: bag3 },
-    { key: 2, src: watch2 },
-    { key: 3, src: bag4 },
-    { key: 4, src: watch3 },
-    { key: 5, src: bag5 },
-    { key: 6, src: watch4 },
-    { key: 7, src: watch5 },
-    { key: 8, src: bag6 },
-    { key: 9, src: watch6 },
-    { key: 10, src: bag7 },
-    { key: 11, src: watch7 },
-    { key: 12, src: bag8 },
+    { key: 1, timer: '3h', src: bag3 },
+    { key: 2, timer: '3h', src: watch2 },
+    { key: 3, timer: '3h', src: bag4 },
+    { key: 4, timer: '3h', src: watch3 },
+    { key: 5, timer: '3h', src: bag5 },
+    { key: 6, timer: '3h', src: watch4 },
+    { key: 7, timer: '3h', src: watch5 },
+    { key: 8, timer: '3h', src: bag6 },
+    { key: 9, timer: '3h', src: watch6 },
+    { key: 10, timer: '3h', src: bag7 },
+    { key: 11, timer: '3h', src: watch7 },
+    { key: 12, timer: '3h', src: bag8 },
   ];
 
   return (
-    <Layout displayStickySidebar loading={loading}>
+    <Layout mainClassName="mt-1" displayStickySidebar loading={loading}>
       <div className="text-24 text-blue font-semibold">{t('header.liveAuctions')}</div>
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-y-9 gap-x-8 md:gap-x-12 mt-16 md:mt-8">
         {items.map((i) => (
           <div key={i.key}>
-            <BidCard id={i.key} src={i.src} contentClass="lightShadow p-6" />
+            <BidCard id={i.key} src={i.src} contentClass="lightShadow p-6" timer={i.timer} />
           </div>
         ))}
       </div>

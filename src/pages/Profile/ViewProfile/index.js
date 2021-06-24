@@ -26,9 +26,23 @@ function Profile() {
   ];
 
   const items = [
-    { key: 1, isPutOnSale: true, isSold: false, title: '', src: bag3 },
-    { key: 2, isPutOnSale: false, isSold: true, title: 'Sold For:', src: watch2 },
-    { key: 3, isPutOnSale: false, isSold: false, title: 'Starter Bid:', src: bag4 },
+    { key: 1, timer: '06:23:57', isPutOnSale: true, isSold: false, title: '', src: bag3 },
+    {
+      key: 2,
+      timer: '06:23:57',
+      isPutOnSale: false,
+      isSold: true,
+      title: 'Sold For:',
+      src: watch2,
+    },
+    {
+      key: 3,
+      timer: '06:23:57',
+      isPutOnSale: false,
+      isSold: false,
+      title: 'Starter Bid:',
+      src: bag4,
+    },
   ];
 
   return (
@@ -57,7 +71,7 @@ function Profile() {
                 id={i.key}
                 src={i.src}
                 contentClass="lightShadow p-6"
-                displayTime
+                timer={i.timer}
               />
             </div>
           ))}

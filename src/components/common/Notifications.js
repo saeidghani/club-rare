@@ -6,9 +6,9 @@ import closeBox from '../../assets/icons/closeBox.svg';
 function Notifications({ onClose }) {
   return (
     <div className="pt-15 pb-8 px-10">
-      <div className="grid grid-cols-3 items-center border-b border-solid border-white pb-4 mb-11 mr-5 ">
+      <div className="grid grid-cols-3 items-center border-b border-solid border-white pb-3.5 mb-11 mr-7">
         <div className="col-start-2 text-center text-18">Notifications</div>
-        <div className="col-start-3 justify-self-end cursor-pointer" onClick={onClose}>
+        <div className="col-start-3 justify-self-end cursor-pointer -mr-2" onClick={onClose}>
           <img src={closeBox} alt="" />
         </div>
       </div>

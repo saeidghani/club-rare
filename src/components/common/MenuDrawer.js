@@ -1,7 +1,14 @@
 import React from 'react';
 import Drawer from '../UI/Drawer';
 
-function MenuDrawer({ children, open, onClose, wrapperClass, height = 650 }) {
+function MenuDrawer({
+  children,
+  open,
+  onClose,
+  wrapperClass,
+  height = 650,
+  displayBgShadow = true,
+}) {
   return (
     <Drawer
       wrapperClass={`relative bg-warmGray rounded-b-40 border border-solid border-white ${wrapperClass}`}
@@ -11,7 +18,7 @@ function MenuDrawer({ children, open, onClose, wrapperClass, height = 650 }) {
       placement="top"
     >
       {children}
-      <div className="bgShadow"></div>
+      {displayBgShadow && <div className="bgShadow"></div>}
     </Drawer>
   );
 }

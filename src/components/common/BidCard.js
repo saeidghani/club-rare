@@ -8,7 +8,7 @@ function BidCard({
   wrapperClass,
   headerClass,
   contentClass,
-  displayTime,
+  timer,
   src,
   id,
   isPutOnSale,
@@ -27,7 +27,7 @@ function BidCard({
       >
         <div className={`flex justify-between ${headerClass}`}>
           <div className="text-18 text-blue font-semibold">Blondie</div>
-          {displayTime && <div className="text-gray">06:23:57</div>}
+          {timer && <div className="text-gray">{timer}</div>}
         </div>
         <img
           className="border border-solid border-white rounded-12 mt-3.5 object-contain"
@@ -48,7 +48,7 @@ function BidCard({
                 isSold ? 'w-full justify-between items-center' : 'flex-col space-y-1'
               }`}
             >
-              <div className="text-18">{title || t('profile.bid.highestBid')}</div>
+              <div className="text-16 sm:text-18">{title || t('profile.bid.highestBid')}</div>
               <div className="flex items-center space-x-2">
                 <div className="sm:text-18 sm:font-semibold">0.5</div>
                 <CryptoIcon />

@@ -30,7 +30,7 @@ function LiveAuction() {
   }, []);
 
   return (
-    <Layout displayStickySidebar loading={loading}>
+    <Layout mainClassName="live-auction-lg" displayStickySidebar loading={loading}>
       <BidModal
         bidModalTitle={bidModalTitle}
         open={bidOpen}

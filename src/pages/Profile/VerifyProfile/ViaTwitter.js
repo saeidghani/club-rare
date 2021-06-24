@@ -22,7 +22,7 @@ function ViaTwitter() {
     <Layout displaySidebar={false} mainClassName="grid grid-cols-1 md:grid-cols-12">
       <div
         className="md:col-start-3 md:col-span-8 xl:col-start-4 xl:col-span-6 w-full flex flex-col
-      justify-center items-center mx-auto mt-21 md:mt-32 px-5 md:px-0"
+      justify-center items-center mx-auto mt-19 md:mt-32 px-5 md:px-0"
       >
         <div className="relative mt-7">
           <div className="text-24 md:text-34 text-blue font-bold text-center">

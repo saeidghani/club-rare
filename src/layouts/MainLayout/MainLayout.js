@@ -11,21 +11,28 @@ function MainLayout({
   displayStickySidebar,
 }) {
   return (
-    <div>
+    <div className="">
       <Header />
       <div className="lg:flex">
-        <div
-          className={`sticky z-50 lg:pt-40 ${displaySidebar ? 'lg:pl-16 lg:pr-8' : ''}`}
-          style={{ top: 827 }}
-        >
-          <Sidebar displaySidebar={displaySidebar} displayStickySidebar={displayStickySidebar} />
+        <div className={`lg:pt-40 ${displaySidebar ? 'lg:pl-16 lg:pr-8' : ''}`}>
+          <Sidebar
+            displaySidebar={displaySidebar}
+            displayStickySidebar={displayStickySidebar}
+            loading={loading}
+          />
         </div>
         <main
-          className={`w-full px-5 lg:pl-4 pb-40 lg:pb-4 ${mainClassName || ''} ${
-            displaySidebar ? 'lg:pr-12' : ''
-          } ${displayStickySidebar ? '-mt-12 lg:mt-0 lg:pt-10' : 'lg:mt-0 lg:pt-10'}`}
+          className={`w-full px-5 lg:pl-4 pb-40 lg:pb-4 pt-7 lg:pt-10 ${mainClassName || ''} ${
+            displaySidebar ? 'lg:pr-11' : ''
+          }`}
         >
-          {loading ? <Spinner /> : children}
+          {loading ? (
+            <div className="mt-20">
+              <Spinner />
+            </div>
+          ) : (
+            children
+          )}
         </main>
       </div>
     </div>

@@ -22,7 +22,7 @@ function ClaimingNFT() {
 
   return (
     <Layout displaySidebar={false} loading={loading}>
-      <div className="w-full mx-auto flex flex-col items-center mt-7.5 md:mt-28 lg:mt-8 pb-6">
+      <div className="w-full mx-auto flex flex-col items-center mt-1 md:mt-28 lg:mt-8 pb-6">
         <div className="text-24 lg:text-34 text-blue font-bold">{t('claimingNFT.title')}</div>
         <div className="relative mt-2">
           <div className="text-14 lg:text-18 text-center">

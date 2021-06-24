@@ -9,6 +9,7 @@ export default function Select({
   label,
   labelClassName,
   logoClassName,
+  selectedClass,
   placeholder,
   ...props
 }) {
@@ -36,8 +37,8 @@ export default function Select({
                   <div>
                     {label && <div className={labelClassName}>{label}</div>}
                     <span
-                      className={`block truncate ${
-                        type === 'primary' ? 'text-fadeBlue2 text-12 md:text-16' : ''
+                      className={`block truncate ${type === 'primary' ? 'text-fadeBlue2' : ''} ${
+                        selectedClass || 'text-12 md:text-16'
                       }`}
                     >
                       {selected?.name}

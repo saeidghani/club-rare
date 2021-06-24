@@ -18,7 +18,7 @@ function ClaimingNFTSuccess() {
   return (
     <Layout displaySidebar={false} loading={loading}>
       <div className="grid grid-cols-1 md:grid-cols-12">
-        <div className="md:col-start-4 md:col-span-6 xl:col-start-5 xl:col-span-4 mt-7.5 md:mt-20">
+        <div className="md:col-start-4 md:col-span-6 xl:col-start-5 xl:col-span-4 mt-1 md:mt-20">
           <div className="w-full mx-auto flex flex-col items-center lg:mt-6">
             <div className="text-24 lg:text-34 text-blue font-bold">
               {t('claimingNFTSuccess.title')}

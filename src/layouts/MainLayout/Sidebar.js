@@ -9,7 +9,7 @@ import create from '../../assets/icons/create.svg';
 import createColorful from '../../assets/icons/createColorful.svg';
 import RouteMap from '../../routes/RouteMap';
 
-function Sidebar({ displaySidebar, displayStickySidebar }) {
+function Sidebar({ displaySidebar, loading }) {
   const { pathname, search } = useLocation();
   const { liveAuctionId } = useParams();
   const history = useHistory();
@@ -71,8 +71,8 @@ function Sidebar({ displaySidebar, displayStickySidebar }) {
           </div>
         ))}
       </div>
-      <div className="">
-        <div className="flex lg:hidden items-center justify-between p-5 border border-solid border-white rounded-t-40 bg-gray2">
+      {!loading && (
+        <div className="fixed z-50 bottom-0 w-full flex lg:hidden items-center justify-between p-5 border border-solid border-white rounded-t-40 bg-gray2">
           {[navItems[0], navItems[2], navItems[1]].map((n) => (
             <div className="" key={n.key} onClick={() => history.push(n.href)}>
               <img
@@ -83,7 +83,7 @@ function Sidebar({ displaySidebar, displayStickySidebar }) {
             </div>
           ))}
         </div>
-      </div>
+      )}
     </aside>
   );
 }

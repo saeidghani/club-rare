@@ -166,4 +166,19 @@ header {
   visibility: hidden;
 }
 
+.live-auction-lg {
+  @media (min-width: 1024px) {
+    @media (max-width: 1027px) {
+      padding-left: 5px !important;
+      padding-right: 25px !important;
+    }
+  }
+}
+
+.grid-cols-4-2xl {
+  @media (min-width: 1800px) {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  }
+}
+
 

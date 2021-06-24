@@ -12,9 +12,9 @@ function Banner({ wrapperClass }) {
         <img className="absolute top-0 right-0" src={bannerIllustration} alt="illustration" />
         <div className="absolute top-0 w-full">
           <div className="flex flex-col items-center pl-6 lg:pl-6 xl:pl-8 pr-2 pt-2 lg:pt-8">
-            <div className="text-14 md:text-24 text-white self-center md:self-start font-Ubuntu opacity-60 mt-2 xs:mt-3.5">
-              Club
-              <span className="font-bold ml-2">Rare</span>
+            <div className="text-14 md:text-24 text-white self-center md:self-start font-Ubuntu mt-2 xs:mt-3.5">
+              <span className="font-bold">Club</span>
+              <span className="opacity-60 ml-2">Rare</span>
             </div>
             <div className="flex flex-col md:flex-row-reverse md:self-start md:justify-between items-center w-full md:pr-4">
               <img className="mt-3" src={purse} alt="purse" />

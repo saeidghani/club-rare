@@ -33,10 +33,11 @@ function ProfileSummary({
         title={<img src={dotsDropdown} alt="dots dropdown" />}
         items={dropdownItems}
         displayChevronDown={false}
-        menuButtonClass="justify-center px-4"
+        menuButtonClass="justify-center"
         menuItemsClass={`top-9 w-36 rounded-40 shadow-lg ${menuItemsClass}`}
         menuItemClass="bg-white rounded-40 px-2 py-2.5 text-red text-center justify-center"
-        width="w-16"
+        width="w-8"
+        onSelect={() => {}}
       />
     </div>
   );
@@ -58,13 +59,13 @@ function ProfileSummary({
           <DotsDropdown wrapperClass="sm:hidden" menuItemsClass="left-0" />
           <div className="flex flex-col sm:flex-row sm:space-x-4 items-center">
             <div className="relative">
-              <img className="rounded-full w-19 h-19" src={avatar} alt="avatar" />
+              <img className="rounded-full w-17 h-17 sm:w-19 sm:h-19" src={avatar} alt="avatar" />
               <img className="absolute bottom-0 right-0" src={tickBox} alt="tick box" />
             </div>
             <div className="text-18 font-semibold text-center mt-2">Emilie Butler</div>
           </div>
           <div className="flex">
-            <DotsDropdown wrapperClass="hidden sm:block" menuItemsClass="right-4" />
+            <DotsDropdown wrapperClass="hidden sm:block mr-2" menuItemsClass="right-4" />
             <Link to={RouteMap.profile.edit}>
               <img src={edit} alt="edit" />
             </Link>
@@ -79,7 +80,9 @@ function ProfileSummary({
               className="flex items-center space-x-2 linearGradient rounded-12
                             w-full px-2 h-12 mr-4"
             >
-              <div className="text-12 text-white flex-grow">0x4A34639...5wqdgyieyvqjva81</div>
+              <div className="text-12 sm:text-14 text-white flex-grow">
+                0x4A34639...5wqdgyieyvqjva81
+              </div>
               <CopyToClipboard text="0x4A34639...5wqdgyieyvqjva81">
                 <img className="cursor-pointer" src={layers} alt="layers" />
               </CopyToClipboard>
@@ -99,7 +102,7 @@ function ProfileSummary({
               key={i.key}
               className={
                 i.key === activeCategory
-                  ? 'bg-blue text-white px-2 py-3 rounded-10'
+                  ? 'bg-blue text-white px-2 xs:px-3 py-3 rounded-10'
                   : 'flex items-center px-3 py-3'
               }
               onClick={() => onSetCategories(i.key)}

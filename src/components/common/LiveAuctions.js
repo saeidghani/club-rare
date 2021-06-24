@@ -37,9 +37,9 @@ function LiveAuctions({ wrapperClass }) {
   };
 
   const items = [
-    { key: 1, src: bag1 },
-    { key: 2, src: bag2 },
-    { key: 3, src: watch },
+    { key: 1, timer: '06:23:57', src: bag1 },
+    { key: 2, timer: '06:23:57', src: bag2 },
+    { key: 3, timer: '06:23:57', src: watch },
   ];
 
   return (
@@ -64,7 +64,7 @@ function LiveAuctions({ wrapperClass }) {
               src={i.src}
               headerClass="px-6 mt-6"
               contentClass="p-0"
-              displayTime
+              timer={i.timer}
             />
           ))}
         </Slider>

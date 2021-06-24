@@ -87,6 +87,7 @@ function PutOnSale() {
                     className="responsive-placeholder bg-transparent border-b-2 border-solid border-white w-full"
                     placeholder="Enter minimum bid"
                     {...register('minimumBidText', { required: true })}
+                    style={{ height: 26 }}
                   />
                   {errors.minimumBidText && (
                     <p className="text-red justify-self-start mt-2 pl-2">
@@ -94,7 +95,12 @@ function PutOnSale() {
                     </p>
                   )}
                 </div>
-                <Select {...register('minimumBid')} options={minimumBidOptions} width="w-42" />
+                <Select
+                  {...register('minimumBid')}
+                  options={minimumBidOptions}
+                  width="w-42"
+                  selectedClass="text-14 sm:text-16"
+                />
               </div>
             </div>
             <div className="flex justify-between w-full">
@@ -102,13 +108,21 @@ function PutOnSale() {
                 <div className="text-18 text-blue font-semibold mb-4">
                   {t('productPage.PutOnSale.StartingDate')}
                 </div>
-                <Select options={startingDateOptions} width="w-32 md:w-42" />
+                <Select
+                  options={startingDateOptions}
+                  width="w-32 md:w-42"
+                  selectedClass="text-14 sm:text-16 pb-1"
+                />
               </div>
               <div className="">
                 <div className="text-18 text-blue font-semibold mb-4">
                   {t('productPage.PutOnSale.ExpirationDate')}
                 </div>
-                <Select options={expirationDateOptions} width="w-32 md:w-42" />
+                <Select
+                  options={expirationDateOptions}
+                  width="w-32 md:w-42"
+                  selectedClass="text-14 sm:text-16 pb-1"
+                />
               </div>
             </div>
           </div>
