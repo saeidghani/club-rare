@@ -77,7 +77,7 @@ function Create() {
         className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 w-full"
         onSubmit={handleSubmit(onSubmit)}
       >
-        <div className="row-start-2 md:row-start-1">
+        <div className="row-start-2 md:row-start-1 xl:pr-10">
           <div className="text-16 md:text-18 text-blue font-semibold mb-2.5 mt-8 md:mt-0">
             {t('create.UploadYourArtwork')}
           </div>
