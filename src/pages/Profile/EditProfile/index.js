@@ -64,7 +64,7 @@ function EditProfile() {
             <div className="relative">
               <input
                 className={`custom-file-input text-transparent cursor-pointer w-full text-16 lg:text-18 font-semibold
-               rounded-full bg-gray bg-opacity-50
+               rounded-full bg-gray bg-opacity-50 w-31 h-31
                         border border-solid border-white ${preview ? 'hidden' : 'block'}`}
                 style={{ height: 124, width: 124 }}
                 onChange={onFileUpload}
@@ -74,7 +74,7 @@ function EditProfile() {
               />
               {!preview && (
                 <div
-                  className="absolute top-8 left-3 z-30 text-18 font-semibold cursor-pointer mt-4"
+                  className="absolute top-30 lg:top-8 left-3 z-30 text-18 font-semibold cursor-pointer mt-4"
                   style={{ color: '#377CF6' }}
                   onClick={() => avatarFileRef?.current?.click()}
                 >
@@ -92,7 +92,9 @@ function EditProfile() {
               </div>
             )}
           </div>
-          <div className="text-18 text-blue font-semibold mt-9 mb-5.5">{t('editProfile.name')}</div>
+          <div className="text-18 text-blue font-semibold mt-20 lg:mt-9 mb-5.5">
+            {t('editProfile.name')}
+          </div>
           <input
             className="responsive-placeholder bg-transparent border-b border-solid border-white
                     w-full"

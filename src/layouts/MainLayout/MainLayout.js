@@ -23,7 +23,7 @@ function MainLayout({
         </div>
         <main
           className={`w-full px-5 lg:pl-4 pb-40 lg:pb-4 pt-7 lg:pt-10 ${mainClassName || ''} ${
-            displaySidebar ? 'lg:pr-11' : ''
+            displaySidebar ? 'lg:pr-8 xl:pr-11' : ''
           }`}
         >
           {loading ? (

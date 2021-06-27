@@ -157,6 +157,31 @@ function Header() {
     </div>
   );
 
+  const SMHeader = () => (
+    <div
+      className="grid grid-cols-3 items-center lightShadow px-4 xs:px-5 pt-15 pb-3
+                      border border-solid border-white rounded-b-40"
+    >
+      <div
+        className="cursor-pointer"
+        style={{ height: 22 }}
+        onClick={() => setSearchInputOpen(true)}
+      >
+        <img src={magnifier} alt="" />
+      </div>
+      <div className="-ml-10">
+        <Menu />
+      </div>
+      <div
+        className="justify-self-end flex items-center space-x-2 pt-1"
+        onClick={() => setWalletDrawerOpen(true)}
+      >
+        <div className="text-12 font-semibold textGradient">0 ETH</div>
+        <img src={wallet} alt="wallet" />
+      </div>
+    </div>
+  );
+
   return (
     <header className="">
       <NotificationsModal
@@ -191,7 +216,7 @@ function Header() {
           ))}
         </div>
       </MenuDrawer>
-      <div className="hidden lg:flex justify-between items-center pt-10 px-4 lg:pl-9 lg:pr-10">
+      <div className="hidden lg:flex justify-between items-center pt-10 px-4 lg:pl-9 lg:pr-6 xl:pr-10">
         <div className="text-blue flex items-center justify-between w-full max-w-350">
           <Link to={RouteMap.home}>
             <img src={logo} alt="" />
@@ -265,25 +290,8 @@ function Header() {
           </div>
         </div>
       </div>
-      <div
-        className="lg:hidden grid grid-cols-3 items-center lightShadow px-4 xs:px-5 pt-15 pb-3
-                      border border-solid border-white rounded-b-40"
-      >
-        <div
-          className="cursor-pointer"
-          style={{ height: 22 }}
-          onClick={() => setSearchInputOpen(true)}
-        >
-          <img src={magnifier} alt="" />
-        </div>
-        <Menu />
-        <div
-          className="justify-self-end flex items-center space-x-2 pt-1"
-          onClick={() => setWalletDrawerOpen(true)}
-        >
-          <div className="text-12 font-semibold textGradient">0 ETH</div>
-          <img src={wallet} alt="wallet" />
-        </div>
+      <div className="lg:hidden">
+        <SMHeader />
       </div>
     </header>
   );

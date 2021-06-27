@@ -30,7 +30,7 @@ function BidCard({
           {timer && <div className="text-gray">{timer}</div>}
         </div>
         <img
-          className="border border-solid border-white rounded-12 mt-3.5 object-contain"
+          className="border border-solid border-white rounded-12 mt-3.5 object-contain py-1"
           style={{ height: 233 }}
           src={src}
           alt=""
