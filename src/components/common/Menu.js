@@ -6,6 +6,7 @@ import RouteMap from '../../routes/RouteMap';
 import arrowBasic from '../../assets/icons/arrowBasic.svg';
 import logo from '../../assets/icons/logo.svg';
 import Notifications from './Notifications';
+import closeBox from '../../assets/icons/closeBox.svg';
 
 function Menu() {
   const { t, i18n } = useTranslation();
@@ -64,8 +65,11 @@ function Menu() {
         <img src={logo} alt="logo" />
         <img className="" src={arrowBasic} alt="arrow" />
       </div>
-      <MenuDrawer open={menuOpen} onClose={() => setMenuOpen(false)} wrapperClass="pt-20">
-        <div className="absolute top-32 flex flex-col items-center space-y-5 w-full z-10">
+      <MenuDrawer open={menuOpen} onClose={() => setMenuOpen(false)} wrapperClass="pt-10">
+        <div className="flex justify-end mr-8 cursor-pointer" onClick={() => setMenuOpen(false)}>
+          <img src={closeBox} alt="" />
+        </div>
+        <div className="absolute top-24 flex flex-col items-center space-y-5 w-full z-10">
           {items.map((i) => (
             <div key={i.key} className="text-18 text-blue cursor-pointer" onClick={i.onClick}>
               {i.title}

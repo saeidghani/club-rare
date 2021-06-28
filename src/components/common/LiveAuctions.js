@@ -56,7 +56,7 @@ function LiveAuctions({ wrapperClass }) {
         </Link>
       </div>
       <div className="grid grid-cols-1 mt-8 slick-slides-gap--lg c-slick-dots c-slick-dots-bottom--55">
-        <Slider {...settings} style={{ maxHeight: 401 }}>
+        <Slider {...settings}>
           {items.map((i) => (
             <BidCard
               key={i.key}
@@ -65,6 +65,8 @@ function LiveAuctions({ wrapperClass }) {
               headerClass="px-6 mt-6"
               contentClass="p-0"
               timer={i.timer}
+              height={286}
+              isLiveAuction
             />
           ))}
         </Slider>

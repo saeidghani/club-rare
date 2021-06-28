@@ -151,7 +151,7 @@ function Header() {
         onSelect={(i) => setSelectedWallet(i)}
         menuButtonClass="justify-center -mt-1"
         menuItemsClass="bg-white absolute focus:outline-none top-12 right-4 w-72 rounded-32 shadow-lg
-              flex flex-col space-y-4 pt-4 pb-2"
+              flex flex-col space-y-2.5 pt-4 pb-2"
         menuItemClass="group flex justify-center rounded-40 items-center py-1.5 text-18 text-center text-blue focus:outline-none"
       />
     </div>

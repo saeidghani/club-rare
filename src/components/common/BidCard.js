@@ -14,6 +14,8 @@ function BidCard({
   isPutOnSale,
   isSold,
   title,
+  height,
+  isLiveAuction,
 }) {
   const { t } = useTranslation();
   const history = useHistory();
@@ -31,7 +33,7 @@ function BidCard({
         </div>
         <img
           className="border border-solid border-white rounded-12 mt-3.5 object-contain py-1"
-          style={{ height: 233 }}
+          style={{ height: height || 233 }}
           src={src}
           alt=""
         />
@@ -40,7 +42,7 @@ function BidCard({
                       rounded-t-16 rounded-b-40 mt-7 ${
                         isPutOnSale || isSold ? 'py-4' : 'pt-2 pb-4'
                       }`}
-          style={{ height: 79 }}
+          style={{ height: isLiveAuction ? 99 : 79 }}
         >
           {!isPutOnSale && (
             <div
